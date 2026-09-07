@@ -8,7 +8,7 @@ import {
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import Contact from "./pages/Contact/Contact";
+import Contact from "./Pages/Contact/Contact";
 
 // =====================================================
 // PAGE TITLE

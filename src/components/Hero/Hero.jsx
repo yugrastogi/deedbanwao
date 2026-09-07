@@ -1,5 +1,3 @@
-import Navbar from "../navbar/Navbar";
-
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
 

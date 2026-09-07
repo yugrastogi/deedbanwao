@@ -10,7 +10,8 @@ import {
 import contactData from "./contact.data";
 
 const Contact = () => {
-  const [showCallOptions, setShowCallOptions] = useState(false);
+  const [showCallOptions, setShowCallOptions] =
+    useState(false);
 
   return (
     <main
@@ -73,13 +74,13 @@ const Contact = () => {
           max-w-7xl
           px-6
           pb-24
-          pt-32
+          pt-24
 
           sm:pb-32
-          sm:pt-36
+          sm:pt-28
 
           lg:pb-40
-          lg:pt-44
+          lg:pt-32
         "
       >
 
@@ -89,12 +90,15 @@ const Contact = () => {
 
         <div
           className="
-            mt-20
+            mt-8
 
             grid
             grid-cols-1
             gap-10
 
+            sm:mt-12
+
+            lg:mt-16
             lg:grid-cols-[1fr_0.8fr]
             lg:items-end
             lg:gap-24
@@ -694,7 +698,9 @@ const Contact = () => {
               <button
                 type="button"
                 onClick={() =>
-                  setShowCallOptions((previous) => !previous)
+                  setShowCallOptions(
+                    (previous) => !previous
+                  )
                 }
                 className="
                   group

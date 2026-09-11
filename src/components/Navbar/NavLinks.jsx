@@ -72,7 +72,8 @@ const NavLinks = ({
 
     setMenuOpen?.(false);
 
-    const sectionId = link.href.replace("#", "");
+    const sectionId =
+      link.href.replace("#", "");
 
     if (location.pathname === "/") {
       const section =
@@ -128,13 +129,20 @@ const NavLinks = ({
               ? "/contact"
               : link.name === "Home"
                 ? "/"
-                : `/#${link.href.replace("#", "")}`
+                : `/#${link.href.replace(
+                    "#",
+                    ""
+                  )}`
           }
           onClick={(event) =>
-            handleNavigation(event, link)
+            handleNavigation(
+              event,
+              link
+            )
           }
           className={`
             rounded-full
+
             font-semibold
 
             transition-all
@@ -143,15 +151,15 @@ const NavLinks = ({
             ${
               isLight
                 ? `
-                  text-black/75
-                  hover:bg-black/[0.06]
-                  hover:text-black
-                `
+                    text-black/75
+                    hover:bg-black/[0.06]
+                    hover:text-black
+                  `
                 : `
-                  text-white
-                  hover:bg-white/10
-                  hover:text-white
-                `
+                    text-white
+                    hover:bg-white/10
+                    hover:text-white
+                  `
             }
 
             ${
@@ -165,7 +173,7 @@ const NavLinks = ({
                 : `
                     px-4
                     py-2
-                    text-sm
+                    text-base
                   `
             }
           `}

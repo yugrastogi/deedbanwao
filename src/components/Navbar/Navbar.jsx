@@ -17,17 +17,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const processSection = document.getElementById("process");
+      const processSection =
+        document.getElementById("process");
 
       if (!processSection) return;
 
       const navbarHeight = 66;
 
       const sectionTop = processSection.offsetTop;
+
       const sectionBottom =
         sectionTop + processSection.offsetHeight;
 
-      const scrollPosition = window.scrollY + navbarHeight;
+      const scrollPosition =
+        window.scrollY + navbarHeight;
 
       setIsLight(
         scrollPosition >= sectionTop &&
@@ -42,7 +45,10 @@ const Navbar = () => {
     });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
     };
   }, []);
 
@@ -77,55 +83,42 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`
+      className="
         fixed
-        left-1/2
-        top-4
+        left-0
+        top-0
         z-30
-        -translate-x-1/2
 
         flex
-        h-[66px]
-        w-[94%]
-        max-w-6xl
+        h-[72px]
+        w-full
 
         items-center
         justify-between
 
         overflow-visible
-        rounded-full
 
-        px-3
-        pl-4
+        border-b
+        border-black/[0.06]
+
+        bg-white/70
+
+        px-5
 
         backdrop-blur-2xl
         backdrop-saturate-150
 
-        shadow-[0_20px_50px_rgba(0,0,0,0.18)]
+        shadow-[0_10px_40px_rgba(0,0,0,0.06)]
 
         transition-all
         duration-500
         ease-out
 
-        sm:top-6
-        sm:w-[92%]
-        sm:pl-5
+        sm:h-[76px]
+        sm:px-7
 
-        ${
-          isLight
-            ? `
-              border
-              border-black/[0.06]
-              bg-white/55
-              shadow-[0_20px_50px_rgba(0,0,0,0.10)]
-            `
-            : `
-              border
-              border-white/[0.04]
-              bg-black/30
-            `
-        }
-      `}
+        lg:px-10
+      "
     >
       {/* =====================================================
           LOGO
@@ -138,6 +131,7 @@ const Navbar = () => {
           className="
             h-9
             w-auto
+
             sm:h-10
           "
         />
@@ -149,14 +143,14 @@ const Navbar = () => {
 
       <NavLinks
         setMenuOpen={setMenuOpen}
-        isLight={isLight}
+        isLight={true}
       />
 
       {/* =====================================================
           CONTACT BUTTONS
       ===================================================== */}
 
-      <ContactActions isLight={isLight} />
+      <ContactActions isLight={true} />
 
       {/* =====================================================
           MOBILE HAMBURGER
@@ -175,9 +169,11 @@ const Navbar = () => {
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() =>
-            setMenuOpen((previous) => !previous)
+            setMenuOpen(
+              (previous) => !previous
+            )
           }
-          className={`
+          className="
             relative
             ml-1
 
@@ -190,45 +186,35 @@ const Navbar = () => {
 
             rounded-full
 
-            shadow-[inset_0_1px_1px_rgba(255,255,255,0.20)]
+            bg-black/[0.05]
+
+            text-black
+
+            shadow-[inset_0_1px_1px_rgba(255,255,255,0.80)]
 
             backdrop-blur-xl
 
             transition-all
-            duration-500
+            duration-300
 
-            ${
-              isLight
-                ? `
-                  bg-black/[0.06]
-                  text-black
-                  hover:bg-black/[0.10]
-                `
-                : `
-                  bg-white/10
-                  text-white
-                  hover:bg-white/20
-                `
-            }
-          `}
+            hover:bg-black/[0.09]
+          "
         >
           {/* TOP LINE */}
 
           <span
             className={`
               absolute
+
               h-[1.5px]
               w-4
+
               rounded-full
+
+              bg-black
 
               transition-all
               duration-300
-
-              ${
-                isLight
-                  ? "bg-black"
-                  : "bg-white"
-              }
 
               ${
                 menuOpen
@@ -243,18 +229,16 @@ const Navbar = () => {
           <span
             className={`
               absolute
+
               h-[1.5px]
               w-4
+
               rounded-full
+
+              bg-black
 
               transition-all
               duration-300
-
-              ${
-                isLight
-                  ? "bg-black"
-                  : "bg-white"
-              }
 
               ${
                 menuOpen
@@ -269,18 +253,16 @@ const Navbar = () => {
           <span
             className={`
               absolute
+
               h-[1.5px]
               w-4
+
               rounded-full
+
+              bg-black
 
               transition-all
               duration-300
-
-              ${
-                isLight
-                  ? "bg-black"
-                  : "bg-white"
-              }
 
               ${
                 menuOpen
@@ -297,11 +279,11 @@ const Navbar = () => {
 
         {menuOpen && (
           <div
-            className={`
+            className="
               absolute
 
               right-0
-              top-[62px]
+              top-[58px]
 
               w-56
 
@@ -309,35 +291,23 @@ const Navbar = () => {
 
               rounded-[24px]
 
+              border
+              border-black/[0.06]
+
+              bg-white/80
+
               p-2
 
               backdrop-blur-2xl
               backdrop-saturate-150
 
-              shadow-[0_20px_50px_rgba(0,0,0,0.20)]
-
-              transition-all
-              duration-500
-
-              ${
-                isLight
-                  ? `
-                    border
-                    border-black/[0.06]
-                    bg-white/65
-                  `
-                  : `
-                    border
-                    border-white/10
-                    bg-black/30
-                  `
-              }
-            `}
+              shadow-[0_20px_50px_rgba(0,0,0,0.15)]
+            "
           >
             <NavLinks
               mobile
               setMenuOpen={setMenuOpen}
-              isLight={isLight}
+              isLight={true}
             />
           </div>
         )}

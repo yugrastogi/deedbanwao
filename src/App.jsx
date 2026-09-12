@@ -312,26 +312,25 @@ const App = () => {
     });
 
   // =====================================================
-  // DISCLAIMER NOT ACCEPTED
-  // Website remains inaccessible
+  // WEBSITE + DISCLAIMER
+  //
+  // The actual website stays mounted behind the modal.
+  // The disclaimer blocks interaction until accepted.
   // =====================================================
 
-  if (!disclaimerAccepted) {
-    return (
-      <Disclaimer
-        onProceed={() =>
-          setDisclaimerAccepted(true)
-        }
-      />
-    );
-  }
+  return (
+    <>
+      <Website />
 
-  // =====================================================
-  // DISCLAIMER ACCEPTED
-  // Show the actual website
-  // =====================================================
-
-  return <Website />;
+      {!disclaimerAccepted && (
+        <Disclaimer
+          onProceed={() =>
+            setDisclaimerAccepted(true)
+          }
+        />
+      )}
+    </>
+  );
 };
 
 export default App;

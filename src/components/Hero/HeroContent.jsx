@@ -751,8 +751,8 @@ Please guide me regarding the next steps.
                       Legal Consultation
                     </option>
 
-                    <option value="Property Documentation Review">
-                      Property Documentation Check
+                    <option value="Property Paper Check">
+                      Property Paper Check
                     </option>
 
                     <option value="Other">

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
   FaArrowUpRightFromSquare,
   FaEnvelope,
@@ -10,8 +8,7 @@ import {
 import contactData from "./contact.data";
 
 const Contact = () => {
-  const [showCallOptions, setShowCallOptions] =
-    useState(false);
+  const phoneNumber = contactData.phoneNumbers[0];
 
   return (
     <main
@@ -20,7 +17,7 @@ const Contact = () => {
         min-h-screen
         overflow-hidden
         bg-white
-        text-black
+        text-[#193A7E]
       "
     >
 
@@ -111,9 +108,7 @@ const Contact = () => {
 
           <div>
 
-            {/* ===============================================
-                SECTION LABEL
-            =============================================== */}
+            {/* SECTION LABEL */}
 
             <div
               className="
@@ -123,7 +118,7 @@ const Contact = () => {
               "
             >
 
-              {/* LEFT LINE — FADES OUT TOWARDS LEFT */}
+              {/* LEFT LINE */}
 
               <span
                 className="
@@ -133,14 +128,13 @@ const Contact = () => {
 
                   bg-gradient-to-r
                   from-transparent
-                  via-black/10
-                  to-black/20
+                  via-[#193A7E]/10
+                  to-[#193A7E]/20
 
                   sm:w-20
                   lg:w-24
                 "
               />
-
 
               {/* LABEL */}
 
@@ -153,14 +147,13 @@ const Contact = () => {
                   uppercase
                   tracking-[0.3em]
 
-                  text-black/45
+                  text-[#193A7E]/60
                 "
               >
                 Get In Touch
               </span>
 
-
-              {/* RIGHT LINE — FADES OUT TOWARDS RIGHT */}
+              {/* RIGHT LINE */}
 
               <span
                 className="
@@ -170,8 +163,8 @@ const Contact = () => {
 
                   bg-gradient-to-l
                   from-transparent
-                  via-black/10
-                  to-black/20
+                  via-[#193A7E]/10
+                  to-[#193A7E]/20
 
                   sm:w-20
                   lg:w-24
@@ -186,59 +179,33 @@ const Contact = () => {
             ================================================= */}
 
             <h1
-              className="
-                mt-9
-                max-w-5xl
+  className="
+    mt-9
+    max-w-3xl
+    text-left
+    text-[26px]
+    font-semibold
+    leading-[1.15]
+    tracking-[-0.035em]
+    text-[#193A7E]
+    sm:text-[32px]
+    md:text-[38px]
+    lg:text-[44px]
+    xl:text-[48px]
+  "
+>
+  <span className="block">
+    Have a <span className="text-[#193A7E]">Deed Drafting</span>
+  </span>
 
-                text-left
+  <span className="block whitespace-nowrap">
+    or <span className="text-[#16A66A]">Property Documentation</span>
+  </span>
 
-                text-[56px]
-                font-semibold
-                leading-[0.9]
-
-                text-black
-
-                sm:text-7xl
-                md:text-8xl
-
-                lg:text-[100px]
-
-                xl:text-[118px]
-              "
-            >
-
-              {/* FIRST LINE */}
-
-              <span
-                className="
-                  block
-                  tracking-[-0.06em]
-                "
-              >
-                Let's talk,
-              </span>
-
-
-              {/* SECOND LINE */}
-
-              <span
-                className="
-                  block
-
-                  font-normal
-                  italic
-                  tracking-normal
-
-                  text-black/50
-
-                  sm:-mt-1
-                  lg:-mt-2
-                "
-              >
-                Property.
-              </span>
-
-            </h1>
+  <span className="block">
+    Requirement?
+  </span>
+</h1>
 
           </div>
 
@@ -260,7 +227,7 @@ const Contact = () => {
                 text-base
                 leading-7
 
-                text-black/55
+                text-[#294A76]/70
 
                 sm:text-lg
                 sm:leading-8
@@ -314,7 +281,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-black/10
+                border-[#193A7E]/10
 
                 py-8
 
@@ -334,7 +301,8 @@ const Contact = () => {
                     font-semibold
                     uppercase
                     tracking-[0.3em]
-                    text-black/40
+
+                    text-[#193A7E]/50
                   "
                 >
                   Phone Number
@@ -342,7 +310,7 @@ const Contact = () => {
               </div>
 
 
-              {/* VALUES */}
+              {/* ONLY ONE NUMBER */}
 
               <div
                 className="
@@ -355,31 +323,28 @@ const Contact = () => {
                 "
               >
 
-                {contactData.phoneNumbers.map((number) => (
-                  <a
-                    key={number}
-                    href={`tel:${number.replace(/\s/g, "")}`}
-                    className="
-                      w-fit
+                <a
+                  href={`tel:${phoneNumber.replace(/\s/g, "")}`}
+                  className="
+                    w-fit
 
-                      text-2xl
-                      font-medium
-                      leading-tight
-                      tracking-[-0.035em]
+                    text-2xl
+                    font-medium
+                    leading-tight
+                    tracking-[-0.035em]
 
-                      text-black
+                    text-[#193A7E]
 
-                      transition-opacity
-                      duration-300
+                    transition-opacity
+                    duration-300
 
-                      hover:opacity-50
+                    hover:opacity-50
 
-                      sm:text-3xl
-                    "
-                  >
-                    {number}
-                  </a>
-                ))}
+                    sm:text-3xl
+                  "
+                >
+                  {phoneNumber}
+                </a>
 
               </div>
 
@@ -396,7 +361,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-black/10
+                border-[#193A7E]/10
 
                 py-8
 
@@ -416,7 +381,8 @@ const Contact = () => {
                     font-semibold
                     uppercase
                     tracking-[0.3em]
-                    text-black/40
+
+                    text-[#193A7E]/50
                   "
                 >
                   Email
@@ -448,7 +414,7 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
 
-                    text-black
+                    text-[#193A7E]
 
                     transition-opacity
                     duration-300
@@ -476,7 +442,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-black/10
+                border-[#193A7E]/10
 
                 py-8
 
@@ -496,7 +462,8 @@ const Contact = () => {
                     font-semibold
                     uppercase
                     tracking-[0.3em]
-                    text-black/40
+
+                    text-[#193A7E]/50
                   "
                 >
                   Location
@@ -521,7 +488,7 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
 
-                    text-black
+                    text-[#193A7E]
 
                     sm:text-3xl
                   "
@@ -561,7 +528,7 @@ const Contact = () => {
                 text-sm
                 leading-6
 
-                text-black/40
+                text-[#294A76]/60
               "
             >
               Prefer a quick conversation? Connect
@@ -592,7 +559,7 @@ const Contact = () => {
 
                 rounded-full
 
-                bg-black
+                bg-[#25D366]
 
                 px-6
 
@@ -602,7 +569,7 @@ const Contact = () => {
                 duration-300
 
                 hover:-translate-y-1
-                hover:bg-[#25D366]
+                hover:bg-[#20BD5A]
 
                 hover:shadow-[0_18px_40px_rgba(37,211,102,0.20)]
 
@@ -695,13 +662,8 @@ const Contact = () => {
                   CALL
               ================================================= */}
 
-              <button
-                type="button"
-                onClick={() =>
-                  setShowCallOptions(
-                    (previous) => !previous
-                  )
-                }
+              <a
+                href={`tel:${phoneNumber.replace(/\s/g, "")}`}
                 className="
                   group
 
@@ -715,20 +677,20 @@ const Contact = () => {
                   rounded-full
 
                   border
-                  border-black/15
+                  border-[#193A7E]/15
 
                   bg-white
 
                   text-sm
                   font-semibold
-                  text-black
+                  text-[#193A7E]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
-                  hover:border-black
-                  hover:bg-black
+                  hover:border-[#193A7E]
+                  hover:bg-[#193A7E]
                   hover:text-white
                 "
               >
@@ -746,7 +708,7 @@ const Contact = () => {
 
                 Call Us
 
-              </button>
+              </a>
 
 
               {/* =================================================
@@ -772,20 +734,20 @@ const Contact = () => {
                   rounded-full
 
                   border
-                  border-black/15
+                  border-[#193A7E]/15
 
                   bg-white
 
                   text-sm
                   font-semibold
-                  text-black
+                  text-[#193A7E]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
-                  hover:border-black
-                  hover:bg-black
+                  hover:border-[#193A7E]
+                  hover:bg-[#193A7E]
                   hover:text-white
                 "
               >
@@ -807,97 +769,6 @@ const Contact = () => {
 
             </div>
 
-
-            {/* =================================================
-                CALL OPTIONS
-            ================================================= */}
-
-            {showCallOptions && (
-              <div
-                className="
-                  mt-3
-
-                  overflow-hidden
-
-                  rounded-3xl
-
-                  border
-                  border-black/10
-
-                  bg-white
-
-                  shadow-[0_20px_50px_rgba(0,0,0,0.10)]
-                "
-              >
-
-                <div
-                  className="
-                    px-5
-                    pb-3
-                    pt-5
-                  "
-                >
-
-                  <p
-                    className="
-                      text-xs
-                      font-semibold
-                      uppercase
-                      tracking-[0.2em]
-
-                      text-black/40
-                    "
-                  >
-                    Choose a number
-                  </p>
-
-                </div>
-
-
-                {contactData.phoneNumbers.map((number) => (
-                  <a
-                    key={number}
-                    href={`tel:${number.replace(/\s/g, "")}`}
-                    onClick={() =>
-                      setShowCallOptions(false)
-                    }
-                    className="
-                      flex
-                      w-full
-                      items-center
-                      justify-between
-
-                      border-t
-                      border-black/10
-
-                      px-5
-                      py-4
-
-                      text-base
-                      font-medium
-
-                      text-black
-
-                      transition-colors
-                      duration-300
-
-                      hover:bg-black
-                      hover:text-white
-                    "
-                  >
-
-                    <span>
-                      {number}
-                    </span>
-
-                    <FaPhone className="text-xs" />
-
-                  </a>
-                ))}
-
-              </div>
-            )}
-
           </div>
 
         </div>
@@ -916,7 +787,7 @@ const Contact = () => {
             gap-2
 
             border-t
-            border-black/10
+            border-[#193A7E]/10
 
             pt-5
 

@@ -1,7 +1,6 @@
 const contactData = {
   phoneNumbers: [
-    "+91 7983320163",
-    "+91 9837202864",
+    "+91 7983320163"
   ],
 
   // Replace this with the actual business email

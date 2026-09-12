@@ -1,4 +1,11 @@
-import { useState } from "react";
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
+
+import { gsap } from "gsap";
+
 import {
   FaArrowDown,
   FaArrowUp,
@@ -18,6 +25,10 @@ const categories = [
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
 
+  const contentRef = useRef(null);
+  const isFirstRender = useRef(true);
+  const isAnimating = useRef(false);
+
   const initialServices = services.slice(
     0,
     INITIAL_SERVICES
@@ -30,13 +41,101 @@ const Services = () => {
     ),
   }));
 
+  // =====================================================
+  // REVEAL WHICHEVER VIEW IS CURRENTLY RENDERED
+  // =====================================================
+
+  useLayoutEffect(() => {
+    const container = contentRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    // Skip animating on first mount — just show it as-is.
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    const cards = container.querySelectorAll(
+      ".service-card-item"
+    );
+
+    gsap.set(cards, {
+      opacity: 0,
+      y: 22,
+    });
+
+    gsap.to(cards, {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      ease: "power3.out",
+      stagger: 0.045,
+      onComplete: () => {
+        isAnimating.current = false;
+      },
+    });
+
+    // After collapsing back to the six-card view, bring the
+    // Services section back into view automatically.
+    if (!showAll) {
+      requestAnimationFrame(() => {
+        const section =
+          document.getElementById("services");
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    }
+  }, [showAll]);
+
+  // =====================================================
+  // TOGGLE HANDLER — FADE OUT CURRENT CARDS, THEN SWAP STATE
+  // =====================================================
+
+  const handleToggle = () => {
+    if (isAnimating.current) {
+      return;
+    }
+
+    const container = contentRef.current;
+
+    if (!container) {
+      setShowAll((previous) => !previous);
+      return;
+    }
+
+    isAnimating.current = true;
+
+    const cards = container.querySelectorAll(
+      ".service-card-item"
+    );
+
+    gsap.to(cards, {
+      opacity: 0,
+      y: 16,
+      duration: 0.3,
+      ease: "power2.in",
+      stagger: 0.02,
+      onComplete: () => {
+        setShowAll((previous) => !previous);
+      },
+    });
+  };
+
   return (
     <section
       id="services"
       className="
         relative
         overflow-hidden
-        bg-[#F5F8FC]
+        bg-white
 
         px-5
         py-24
@@ -249,163 +348,170 @@ const Services = () => {
         </div>
 
         {/* ===================================================
-            SIX FEATURED SERVICES
+            ANIMATED CONTENT WRAPPER
         =================================================== */}
 
-        {!showAll && (
-          <div
-            className="
-              mt-14
+        <div ref={contentRef}>
 
-              grid
-              grid-cols-1
-              gap-4
+          {/* =================================================
+              SIX FEATURED SERVICES
+          ================================================= */}
 
-              sm:mt-20
-              sm:grid-cols-2
-              sm:gap-5
+          {!showAll && (
+            <div
+              className="
+                mt-14
 
-              lg:grid-cols-3
-            "
-          >
-            {initialServices.map((service) => (
-              <ServiceCard
-                key={service.id}
-                service={service}
-              />
-            ))}
-          </div>
-        )}
+                grid
+                grid-cols-1
+                gap-4
 
-        {/* ===================================================
-            ALL SERVICES
-        =================================================== */}
+                sm:mt-20
+                sm:grid-cols-2
+                sm:gap-5
 
-        {showAll && (
-          <div
-            className="
-              mt-14
+                lg:grid-cols-3
+              "
+            >
+              {initialServices.map((service) => (
+                <ServiceCard
+                  key={service.id}
+                  service={service}
+                />
+              ))}
+            </div>
+          )}
 
-              space-y-16
+          {/* =================================================
+              ALL SERVICES
+          ================================================= */}
 
-              sm:mt-20
-              sm:space-y-24
-            "
-          >
-            {groupedServices.map(
-              ({
-                category,
-                services: categoryServices,
-              }) => (
-                <div key={category}>
+          {showAll && (
+            <div
+              className="
+                mt-14
 
-                  {/* =========================================
-                      CATEGORY HEADER
-                  ========================================= */}
+                space-y-16
 
-                  <div
-                    className="
-                      mb-7
+                sm:mt-20
+                sm:space-y-24
+              "
+            >
+              {groupedServices.map(
+                ({
+                  category,
+                  services: categoryServices,
+                }) => (
+                  <div key={category}>
 
-                      flex
-                      items-end
-                      gap-4
-
-                      sm:mb-10
-                      sm:gap-8
-                    "
-                  >
-                    <div className="min-w-0 shrink-0">
-
-                      <p
-                        className="
-                          text-[9px]
-                          font-semibold
-                          uppercase
-                          tracking-[0.16em]
-
-                          text-[#193A7E]/45
-
-                          sm:text-[10px]
-                          sm:tracking-[0.2em]
-                        "
-                      >
-                        {String(
-                          categoryServices.length
-                        ).padStart(2, "0")}{" "}
-                        Services
-                      </p>
-
-                      <h3
-                        className="
-                          mt-1.5
-
-                          max-w-[280px]
-
-                          text-xl
-                          font-semibold
-                          leading-tight
-                          tracking-[-0.03em]
-
-                          text-[#193A7E]
-
-                          sm:mt-2
-                          sm:max-w-none
-                          sm:text-3xl
-                        "
-                      >
-                        {category}
-                      </h3>
-                    </div>
-
-                    {/* =======================================
-                        CATEGORY DIVIDER
-                    ======================================= */}
+                    {/* =====================================
+                        CATEGORY HEADER
+                    ===================================== */}
 
                     <div
                       className="
-                        mb-1.5
+                        mb-7
 
-                        hidden
-                        h-px
-                        flex-1
+                        flex
+                        items-end
+                        gap-4
 
-                        bg-[#193A7E]/10
-
-                        sm:mb-2
-                        sm:block
+                        sm:mb-10
+                        sm:gap-8
                       "
-                    />
-                  </div>
+                    >
+                      <div className="min-w-0 shrink-0">
 
-                  {/* =========================================
-                      CATEGORY CARDS
-                  ========================================= */}
+                        <p
+                          className="
+                            text-[9px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.16em]
 
-                  <div
-                    className="
-                      grid
-                      grid-cols-1
-                      gap-4
+                            text-[#193A7E]/45
 
-                      sm:grid-cols-2
-                      sm:gap-5
+                            sm:text-[10px]
+                            sm:tracking-[0.2em]
+                          "
+                        >
+                          {String(
+                            categoryServices.length
+                          ).padStart(2, "0")}{" "}
+                          Services
+                        </p>
 
-                      lg:grid-cols-3
-                    "
-                  >
-                    {categoryServices.map((service) => (
-                      <ServiceCard
-                        key={service.id}
-                        service={service}
+                        <h3
+                          className="
+                            mt-1.5
+
+                            max-w-[280px]
+
+                            text-xl
+                            font-semibold
+                            leading-tight
+                            tracking-[-0.03em]
+
+                            text-[#193A7E]
+
+                            sm:mt-2
+                            sm:max-w-none
+                            sm:text-3xl
+                          "
+                        >
+                          {category}
+                        </h3>
+                      </div>
+
+                      {/* ===================================
+                          CATEGORY DIVIDER
+                      =================================== */}
+
+                      <div
+                        className="
+                          mb-1.5
+
+                          hidden
+                          h-px
+                          flex-1
+
+                          bg-[#193A7E]/10
+
+                          sm:mb-2
+                          sm:block
+                        "
                       />
-                    ))}
+                    </div>
+
+                    {/* =====================================
+                        CATEGORY CARDS
+                    ===================================== */}
+
+                    <div
+                      className="
+                        grid
+                        grid-cols-1
+                        gap-4
+
+                        sm:grid-cols-2
+                        sm:gap-5
+
+                        lg:grid-cols-3
+                      "
+                    >
+                      {categoryServices.map((service) => (
+                        <ServiceCard
+                          key={service.id}
+                          service={service}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )
-            )}
-          </div>
-        )}
+                )
+              )}
+            </div>
+          )}
+        </div>
 
         {/* ===================================================
             EXPLORE / SHOW LESS BUTTON
@@ -421,9 +527,7 @@ const Services = () => {
         >
           <button
             type="button"
-            onClick={() =>
-              setShowAll((previous) => !previous)
-            }
+            onClick={handleToggle}
             className="
               group
 

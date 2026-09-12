@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import {
   BrowserRouter,
   Routes,
@@ -6,8 +7,10 @@ import {
   useLocation,
 } from "react-router-dom";
 
+import { gsap } from "gsap";
+
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./Pages/Home/Home"
+import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 
 // =====================================================
@@ -18,7 +21,8 @@ import Contact from "./Pages/Contact/Contact";
 const PageTitle = () => {
   const location = useLocation();
 
-  const [section, setSection] = useState("home");
+  const [section, setSection] =
+    useState("home");
 
   // =====================================================
   // DETECT CURRENT SECTION WHILE SCROLLING
@@ -68,25 +72,35 @@ const PageTitle = () => {
 
     const handleScroll = () => {
       // -------------------------------------------------
-      // POSITION WE USE TO DETERMINE THE ACTIVE SECTION
+      // POSITION WE USE TO DETERMINE ACTIVE SECTION
       // -------------------------------------------------
 
-      const scrollPosition = window.scrollY + 180;
+      const scrollPosition =
+        window.scrollY + 180;
 
       let currentSection = "home";
 
-      sections.forEach((sectionItem) => {
-        const element =
-          document.getElementById(sectionItem.id);
+      sections.forEach(
+        (sectionItem) => {
+          const element =
+            document.getElementById(
+              sectionItem.id
+            );
 
-        if (!element) return;
+          if (!element) return;
 
-        const sectionTop = element.offsetTop;
+          const sectionTop =
+            element.offsetTop;
 
-        if (scrollPosition >= sectionTop) {
-          currentSection = sectionItem.id;
+          if (
+            scrollPosition >=
+            sectionTop
+          ) {
+            currentSection =
+              sectionItem.id;
+          }
         }
-      });
+      );
 
       setSection(currentSection);
     };
@@ -96,7 +110,9 @@ const PageTitle = () => {
     window.addEventListener(
       "scroll",
       handleScroll,
-      { passive: true }
+      {
+        passive: true,
+      }
     );
 
     return () => {
@@ -114,42 +130,104 @@ const PageTitle = () => {
   useEffect(() => {
     const titles = {
       home: "DeedBanwao - Home",
-      services: "DeedBanwao - Services",
-      process: "DeedBanwao - Process",
-      "why-us": "DeedBanwao - Why Us",
+      services:
+        "DeedBanwao - Services",
+      process:
+        "DeedBanwao - Process",
+      "why-us":
+        "DeedBanwao - Why Us",
       faq: "DeedBanwao - FAQs",
-      contact: "DeedBanwao - Contact",
+      contact:
+        "DeedBanwao - Contact",
     };
 
     document.title =
-      titles[section] || "DeedBanwao";
+      titles[section] ||
+      "DeedBanwao";
   }, [section]);
 
   return null;
 };
 
 // =====================================================
-// APP
+// ANIMATED ROUTES
+// GSAP PAGE TRANSITION
 // =====================================================
 
-const App = () => {
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  const pageRef = useRef(null);
+
+  // =====================================================
+  // PAGE ENTER ANIMATION
+  // =====================================================
+
+  useEffect(() => {
+    if (!pageRef.current) return;
+
+    const page = pageRef.current;
+
+    // Kill any animation already running
+    gsap.killTweensOf(page);
+
+    // -----------------------------------------------------
+    // CONTACT PAGE
+    // -----------------------------------------------------
+
+    if (
+      location.pathname === "/contact"
+    ) {
+      gsap.fromTo(
+        page,
+        {
+          opacity: 0,
+          y: 24,
+          filter: "blur(7px)",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.75,
+          ease: "power3.out",
+        }
+      );
+
+      return;
+    }
+
+    // -----------------------------------------------------
+    // HOME PAGE
+    // -----------------------------------------------------
+
+    gsap.fromTo(
+      page,
+      {
+        opacity: 0,
+        y: 18,
+        filter: "blur(5px)",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.7,
+        ease: "power3.out",
+      }
+    );
+  }, [location.pathname]);
+
+  // =====================================================
+  // ROUTES
+  // =====================================================
+
   return (
-    <BrowserRouter>
-
-      {/* =====================================================
-          PAGE TITLE
-      ===================================================== */}
-
-      <PageTitle />
-
-      {/* =====================================================
-          GLOBAL NAVBAR
-      ===================================================== */}
-
-      <Navbar />
-
-      <Routes>
-
+    <div
+      ref={pageRef}
+      className="min-h-screen"
+    >
+      <Routes location={location}>
         {/* =================================================
             HOME
         ================================================= */}
@@ -167,9 +245,35 @@ const App = () => {
           path="/contact"
           element={<Contact />}
         />
-
       </Routes>
+    </div>
+  );
+};
 
+// =====================================================
+// APP
+// =====================================================
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      {/* =====================================================
+          PAGE TITLE
+      ===================================================== */}
+
+      <PageTitle />
+
+      {/* =====================================================
+          GLOBAL NAVBAR
+      ===================================================== */}
+
+      <Navbar />
+
+      {/* =====================================================
+          ANIMATED ROUTES
+      ===================================================== */}
+
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 };

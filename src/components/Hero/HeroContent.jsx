@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import {
   FaArrowRight,
   FaCheck,
@@ -18,10 +20,37 @@ const HeroContent = ({
   showEnquiry,
   setShowEnquiry,
 }) => {
+  // =====================================================
+  // OPEN ENQUIRY FORM FROM MOBILE MENU
+  // =====================================================
+
+  useEffect(() => {
+    const openEnquiryForm = () => {
+      setShowEnquiry(true);
+    };
+
+    window.addEventListener(
+      "open-enquiry-form",
+      openEnquiryForm
+    );
+
+    return () => {
+      window.removeEventListener(
+        "open-enquiry-form",
+        openEnquiryForm
+      );
+    };
+  }, [setShowEnquiry]);
+
+  // =====================================================
+  // SUBMIT ENQUIRY
+  // =====================================================
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const formData =
+      new FormData(event.currentTarget);
 
     const name = formData.get("name");
     const phone = formData.get("phone");
@@ -41,11 +70,15 @@ Message: ${message || "Not provided"}
 Please guide me regarding the next steps.
     `.trim();
 
-    const whatsappUrl = `https://wa.me/917983320163?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    const whatsappUrl =
+      `https://wa.me/917983320163?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
 
-    window.open(whatsappUrl, "_blank");
+    window.open(
+      whatsappUrl,
+      "_blank"
+    );
   };
 
   return (
@@ -143,6 +176,7 @@ Please guide me regarding the next steps.
               className="
                 h-1.5
                 w-1.5
+
                 rounded-full
 
                 bg-[#193A7E]
@@ -225,7 +259,10 @@ Please guide me regarding the next steps.
               sm:items-center
             "
           >
-            {/* Get In Touch */}
+            {/* =================================================
+                GET IN TOUCH
+            ================================================= */}
+
             <a
               href="/contact"
               className="
@@ -274,10 +311,15 @@ Please guide me regarding the next steps.
               />
             </a>
 
-            {/* Get Enquiry */}
+            {/* =================================================
+                GET ENQUIRY
+            ================================================= */}
+
             <button
               type="button"
-              onClick={() => setShowEnquiry(true)}
+              onClick={() =>
+                setShowEnquiry(true)
+              }
               className="
                 group
 
@@ -455,6 +497,7 @@ Please guide me regarding the next steps.
               "
             >
               {/* Document Header */}
+
               <div
                 className="
                   flex
@@ -467,6 +510,7 @@ Please guide me regarding the next steps.
                     className="
                       h-2
                       w-20
+
                       rounded-full
 
                       bg-[#193A7E]/20
@@ -478,6 +522,7 @@ Please guide me regarding the next steps.
                       mt-3
                       h-2
                       w-32
+
                       rounded-full
 
                       bg-black/[0.07]
@@ -505,6 +550,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Document Lines */}
+
               <div className="mt-10 space-y-4">
                 <div
                   className="
@@ -544,6 +590,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Property Details */}
+
               <div
                 className="
                   mt-9
@@ -580,6 +627,7 @@ Please guide me regarding the next steps.
                 <div
                   className="
                     mt-4
+
                     space-y-3
                   "
                 >
@@ -604,6 +652,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Signature */}
+
               <div
                 className="
                   absolute
@@ -621,6 +670,7 @@ Please guide me regarding the next steps.
                     className="
                       h-px
                       w-28
+
                       bg-black/10
                     "
                   />
@@ -772,6 +822,7 @@ Please guide me regarding the next steps.
                   className="
                     h-1.5
                     w-1.5
+
                     rounded-full
 
                     bg-[#193A7E]
@@ -911,6 +962,7 @@ Please guide me regarding the next steps.
             "
           >
             {/* Form Header */}
+
             <div
               className="
                 flex
@@ -968,9 +1020,12 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Close */}
+
               <button
                 type="button"
-                onClick={() => setShowEnquiry(false)}
+                onClick={() =>
+                  setShowEnquiry(false)
+                }
                 className="
                   flex
                   h-9
@@ -1011,6 +1066,7 @@ Please guide me regarding the next steps.
               "
             >
               {/* Name + Phone */}
+
               <div
                 className="
                   grid
@@ -1021,6 +1077,7 @@ Please guide me regarding the next steps.
                 "
               >
                 {/* Name */}
+
                 <div>
                   <label
                     htmlFor="name"
@@ -1077,6 +1134,7 @@ Please guide me regarding the next steps.
                 </div>
 
                 {/* Phone */}
+
                 <div>
                   <label
                     htmlFor="phone"
@@ -1134,6 +1192,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Requirement */}
+
               <div>
                 <label
                   htmlFor="service"
@@ -1187,7 +1246,10 @@ Please guide me regarding the next steps.
                       focus:ring-[#193A7E]/[0.05]
                     "
                   >
-                    <option value="" disabled>
+                    <option
+                      value=""
+                      disabled
+                    >
                       Select a service
                     </option>
 
@@ -1250,6 +1312,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Message */}
+
               <div>
                 <label
                   htmlFor="message"
@@ -1307,6 +1370,7 @@ Please guide me regarding the next steps.
               </div>
 
               {/* Submit */}
+
               <button
                 type="submit"
                 className="
@@ -1353,6 +1417,7 @@ Please guide me regarding the next steps.
               </button>
 
               {/* Privacy note */}
+
               <p
                 className="
                   text-center

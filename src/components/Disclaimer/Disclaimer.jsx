@@ -74,6 +74,7 @@ const Disclaimer = ({ onProceed }) => {
           relative
           w-full
           max-w-[570px]
+          rounded-[20px]
           border
           border-white/80
           bg-white/95
@@ -81,6 +82,7 @@ const Disclaimer = ({ onProceed }) => {
           py-7
           shadow-[0_25px_80px_rgba(25,58,126,0.16)]
           backdrop-blur-xl
+          sm:rounded-[24px]
           sm:px-9
           sm:py-9
         "
@@ -101,7 +103,17 @@ const Disclaimer = ({ onProceed }) => {
             TITLE
         ===================================================== */}
 
-        <div className="mb-6 flex items-center gap-3 border-b border-[#193A7E]/10 pb-5">
+        <div
+          className="
+            mb-6
+            flex
+            items-center
+            gap-3
+            border-b
+            border-[#193A7E]/10
+            pb-5
+          "
+        >
           <div
             className="
               flex
@@ -112,8 +124,9 @@ const Disclaimer = ({ onProceed }) => {
               justify-center
               rounded-full
               border
-              border-[#193A7E]/12
-              text-[#193A7E]
+              border-[#B85C5C]/20
+              bg-[#B85C5C]/5
+              text-[#B85C5C]
             "
           >
             <LuFileWarning
@@ -165,44 +178,47 @@ const Disclaimer = ({ onProceed }) => {
             AGREEMENT CHECKBOX
         ===================================================== */}
 
-        <label
-          className="
-            mt-7
-            flex
-            cursor-pointer
-            items-start
-            gap-3
-            select-none
-          "
-        >
-          <input
-            type="checkbox"
-            checked={agreed}
-            onChange={(event) =>
-              setAgreed(event.target.checked)
-            }
+        <div className="mt-7">
+          <label
             className="
-              mt-[3px]
-              h-[17px]
-              w-[17px]
-              shrink-0
+              flex
+              w-full
               cursor-pointer
-              accent-[#193A7E]
-            "
-          />
-
-          <span
-            className="
-              text-[13px]
-              leading-6
-              text-[#294A76]
-              sm:text-[14px]
+              items-start
+              gap-3
+              select-none
             "
           >
-            I have read and understood the above disclaimer
-            and agree to proceed to the DeedBanwao website.
-          </span>
-        </label>
+            <input
+              type="checkbox"
+              checked={agreed}
+              onChange={(event) =>
+                setAgreed(event.target.checked)
+              }
+              className="
+                mt-[4px]
+                h-[17px]
+                w-[17px]
+                shrink-0
+                cursor-pointer
+                accent-[#193A7E]
+              "
+            />
+
+            <span
+              className="
+                flex-1
+                text-[13px]
+                leading-6
+                text-[#294A76]
+                sm:text-[14px]
+              "
+            >
+              I have read and understood the above disclaimer
+              and agree to proceed to the DeedBanwao website.
+            </span>
+          </label>
+        </div>
 
         {/* =====================================================
             ACTION BUTTONS

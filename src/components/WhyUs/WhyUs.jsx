@@ -5,6 +5,7 @@ const WhyUs = () => {
   return (
     <section
       id="why-us"
+      aria-labelledby="why-us-heading"
       className="
         relative
         overflow-hidden
@@ -199,20 +200,21 @@ const WhyUs = () => {
               {/* LABEL */}
 
               <span
-  className="
-    shrink-0
-    leading-none
-    text-[11px]
-    font-semibold
-    uppercase
-    tracking-[0.22em]
-    text-[#193A7E]/65
-    sm:text-[15px]
-    sm:tracking-[0.3em]
-  "
->
-  Why DeedBanwao
-</span>
+                className="
+                  shrink-0
+                  leading-none
+                  text-[11px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.22em]
+                  text-[#193A7E]/65
+                  sm:text-[15px]
+                  sm:tracking-[0.3em]
+                "
+              >
+                Why DeedBanwao
+              </span>
+
               {/* RIGHT LINE */}
 
               <span
@@ -238,6 +240,7 @@ const WhyUs = () => {
             =============================================== */}
 
             <h2
+              id="why-us-heading"
               className="
                 mt-7
 
@@ -269,7 +272,7 @@ const WhyUs = () => {
                   font-normal
                   italic
 
-                 text-[#16A66A]
+                  text-[#16A66A]
                 "
               >
                 More peace.
@@ -302,10 +305,10 @@ const WhyUs = () => {
                 sm:leading-8
               "
             >
-              Property documentation can feel complicated
-              when you don't know what is required or what
-              comes next. We aim to make that journey
-              simpler, clearer and more organised.
+              DeedBanwao helps simplify property documentation and
+              deed drafting in Meerut by making document requirements,
+              document checking, drafting and registration-related
+              assistance clearer and easier to manage.
             </p>
           </div>
         </div>

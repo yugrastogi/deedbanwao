@@ -132,6 +132,7 @@ const Services = () => {
   return (
     <section
       id="services"
+      aria-labelledby="services-heading"
       className="
         relative
         overflow-hidden
@@ -284,6 +285,7 @@ const Services = () => {
           ================================================= */}
 
           <h2
+            id="services-heading"
             className="
               mt-6
 
@@ -311,7 +313,7 @@ const Services = () => {
               className="
                 font-normal
                 italic
-               text-[#16A66A]
+                text-[#16A66A]
               "
             >
               Handled Properly.
@@ -319,7 +321,7 @@ const Services = () => {
           </h2>
 
           {/* =================================================
-              DESCRIPTION
+              SEO-OPTIMIZED DESCRIPTION
           ================================================= */}
 
           <p
@@ -341,9 +343,12 @@ const Services = () => {
               sm:leading-7
             "
           >
-            From Drafting To Registration, We Help You
-            Navigate The Documentation Behind Your
-            Property With Clarity And Confidence.
+            DeedBanwao provides property documentation and
+            deed drafting assistance in Meerut, covering
+            Sale Deeds, Gift Deeds, Wills, GPA, SPA, Partition
+            Deeds, Rent Agreements and other property-related
+            documentation, along with document checking and
+            registration assistance.
           </p>
         </div>
 

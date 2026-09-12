@@ -19,6 +19,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
+      aria-labelledby="faq-heading"
       className="
         relative
         overflow-hidden
@@ -138,6 +139,7 @@ const FAQ = () => {
           =============================================== */}
 
           <h2
+            id="faq-heading"
             className="
               mt-6
 
@@ -165,7 +167,7 @@ const FAQ = () => {
                 font-normal
                 italic
 
-               text-[#16A66A]
+                text-[#16A66A]
               "
             >
               We make it simple.
@@ -195,8 +197,10 @@ const FAQ = () => {
               sm:leading-8
             "
           >
-            Common questions people ask before getting
-            their property documents prepared.
+            Find answers to common questions about property
+            documentation, deed drafting, document checking,
+            registration assistance and other property-related
+            services provided by DeedBanwao in Meerut.
           </p>
         </div>
 

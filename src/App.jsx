@@ -21,8 +21,7 @@ import Contact from "./Pages/Contact/Contact";
 const PageTitle = () => {
   const location = useLocation();
 
-  const [section, setSection] =
-    useState("home");
+  const [section, setSection] = useState("home");
 
   // =====================================================
   // DETECT CURRENT SECTION WHILE SCROLLING
@@ -50,23 +49,28 @@ const PageTitle = () => {
     const sections = [
       {
         id: "home",
-        title: "DeedBanwao - Home",
+        title:
+          "DeedBanwao | Property Documentation & Deed Drafting in Meerut",
       },
       {
         id: "services",
-        title: "DeedBanwao - Services",
+        title:
+          "DeedBanwao | Property Deed & Documentation Services in Meerut",
       },
       {
         id: "process",
-        title: "DeedBanwao - Process",
+        title:
+          "DeedBanwao | Property Documentation Process in Meerut",
       },
       {
         id: "why-us",
-        title: "DeedBanwao - Why Us",
+        title:
+          "DeedBanwao | Trusted Property Documentation in Meerut",
       },
       {
         id: "faq",
-        title: "DeedBanwao - FAQs",
+        title:
+          "DeedBanwao | Property Documentation FAQs | Meerut",
       },
     ];
 
@@ -129,21 +133,28 @@ const PageTitle = () => {
 
   useEffect(() => {
     const titles = {
-      home: "DeedBanwao - Home",
+      home:
+        "DeedBanwao | Property Documentation & Deed Drafting in Meerut",
+
       services:
-        "DeedBanwao - Services",
+        "DeedBanwao | Property Deed & Documentation Services in Meerut",
+
       process:
-        "DeedBanwao - Process",
+        "DeedBanwao | Property Documentation Process in Meerut",
+
       "why-us":
-        "DeedBanwao - Why Us",
-      faq: "DeedBanwao - FAQs",
+        "DeedBanwao | Trusted Property Documentation in Meerut",
+
+      faq:
+        "DeedBanwao | Property Documentation FAQs | Meerut",
+
       contact:
-        "DeedBanwao - Contact",
+        "DeedBanwao | Contact | Property Documentation in Meerut",
     };
 
     document.title =
       titles[section] ||
-      "DeedBanwao";
+      "DeedBanwao | Property Documentation & Deed Drafting in Meerut";
   }, [section]);
 
   return null;

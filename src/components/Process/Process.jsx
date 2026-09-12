@@ -5,6 +5,7 @@ const Process = () => {
   return (
     <section
       id="process"
+      aria-labelledby="process-heading"
       className="
         relative
         overflow-hidden
@@ -174,6 +175,7 @@ const Process = () => {
             =============================================== */}
 
             <h2
+              id="process-heading"
               className="
                 mt-6
 
@@ -229,10 +231,10 @@ const Process = () => {
                 sm:text-lg
               "
             >
-              A straightforward process designed to keep
-              your property documentation clear, organised,
-              and easy to follow from the first conversation
-              to the final stage.
+              A straightforward process for property documentation
+              and deed drafting in Meerut, designed to keep your
+              documents clear, organised, and easy to follow from
+              the first conversation to the final registration stage.
             </p>
 
           </div>

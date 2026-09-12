@@ -74,7 +74,7 @@ Requirement: ${service}
 Message: ${message || "Not provided"}
 
 Please guide me regarding the next steps.
-    `.trim();
+`.trim();
 
     const whatsappUrl =
       `https://wa.me/917983320163?text=${encodeURIComponent(
@@ -104,7 +104,7 @@ Please guide me regarding the next steps.
 
         px-5
         pb-16
-        pt-28
+        pt-36
 
         sm:px-6
         sm:pb-20
@@ -150,6 +150,22 @@ Please guide me regarding the next steps.
 
           <p
             className="
+              mb-3
+
+              text-xs
+              font-semibold
+              tracking-[-0.01em]
+
+              text-[#16A66A]
+
+              sm:text-sm
+            "
+          >
+            Property Documentation &amp; Deed Drafting in Meerut
+          </p>
+
+          <p
+            className="
               mb-6
 
               text-[11px]
@@ -166,6 +182,8 @@ Please guide me regarding the next steps.
           >
             Your Trusted Partner for Property Documentation
           </p>
+
+          {/* SEO SUPPORTING HEADING */}
 
           {/* HEADING */}
 
@@ -215,7 +233,13 @@ Please guide me regarding the next steps.
               sm:leading-8
             "
           >
-            Expert drafting, review, and coordination for Sale Deeds, Gift Deeds, Wills, and Rent Agreements and all other Property Related Deeds, right from the comfort of your home.
+            Professional property documentation and deed
+            drafting assistance in Meerut, including Sale
+            Deeds, Gift Deeds, Wills, GPA, SPA, Partition
+            Deeds, Rent Agreements and other property-related
+            deeds. Get document checking, drafting guidance
+            and registration assistance from the comfort of
+            your home.
           </p>
 
           {/* BUTTONS */}
@@ -398,7 +422,7 @@ Please guide me regarding the next steps.
           >
             <img
               src={propertyDocument}
-              alt="Property deeds and documentation"
+              alt="Property deed documents and property documentation"
               className="
                 block
 
@@ -900,7 +924,6 @@ Please guide me regarding the next steps.
               </button>
 
               {/* PRIVACY */}
-
 
             </form>
           </div>

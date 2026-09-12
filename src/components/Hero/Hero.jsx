@@ -38,30 +38,21 @@ const Hero = () => {
       return;
     }
 
-    gsap.killTweensOf([
-      content,
-      visual,
-      graphics,
-      form,
-    ]);
-
     // ---------------------------------------------------
-    // INITIAL FORM STATE
+    // IMPORTANT:
+    // Only control the INITIAL state here.
+    // Do NOT run the close animation on mount.
     // ---------------------------------------------------
 
-    gsap.set(form, {
-      display: "none",
-      opacity: 0,
-      scale: 0.97,
-      x: 25,
-      y: 15,
-      filter: "blur(7px)",
-      pointerEvents: "none",
+    gsap.set(content, {
+      x: 0,
+      opacity: 1,
     });
 
-    // ---------------------------------------------------
-    // INITIAL IMAGE STATE
-    // ---------------------------------------------------
+    gsap.set(visual, {
+      x: 0,
+      opacity: 1,
+    });
 
     gsap.set(graphics, {
       display: "flex",
@@ -71,6 +62,16 @@ const Hero = () => {
       y: 0,
       filter: "blur(0px)",
       pointerEvents: "auto",
+    });
+
+    gsap.set(form, {
+      display: "none",
+      opacity: 0,
+      scale: 0.97,
+      x: 25,
+      y: 15,
+      filter: "blur(7px)",
+      pointerEvents: "none",
     });
 
     // ---------------------------------------------------
@@ -110,14 +111,9 @@ const Hero = () => {
       );
 
     return () => {
+      // Only kill THIS entrance timeline.
+      // Do not kill all tweens on the refs.
       timeline.kill();
-
-      gsap.killTweensOf([
-        content,
-        visual,
-        graphics,
-        form,
-      ]);
     };
   }, []);
 
@@ -138,11 +134,48 @@ const Hero = () => {
       return;
     }
 
-    gsap.killTweensOf([
-      content,
-      graphics,
-      form,
-    ]);
+    // ---------------------------------------------------
+    // INITIAL RENDER
+    // ---------------------------------------------------
+    //
+    // When showEnquiry is false on the first render,
+    // the initial setup above has already handled the
+    // correct state.
+    //
+    // We do NOT run a close animation here.
+    // ---------------------------------------------------
+
+    if (!showEnquiry) {
+      gsap.set(content, {
+        x: 0,
+      });
+
+      gsap.set(form, {
+        display: "none",
+        opacity: 0,
+        scale: 0.97,
+        x: 25,
+        y: 15,
+        filter: "blur(7px)",
+        pointerEvents: "none",
+      });
+
+      gsap.set(graphics, {
+        display: "flex",
+        opacity: 1,
+        scale: 1,
+        x: 0,
+        y: 0,
+        filter: "blur(0px)",
+        pointerEvents: "auto",
+      });
+
+      return;
+    }
+
+    // ---------------------------------------------------
+    // OPEN ENQUIRY
+    // ---------------------------------------------------
 
     const timeline = gsap.timeline({
       defaults: {
@@ -150,68 +183,119 @@ const Hero = () => {
       },
     });
 
-    // ===================================================
-    // OPEN ENQUIRY
-    // ===================================================
+    timeline
 
-    if (showEnquiry) {
-      timeline
+      // Move left content slightly left
+      .to(
+        content,
+        {
+          x: -20,
+          duration: 0.45,
+        },
+        0
+      )
 
-        // Move left content slightly left
-        .to(
-          content,
-          {
-            x: -20,
-            duration: 0.45,
-          },
-          0
-        )
-
-        // Fade / move image away
-        .to(
-          graphics,
-          {
-            opacity: 0,
-            scale: 0.96,
-            x: 25,
-            filter: "blur(7px)",
-            duration: 0.4,
-          },
-          0
-        )
-
-        // Hide image after animation
-        .set(graphics, {
-          display: "none",
-        })
-
-        // Prepare form
-        .set(form, {
-          display: "block",
+      // Fade / move image away
+      .to(
+        graphics,
+        {
           opacity: 0,
-          scale: 0.97,
+          scale: 0.96,
           x: 25,
-          y: 15,
           filter: "blur(7px)",
-          pointerEvents: "auto",
-        })
+          duration: 0.4,
+        },
+        0
+      )
 
-        // Bring form in
-        .to(form, {
-          opacity: 1,
-          scale: 1,
-          x: 0,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.55,
-        });
+      // Hide image after animation
+      .set(graphics, {
+        display: "none",
+        pointerEvents: "none",
+      })
+
+      // Prepare form
+      .set(form, {
+        display: "block",
+        opacity: 0,
+        scale: 0.97,
+        x: 25,
+        y: 15,
+        filter: "blur(7px)",
+        pointerEvents: "auto",
+      })
+
+      // Bring form in
+      .to(form, {
+        opacity: 1,
+        scale: 1,
+        x: 0,
+        y: 0,
+        filter: "blur(0px)",
+        duration: 0.55,
+      });
+
+    return () => {
+      timeline.kill();
+    };
+  }, [showEnquiry]);
+
+  // =====================================================
+  // CLOSE ENQUIRY
+  // =====================================================
+
+  useLayoutEffect(() => {
+    if (!showEnquiry) {
+      return;
     }
 
-    // ===================================================
-    // CLOSE ENQUIRY
-    // ===================================================
+    // This effect intentionally does nothing.
+    // The actual close animation is handled below
+    // using a stable ref to track the previous state.
+  }, []);
 
-    else {
+  // =====================================================
+  // CLOSE ANIMATION
+  // =====================================================
+
+  const previousEnquiryState = useRef(false);
+
+  useLayoutEffect(() => {
+    const content = contentRef.current;
+    const graphics = graphicsRef.current;
+    const form = formRef.current;
+
+    if (
+      !content ||
+      !graphics ||
+      !form
+    ) {
+      return;
+    }
+
+    // Skip first render.
+    if (!previousEnquiryState.current && !showEnquiry) {
+      previousEnquiryState.current = showEnquiry;
+      return;
+    }
+
+    // Only run when changing FROM open -> closed.
+    if (
+      previousEnquiryState.current === true &&
+      showEnquiry === false
+    ) {
+      gsap.killTweensOf([
+        content,
+        graphics,
+        form,
+      ]);
+
+      const timeline = gsap.timeline({
+        defaults: {
+          ease: "power3.inOut",
+        },
+      });
+
       timeline
 
         // Move form out
@@ -267,18 +351,20 @@ const Hero = () => {
           },
           "<"
         );
+
+      previousEnquiryState.current = showEnquiry;
+
+      return () => {
+        timeline.kill();
+      };
     }
 
-    return () => {
-      timeline.kill();
-
-      gsap.killTweensOf([
-        content,
-        graphics,
-        form,
-      ]);
-    };
+    previousEnquiryState.current = showEnquiry;
   }, [showEnquiry]);
+
+  // =====================================================
+  // RENDER
+  // =====================================================
 
   return (
     <section
@@ -286,9 +372,8 @@ const Hero = () => {
       id="home"
       className="
         relative
-
+        min-h-screen
         overflow-hidden
-
         bg-white
       "
     >

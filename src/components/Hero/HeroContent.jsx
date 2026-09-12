@@ -346,10 +346,10 @@ Please guide me regarding the next steps.
             className="
               mt-7
 
-              text-xs
+              text-lg
               font-medium
 
-              text-black/35
+              text-black/50
 
               sm:mt-8
             "
@@ -739,40 +739,20 @@ Please guide me regarding the next steps.
                       Select a service
                     </option>
 
-                    <option value="Sale Deed">
-                      Sale Deed
-                    </option>
-
-                    <option value="Gift Deed">
-                      Gift Deed
-                    </option>
-
-                    <option value="Agreement to Sell">
-                      Agreement to Sell
-                    </option>
-
-                    <option value="Will">
-                      Will
-                    </option>
-
-                    <option value="GPA / SPA">
-                      GPA / SPA
-                    </option>
-
-                    <option value="Partition Deed">
-                      Partition Deed
-                    </option>
-
-                    <option value="Family Settlement">
-                      Family Settlement
-                    </option>
-
-                    <option value="Property Document Checking">
-                      Property Document Checking
+                    <option value="Deed Drafting">
+                      Deed Drafting
                     </option>
 
                     <option value="Registration Assistance">
                       Registration Assistance
+                    </option>
+
+                    <option value="Legal Consultation">
+                      Legal Consultation
+                    </option>
+
+                    <option value="Property Documentation Review">
+                      Property Documentation Check
                     </option>
 
                     <option value="Other">

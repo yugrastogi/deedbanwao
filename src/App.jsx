@@ -10,8 +10,16 @@ import {
 import { gsap } from "gsap";
 
 import Navbar from "./components/Navbar/Navbar";
+import Disclaimer from "./components/Disclaimer/Disclaimer";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
+
+// =====================================================
+// DISCLAIMER STORAGE KEY
+// =====================================================
+
+const DISCLAIMER_STORAGE_KEY =
+  "deedbanwao-disclaimer-accepted";
 
 // =====================================================
 // PAGE TITLE
@@ -262,10 +270,10 @@ const AnimatedRoutes = () => {
 };
 
 // =====================================================
-// APP
+// WEBSITE
 // =====================================================
 
-const App = () => {
+const Website = () => {
   return (
     <BrowserRouter>
       {/* =====================================================
@@ -287,6 +295,43 @@ const App = () => {
       <AnimatedRoutes />
     </BrowserRouter>
   );
+};
+
+// =====================================================
+// APP
+// =====================================================
+
+const App = () => {
+  const [disclaimerAccepted, setDisclaimerAccepted] =
+    useState(() => {
+      return (
+        localStorage.getItem(
+          DISCLAIMER_STORAGE_KEY
+        ) === "true"
+      );
+    });
+
+  // =====================================================
+  // DISCLAIMER NOT ACCEPTED
+  // Website remains inaccessible
+  // =====================================================
+
+  if (!disclaimerAccepted) {
+    return (
+      <Disclaimer
+        onProceed={() =>
+          setDisclaimerAccepted(true)
+        }
+      />
+    );
+  }
+
+  // =====================================================
+  // DISCLAIMER ACCEPTED
+  // Show the actual website
+  // =====================================================
+
+  return <Website />;
 };
 
 export default App;

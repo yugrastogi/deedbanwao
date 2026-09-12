@@ -29,7 +29,6 @@ const footerData = {
   contact: {
     phoneNumbers: [
       "+91 7983320163",
-      "+91 9837202864",
     ],
 
     whatsapp: "7983320163",

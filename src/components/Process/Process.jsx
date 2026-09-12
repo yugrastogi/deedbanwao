@@ -289,33 +289,7 @@ const Process = () => {
               sm:gap-4
             "
           >
-            <p
-              className="
-                text-xs
-                font-medium
 
-                text-white/40
-
-                sm:text-sm
-              "
-            >
-              Four simple stages. One clear process.
-            </p>
-
-            <span
-              className="
-                text-[9px]
-                font-semibold
-                uppercase
-                tracking-[0.2em]
-
-                text-white/35
-
-                sm:text-[10px]
-              "
-            >
-              DeedBanwao
-            </span>
           </div>
         </div>
 

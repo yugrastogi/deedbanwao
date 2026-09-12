@@ -1,4 +1,10 @@
-import { FaArrowUp, FaEnvelope, FaMapMarkerAlt, FaPhone, FaWhatsapp } from "react-icons/fa";
+import {
+  FaArrowUp,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 import logo from "../../assets/images/deedbanwao_logo.svg";
 
@@ -47,10 +53,13 @@ const Footer = () => {
         relative
         overflow-hidden
         bg-[#0B2348]
+
         px-5
         pt-20
+
         sm:px-6
         sm:pt-28
+
         lg:pt-32
       "
     >
@@ -61,13 +70,18 @@ const Footer = () => {
       <div
         className="
           pointer-events-none
+
           absolute
           -right-48
           top-0
+
           h-[400px]
           w-[400px]
+
           rounded-full
+
           bg-white/[0.035]
+
           blur-[100px]
 
           sm:h-[550px]
@@ -79,13 +93,18 @@ const Footer = () => {
       <div
         className="
           pointer-events-none
+
           absolute
           -left-48
           bottom-0
+
           h-[350px]
           w-[350px]
+
           rounded-full
+
           bg-[#193A7E]/40
+
           blur-[90px]
 
           sm:h-[500px]
@@ -102,6 +121,7 @@ const Footer = () => {
         className="
           relative
           z-10
+
           mx-auto
           max-w-7xl
         "
@@ -141,9 +161,12 @@ const Footer = () => {
             <p
               className="
                 mt-6
+
                 max-w-sm
+
                 text-sm
                 leading-7
+
                 text-white/50
 
                 sm:text-base
@@ -163,6 +186,7 @@ const Footer = () => {
                 flex
                 items-center
                 gap-3
+
                 text-sm
                 text-white/45
               "
@@ -202,6 +226,7 @@ const Footer = () => {
                   }
                   className="
                     w-fit
+
                     text-sm
                     font-medium
                     text-white/65
@@ -237,7 +262,9 @@ const Footer = () => {
             </p>
 
             <div className="mt-5 flex flex-col gap-4">
-              {/* WHATSAPP */}
+              {/* =================================================
+                  WHATSAPP
+              ================================================= */}
 
               <a
                 href={`https://wa.me/${footerData.contact.whatsapp}`}
@@ -265,7 +292,9 @@ const Footer = () => {
                 </span>
               </a>
 
-              {/* PHONE 1 */}
+              {/* =================================================
+                  PHONE
+              ================================================= */}
 
               <a
                 href={`tel:${footerData.contact.phoneNumbers[0].replace(
@@ -294,36 +323,9 @@ const Footer = () => {
                 </span>
               </a>
 
-              {/* PHONE 2 */}
-
-              <a
-                href={`tel:${footerData.contact.phoneNumbers[1].replace(
-                  /\s/g,
-                  ""
-                )}`}
-                className="
-                  flex
-                  items-center
-                  gap-3
-
-                  text-sm
-                  font-medium
-                  text-white/65
-
-                  transition-all
-                  duration-300
-
-                  hover:text-white
-                "
-              >
-                <FaPhone className="text-xs" />
-
-                <span>
-                  {footerData.contact.phoneNumbers[1]}
-                </span>
-              </a>
-
-              {/* EMAIL */}
+              {/* =================================================
+                  EMAIL
+              ================================================= */}
 
               <a
                 href={`mailto:${footerData.contact.email}`}
@@ -359,10 +361,14 @@ const Footer = () => {
         <div
           className="
             mt-16
+
             rounded-[28px]
+
             border
             border-white/10
+
             bg-white/[0.035]
+
             p-6
 
             backdrop-blur-xl
@@ -395,9 +401,12 @@ const Footer = () => {
             <p
               className="
                 mt-2
+
                 max-w-xl
+
                 text-sm
                 leading-6
+
                 text-white/45
               "
             >
@@ -410,14 +419,20 @@ const Footer = () => {
             href="/contact"
             className="
               mt-6
+
               inline-flex
               w-fit
+
               items-center
               gap-2
+
               rounded-full
+
               bg-white
+
               px-5
               py-3
+
               text-sm
               font-semibold
               text-[#0B2348]
@@ -449,11 +464,14 @@ const Footer = () => {
         <div
           className="
             mt-12
+
             flex
             flex-col
             gap-4
+
             border-t
             border-white/10
+
             py-6
 
             sm:mt-16
@@ -482,8 +500,10 @@ const Footer = () => {
             className="
               flex
               w-fit
+
               items-center
               gap-2
+
               text-[10px]
               font-semibold
               uppercase
@@ -503,11 +523,15 @@ const Footer = () => {
                 flex
                 h-7
                 w-7
+
                 items-center
                 justify-center
+
                 rounded-full
+
                 border
                 border-white/10
+
                 bg-white/[0.04]
               "
             >

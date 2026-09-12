@@ -199,23 +199,20 @@ const WhyUs = () => {
               {/* LABEL */}
 
               <span
-                className="
-                  shrink-0
-
-                  text-[11px]
-                  font-semibold
-                  uppercase
-                  tracking-[0.22em]
-
-                  text-[#193A7E]/65
-
-                  sm:text-[15px]
-                  sm:tracking-[0.3em]
-                "
-              >
-                Why DeedBanwao
-              </span>
-
+  className="
+    shrink-0
+    leading-none
+    text-[11px]
+    font-semibold
+    uppercase
+    tracking-[0.22em]
+    text-[#193A7E]/65
+    sm:text-[15px]
+    sm:tracking-[0.3em]
+  "
+>
+  Why DeedBanwao
+</span>
               {/* RIGHT LINE */}
 
               <span

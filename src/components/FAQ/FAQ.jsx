@@ -23,7 +23,7 @@ const FAQ = () => {
         relative
         overflow-hidden
 
-        bg-[#F5F7FA]
+        bg-white
 
         px-5
         py-24
@@ -34,81 +34,6 @@ const FAQ = () => {
         lg:py-40
       "
     >
-      {/* =====================================================
-          CIRCULAR GRADIENT — MAIN
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          inset-0
-
-          bg-[radial-gradient(circle_at_10%_15%,#D5DCE4_0%,#E8ECF1_25%,transparent_55%)]
-        "
-      />
-
-      {/* =====================================================
-          CIRCULAR GRADIENT — RIGHT
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          inset-0
-
-          bg-[radial-gradient(circle_at_90%_25%,#DCE2E8_0%,#EEF1F4_25%,transparent_55%)]
-        "
-      />
-
-      {/* =====================================================
-          CIRCULAR GRADIENT — BOTTOM
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          inset-0
-
-          bg-[radial-gradient(circle_at_55%_100%,#DCE2E8_0%,#EEF1F4_25%,transparent_58%)]
-        "
-      />
-
-      {/* =====================================================
-          SOFT CENTER LIGHT
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          left-1/2
-          top-1/2
-
-          h-[450px]
-          w-[650px]
-
-          -translate-x-1/2
-          -translate-y-1/2
-
-          rounded-full
-
-          bg-white/60
-
-          blur-[100px]
-
-          sm:h-[600px]
-          sm:w-[900px]
-          sm:blur-[120px]
-        "
-      />
-
       {/* =====================================================
           CONTENT
       ===================================================== */}

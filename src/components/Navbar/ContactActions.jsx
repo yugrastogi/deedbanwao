@@ -1,52 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-
-import {
-  FaPhone,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 import contactData from "./contact.data";
 
-const ContactActions = ({
-  isLight = false,
-}) => {
-  const [showCallOptions, setShowCallOptions] =
-    useState(false);
-
-  const callOptionsRef = useRef(null);
-
-  // =====================================================
-  // CLOSE CALL MENU WHEN CLICKING OUTSIDE
-  // =====================================================
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        callOptionsRef.current &&
-        !callOptionsRef.current.contains(
-          event.target
-        )
-      ) {
-        setShowCallOptions(false);
-      }
-    };
-
-    document.addEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-
-    return () => {
-      document.removeEventListener(
-        "mousedown",
-        handleClickOutside
-      );
-    };
-  }, []);
+const ContactActions = ({ isLight = false }) => {
+  const phoneNumber = contactData.phoneNumbers[0];
 
   return (
     <div
-      ref={callOptionsRef}
       className="
         relative
         z-10
@@ -60,13 +20,9 @@ const ContactActions = ({
           CALL NOW
       ===================================================== */}
 
-      <button
-        type="button"
-        onClick={() =>
-          setShowCallOptions(
-            (previous) => !previous
-          )
-        }
+      <a
+        href={`tel:${phoneNumber.replace(/\s/g, "")}`}
+        aria-label="Call Now"
         className={`
           flex
           h-10
@@ -119,140 +75,7 @@ const ContactActions = ({
         <span className="hidden lg:inline">
           Call Now
         </span>
-      </button>
-
-      {/* =====================================================
-          CALL OPTIONS
-      ===================================================== */}
-
-      {showCallOptions && (
-        <div
-          className={`
-            absolute
-
-            right-0
-            top-[52px]
-
-            z-50
-
-            w-[calc(100vw-32px)]
-            max-w-72
-
-            overflow-hidden
-
-            rounded-[24px]
-
-            p-2
-
-            backdrop-blur-2xl
-            backdrop-saturate-150
-
-            shadow-[0_20px_50px_rgba(0,0,0,0.20)]
-
-            ${
-              isLight
-                ? `
-                  border
-                  border-black/[0.06]
-                  bg-white/75
-                `
-                : `
-                  border
-                  border-white/15
-                  bg-black/30
-                `
-            }
-          `}
-        >
-          {/* HEADER */}
-
-          <div
-            className={`
-              px-4
-              py-3
-
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[0.2em]
-
-              ${
-                isLight
-                  ? "text-black/45"
-                  : "text-white/55"
-              }
-            `}
-          >
-            Choose a number
-          </div>
-
-          {/* NUMBERS */}
-
-          {contactData.phoneNumbers.map(
-            (number) => (
-              <a
-                key={number}
-                href={`tel:${number.replace(
-                  /\s/g,
-                  ""
-                )}`}
-                onClick={() =>
-                  setShowCallOptions(false)
-                }
-                className={`
-                  flex
-                  w-full
-                  cursor-pointer
-
-                  items-center
-                  justify-between
-
-                  rounded-[18px]
-
-                  px-4
-                  py-3.5
-
-                  text-sm
-                  font-semibold
-
-                  transition-all
-                  duration-300
-
-                  ${
-                    isLight
-                      ? `
-                        text-black/80
-                        hover:bg-black/[0.06]
-                        hover:text-black
-                      `
-                      : `
-                        text-white/90
-                        hover:bg-white/10
-                        hover:text-white
-                      `
-                  }
-                `}
-              >
-                <span>
-                  {number}
-                </span>
-
-                <FaPhone
-                  className={`
-                    text-xs
-
-                    ${
-                      isLight
-                        ? "text-black/35"
-                        : "text-white/50"
-                    }
-                  `}
-                />
-              </a>
-            )
-          )}
-        </div>
-      )}
+      </a>
 
       {/* =====================================================
           WHATSAPP

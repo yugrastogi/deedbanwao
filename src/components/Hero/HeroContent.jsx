@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import {
+  useEffect,
+} from "react";
 
 import {
   FaArrowRight,
@@ -213,7 +215,7 @@ Please guide me regarding the next steps.
               sm:leading-8
             "
           >
-           Expert drafting, review, and coordination for Sale Deeds, Gift Deeds, Wills, and Rent Agreements and all other Property Related Deeds, right from the comfort of your home.
+            Expert drafting, review, and coordination for Sale Deeds, Gift Deeds, Wills, and Rent Agreements and all other Property Related Deeds, right from the comfort of your home.
           </p>
 
           {/* BUTTONS */}
@@ -354,7 +356,7 @@ Please guide me regarding the next steps.
               sm:mt-8
             "
           >
-            Guided • Professional • Trusted • Reliable
+            Professional • Trusted • Reliable
           </div>
         </div>
 
@@ -369,12 +371,13 @@ Please guide me regarding the next steps.
 
             mx-auto
 
-            h-[390px]
+            min-h-[560px]
             w-full
             max-w-[560px]
 
             lg:mx-0
             lg:h-[500px]
+            lg:min-h-0
             lg:max-w-none
           "
         >
@@ -425,7 +428,10 @@ Please guide me regarding the next steps.
               absolute
               inset-0
 
-              overflow-hidden
+              w-full
+
+              overflow-y-auto
+              overflow-x-hidden
 
               rounded-[30px]
 
@@ -453,7 +459,12 @@ Please guide me regarding the next steps.
                 justify-between
               "
             >
-              <div>
+              <div
+                className="
+                  min-w-0
+                  pr-3
+                "
+              >
                 <p
                   className="
                     text-[10px]
@@ -751,8 +762,8 @@ Please guide me regarding the next steps.
                       Legal Consultation
                     </option>
 
-                    <option value="Property Paper Check">
-                      Property Paper Check
+                    <option value="Property Papers Check">
+                      Property Papers Check
                     </option>
 
                     <option value="Other">
@@ -803,6 +814,7 @@ Please guide me regarding the next steps.
                   rows="2"
                   placeholder="Tell us briefly about your requirement..."
                   className="
+                    min-h-[72px]
                     w-full
 
                     resize-none
@@ -859,21 +871,24 @@ Please guide me regarding the next steps.
                   font-semibold
                   text-white
 
-                  shadow-[0_10px_25px_rgba(25,58,126,0.18)]
+                  shadow-[0_10px_25px_rgba(37,211,102,0.18)]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-0.5
-                  hover:bg-[#123064]
+                  hover:bg-[#20BD5A]
                 "
               >
                 <FaWhatsapp className="text-base" />
 
-                Send Enquiry on WhatsApp
+                <span className="truncate">
+                  Send Enquiry on WhatsApp
+                </span>
 
                 <FaArrowRight
                   className="
+                    shrink-0
                     text-xs
 
                     transition-transform
@@ -883,6 +898,10 @@ Please guide me regarding the next steps.
                   "
                 />
               </button>
+
+              {/* PRIVACY */}
+
+
             </form>
           </div>
         </div>

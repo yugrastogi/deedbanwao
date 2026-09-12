@@ -19,8 +19,8 @@ const Hero = () => {
   const graphicsRef = useRef(null);
   const formRef = useRef(null);
 
-  const animationRef = useRef(null);
-  const hasMountedRef = useRef(false);
+  const previousEnquiryState =
+    useRef(false);
 
   // =====================================================
   // INITIAL HERO SETUP + ENTRANCE
@@ -42,7 +42,7 @@ const Hero = () => {
     }
 
     // ---------------------------------------------------
-    // INITIAL CONTENT STATE
+    // INITIAL CONTENT
     // ---------------------------------------------------
 
     gsap.set(content, {
@@ -51,7 +51,7 @@ const Hero = () => {
     });
 
     // ---------------------------------------------------
-    // INITIAL VISUAL STATE
+    // INITIAL VISUAL
     // ---------------------------------------------------
 
     gsap.set(visual, {
@@ -60,11 +60,12 @@ const Hero = () => {
     });
 
     // ---------------------------------------------------
-    // INITIAL IMAGE STATE
+    // INITIAL IMAGE
     // ---------------------------------------------------
 
     gsap.set(graphics, {
       display: "flex",
+      visibility: "visible",
       opacity: 1,
       scale: 1,
       x: 0,
@@ -74,11 +75,12 @@ const Hero = () => {
     });
 
     // ---------------------------------------------------
-    // INITIAL FORM STATE
+    // INITIAL FORM
     // ---------------------------------------------------
 
     gsap.set(form, {
       display: "none",
+      visibility: "hidden",
       opacity: 0,
       scale: 0.97,
       x: 25,
@@ -123,15 +125,13 @@ const Hero = () => {
         "-=0.55"
       );
 
-    hasMountedRef.current = true;
-
     return () => {
       timeline.kill();
     };
   }, []);
 
   // =====================================================
-  // ENQUIRY OPEN / CLOSE
+  // ENQUIRY TRANSITION
   // =====================================================
 
   useLayoutEffect(() => {
@@ -147,206 +147,371 @@ const Hero = () => {
       return;
     }
 
-    // ---------------------------------------------------
-    // Don't run transition on initial render
-    // ---------------------------------------------------
+    const isMobile =
+      window.matchMedia(
+        "(max-width: 1023px)"
+      ).matches;
 
-    if (!hasMountedRef.current) {
+    // ===================================================
+    // FIRST RENDER
+    // ===================================================
+
+    if (
+      previousEnquiryState.current === false &&
+      showEnquiry === false
+    ) {
+      previousEnquiryState.current = false;
       return;
     }
 
     // ---------------------------------------------------
-    // Kill any previous transition
+    // STOP PREVIOUS TRANSITION
     // ---------------------------------------------------
 
-    if (animationRef.current) {
-      animationRef.current.kill();
-      animationRef.current = null;
-    }
+    gsap.killTweensOf([
+      content,
+      graphics,
+      form,
+    ]);
 
     // ===================================================
-    // OPEN ENQUIRY
+    // OPEN
     // ===================================================
 
-    if (showEnquiry) {
+    if (
+      previousEnquiryState.current === false &&
+      showEnquiry === true
+    ) {
       const timeline = gsap.timeline({
         defaults: {
           ease: "power3.inOut",
         },
       });
 
-      animationRef.current = timeline;
+      if (isMobile) {
+        // ------------------------------------------------
+        // MOBILE OPEN
+        // ------------------------------------------------
 
-      // -------------------------------------------------
-      // Make sure image is currently available
-      // -------------------------------------------------
+        timeline
 
-      gsap.set(graphics, {
-        display: "flex",
-        pointerEvents: "auto",
-      });
+          // Keep content fixed
+          .to(
+            content,
+            {
+              x: 0,
+              duration: 0.45,
+            },
+            0
+          )
 
-      // -------------------------------------------------
-      // Move content + image away together
-      // -------------------------------------------------
+          // Image fades away
+          .to(
+            graphics,
+            {
+              opacity: 0,
+              scale: 0.96,
+              x: 0,
+              y: -5,
+              filter: "blur(7px)",
+              duration: 0.4,
+            },
+            0
+          )
 
-      timeline
-        .to(
-          content,
-          {
-            x: -20,
-            duration: 0.45,
-          },
-          0
-        )
+          // Hide image
+          .set(graphics, {
+            display: "none",
+            visibility: "hidden",
+            pointerEvents: "none",
+          })
 
-        .to(
-          graphics,
-          {
+          // Prepare form
+          .set(form, {
+            display: "block",
+            visibility: "visible",
             opacity: 0,
-            scale: 0.96,
-            x: 25,
+            scale: 0.97,
+            x: 0,
+            y: 20,
             filter: "blur(7px)",
-            duration: 0.4,
-          },
-          0
-        )
+            pointerEvents: "auto",
+          })
 
-        // ------------------------------------------------
-        // Only hide image AFTER fade-out is complete
-        // ------------------------------------------------
+          // Form enters
+          .to(form, {
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 0.55,
+          })
 
-        .set(graphics, {
-          display: "none",
-          pointerEvents: "none",
-        })
-
+          // Scroll to form
+          .add(() => {
+            requestAnimationFrame(() => {
+              form.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            });
+          });
+      } else {
         // ------------------------------------------------
-        // Prepare form
-        // ------------------------------------------------
-
-        .set(form, {
-          display: "block",
-          opacity: 0,
-          scale: 0.97,
-          x: 25,
-          y: 15,
-          filter: "blur(7px)",
-          pointerEvents: "auto",
-        })
-
-        // ------------------------------------------------
-        // Bring form in
+        // DESKTOP OPEN
         // ------------------------------------------------
 
-        .to(form, {
-          opacity: 1,
-          scale: 1,
-          x: 0,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.55,
-        });
+        timeline
+
+          // Move content left
+          .to(
+            content,
+            {
+              x: -20,
+              duration: 0.45,
+            },
+            0
+          )
+
+          // Image disappears
+          .to(
+            graphics,
+            {
+              opacity: 0,
+              scale: 0.96,
+              x: 25,
+              filter: "blur(7px)",
+              duration: 0.4,
+            },
+            0
+          )
+
+          // Hide image
+          .set(graphics, {
+            display: "none",
+            visibility: "hidden",
+            pointerEvents: "none",
+          })
+
+          // Prepare form
+          .set(form, {
+            display: "block",
+            visibility: "visible",
+            opacity: 0,
+            scale: 0.97,
+            x: 25,
+            y: 15,
+            filter: "blur(7px)",
+            pointerEvents: "auto",
+          })
+
+          // Form enters
+          .to(form, {
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 0.55,
+          });
+      }
+
+      previousEnquiryState.current = true;
 
       return () => {
-        if (animationRef.current === timeline) {
-          timeline.kill();
-          animationRef.current = null;
-        }
+        timeline.kill();
       };
     }
 
     // ===================================================
-    // CLOSE ENQUIRY
+    // CLOSE
     // ===================================================
 
-    const timeline = gsap.timeline({
-      defaults: {
-        ease: "power3.inOut",
-      },
-    });
-
-    animationRef.current = timeline;
-
-    // ---------------------------------------------------
-    // FORM REVERSES OPENING
-    // ---------------------------------------------------
-
-    timeline
-      .to(
-        form,
-        {
-          opacity: 0,
-          scale: 0.97,
-          x: 25,
-          y: 15,
-          filter: "blur(7px)",
-          pointerEvents: "none",
-          duration: 0.55,
+    if (
+      previousEnquiryState.current === true &&
+      showEnquiry === false
+    ) {
+      const timeline = gsap.timeline({
+        defaults: {
+          ease: "power3.inOut",
         },
-        0
-      )
+      });
 
-      // -------------------------------------------------
-      // IMPORTANT:
-      // Hide form only AFTER its animation is finished
-      // -------------------------------------------------
+      if (isMobile) {
+        // ------------------------------------------------
+        // MOBILE CLOSE
+        // ------------------------------------------------
 
-      .set(form, {
-        display: "none",
-      })
+        timeline
 
-      // -------------------------------------------------
-      // IMPORTANT:
-      // Explicitly restore image to its starting state
-      // -------------------------------------------------
+          // Reverse form entrance
+          .to(
+            form,
+            {
+              opacity: 0,
+              scale: 0.97,
+              x: 0,
+              y: 20,
+              filter: "blur(7px)",
+              duration: 0.55,
+              pointerEvents: "none",
+            },
+            0
+          )
 
-      .set(graphics, {
-        display: "flex",
-        opacity: 0,
-        scale: 0.96,
-        x: 25,
-        y: 0,
-        filter: "blur(7px)",
-        pointerEvents: "auto",
-      })
+          // Hide form
+          .set(form, {
+            display: "none",
+            visibility: "hidden",
+          })
 
-      // -------------------------------------------------
-      // Bring image back
-      // -------------------------------------------------
+          // IMPORTANT:
+          // Explicitly make image visible again
+          // (pinned to time 0 so it primes BEFORE the
+          // reveal tween below runs, instead of firing
+          // after it and wiping it back to hidden)
+          .set(
+            graphics,
+            {
+              display: "flex",
+              visibility: "visible",
+              opacity: 0,
+              scale: 0.96,
+              x: 0,
+              y: -5,
+              filter: "blur(7px)",
+              pointerEvents: "auto",
+            },
+            0
+          )
 
-      .to(
-        graphics,
-        {
-          opacity: 1,
-          scale: 1,
-          x: 0,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.55,
-        },
-        0.12
-      )
+          // Bring image back
+          .to(
+            graphics,
+            {
+              visibility: "visible",
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 0.4,
+            },
+            0.15
+          )
 
-      // -------------------------------------------------
-      // Restore content at same time as image
-      // -------------------------------------------------
+          // Keep content fixed
+          .to(
+            content,
+            {
+              x: 0,
+              duration: 0.45,
+            },
+            0.15
+          )
 
-      .to(
-        content,
-        {
-          x: 0,
-          duration: 0.45,
-        },
-        0.12
-      );
+          // Return toward hero
+          // (pinned to 0 so it runs alongside the image/content
+          // reveal instead of firing after they've already
+          // settled, which read as a separate sudden jump)
+          .add(() => {
+            requestAnimationFrame(() => {
+              content.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            });
+          }, 0);
+      } else {
+        // ------------------------------------------------
+        // DESKTOP CLOSE
+        // ------------------------------------------------
 
-    return () => {
-      if (animationRef.current === timeline) {
-        timeline.kill();
-        animationRef.current = null;
+        timeline
+
+          // Reverse form entrance
+          .to(
+            form,
+            {
+              opacity: 0,
+              scale: 0.97,
+              x: 25,
+              y: 15,
+              filter: "blur(7px)",
+              duration: 0.55,
+              pointerEvents: "none",
+            },
+            0
+          )
+
+          // Hide form
+          .set(form, {
+            display: "none",
+            visibility: "hidden",
+          })
+
+          // =================================================
+          // IMPORTANT IMAGE FIX
+          // (pinned to time 0 — same reasoning as mobile close)
+          // =================================================
+
+          .set(
+            graphics,
+            {
+              display: "flex",
+              visibility: "visible",
+              opacity: 0,
+              scale: 0.96,
+              x: 25,
+              y: 0,
+              filter: "blur(7px)",
+              pointerEvents: "auto",
+            },
+            0
+          )
+
+          // =================================================
+          // IMAGE RETURNS
+          // =================================================
+
+          .to(
+            graphics,
+            {
+              visibility: "visible",
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 0.4,
+            },
+            0.15
+          )
+
+          // =================================================
+          // RESTORE CONTENT
+          // =================================================
+
+          .to(
+            content,
+            {
+              x: 0,
+              duration: 0.45,
+            },
+            0.15
+          );
       }
-    };
+
+      previousEnquiryState.current = false;
+
+      return () => {
+        timeline.kill();
+      };
+    }
+
+    previousEnquiryState.current =
+      showEnquiry;
   }, [showEnquiry]);
 
   // =====================================================

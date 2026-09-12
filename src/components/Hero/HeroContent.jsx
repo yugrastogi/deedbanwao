@@ -327,7 +327,7 @@ Please guide me regarding the next steps.
                 sm:px-7
               "
             >
-              Get Enquiry
+              Send Enquiry
 
               <FaArrowRight
                 className="

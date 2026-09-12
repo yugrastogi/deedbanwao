@@ -195,7 +195,6 @@ const Hero = () => {
 
         timeline
 
-          // Keep content fixed
           .to(
             content,
             {
@@ -205,7 +204,6 @@ const Hero = () => {
             0
           )
 
-          // Image fades away
           .to(
             graphics,
             {
@@ -219,14 +217,12 @@ const Hero = () => {
             0
           )
 
-          // Hide image
           .set(graphics, {
             display: "none",
             visibility: "hidden",
             pointerEvents: "none",
           })
 
-          // Prepare form
           .set(form, {
             display: "block",
             visibility: "visible",
@@ -238,7 +234,6 @@ const Hero = () => {
             pointerEvents: "auto",
           })
 
-          // Form enters
           .to(form, {
             opacity: 1,
             scale: 1,
@@ -248,7 +243,6 @@ const Hero = () => {
             duration: 0.55,
           })
 
-          // Scroll to form
           .add(() => {
             requestAnimationFrame(() => {
               form.scrollIntoView({
@@ -264,7 +258,6 @@ const Hero = () => {
 
         timeline
 
-          // Move content left
           .to(
             content,
             {
@@ -274,7 +267,6 @@ const Hero = () => {
             0
           )
 
-          // Image disappears
           .to(
             graphics,
             {
@@ -287,14 +279,12 @@ const Hero = () => {
             0
           )
 
-          // Hide image
           .set(graphics, {
             display: "none",
             visibility: "hidden",
             pointerEvents: "none",
           })
 
-          // Prepare form
           .set(form, {
             display: "block",
             visibility: "visible",
@@ -306,7 +296,6 @@ const Hero = () => {
             pointerEvents: "auto",
           })
 
-          // Form enters
           .to(form, {
             opacity: 1,
             scale: 1,
@@ -345,7 +334,6 @@ const Hero = () => {
 
         timeline
 
-          // Reverse form entrance
           .to(
             form,
             {
@@ -360,17 +348,11 @@ const Hero = () => {
             0
           )
 
-          // Hide form
           .set(form, {
             display: "none",
             visibility: "hidden",
           })
 
-          // IMPORTANT:
-          // Explicitly make image visible again
-          // (pinned to time 0 so it primes BEFORE the
-          // reveal tween below runs, instead of firing
-          // after it and wiping it back to hidden)
           .set(
             graphics,
             {
@@ -386,7 +368,6 @@ const Hero = () => {
             0
           )
 
-          // Bring image back
           .to(
             graphics,
             {
@@ -401,7 +382,6 @@ const Hero = () => {
             0.15
           )
 
-          // Keep content fixed
           .to(
             content,
             {
@@ -411,10 +391,6 @@ const Hero = () => {
             0.15
           )
 
-          // Return toward hero
-          // (pinned to 0 so it runs alongside the image/content
-          // reveal instead of firing after they've already
-          // settled, which read as a separate sudden jump)
           .add(() => {
             requestAnimationFrame(() => {
               content.scrollIntoView({
@@ -430,7 +406,6 @@ const Hero = () => {
 
         timeline
 
-          // Reverse form entrance
           .to(
             form,
             {
@@ -445,16 +420,10 @@ const Hero = () => {
             0
           )
 
-          // Hide form
           .set(form, {
             display: "none",
             visibility: "hidden",
           })
-
-          // =================================================
-          // IMPORTANT IMAGE FIX
-          // (pinned to time 0 — same reasoning as mobile close)
-          // =================================================
 
           .set(
             graphics,
@@ -471,10 +440,6 @@ const Hero = () => {
             0
           )
 
-          // =================================================
-          // IMAGE RETURNS
-          // =================================================
-
           .to(
             graphics,
             {
@@ -488,10 +453,6 @@ const Hero = () => {
             },
             0.15
           )
-
-          // =================================================
-          // RESTORE CONTENT
-          // =================================================
 
           .to(
             content,
@@ -524,7 +485,6 @@ const Hero = () => {
       id="home"
       className="
         relative
-        min-h-screen
         overflow-hidden
         bg-white
       "

@@ -269,7 +269,7 @@ const WhyUs = () => {
                   font-normal
                   italic
 
-                  text-[#193A7E]/80
+                 text-[#16A66A]
                 "
               >
                 More peace.

@@ -135,7 +135,7 @@ const Services = () => {
       className="
         relative
         overflow-hidden
-        bg-white
+        bg-[#FAFAFA]
 
         px-5
         py-24
@@ -311,7 +311,7 @@ const Services = () => {
               className="
                 font-normal
                 italic
-                text-[#193A7E]/80
+               text-[#16A66A]
               "
             >
               Handled Properly.

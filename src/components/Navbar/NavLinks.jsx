@@ -119,11 +119,9 @@ const NavLinks = ({
   ) => {
     event.preventDefault();
 
-    /*
-      Mobile:
-      Animate the menu OUT first,
-      then perform navigation.
-    */
+    // =================================================
+    // MOBILE
+    // =================================================
 
     if (
       mobile &&
@@ -136,10 +134,9 @@ const NavLinks = ({
       return;
     }
 
-    /*
-      Desktop:
-      Navigate immediately.
-    */
+    // =================================================
+    // DESKTOP
+    // =================================================
 
     setMenuOpen?.(false);
 
@@ -153,7 +150,7 @@ const NavLinks = ({
           ? `
               flex
               flex-col
-              gap-1
+              gap-1.5
             `
           : `
               relative
@@ -200,42 +197,47 @@ const NavLinks = ({
             ${
               isLight
                 ? `
-                    text-black/75
-                    hover:bg-black/[0.06]
-                    hover:text-black
-                  `
+                  text-black/75
+                  hover:bg-black/[0.06]
+                  hover:text-black
+                `
                 : `
-                    text-white
-                    hover:bg-white/10
-                    hover:text-white
-                  `
+                  text-white
+                  hover:bg-white/10
+                  hover:text-white
+                `
             }
 
             ${
               mobile
                 ? `
-                    flex
-                    w-full
-                    items-center
-                    justify-between
+                  flex
+                  w-full
 
-                    px-3
-                    py-4
+                  items-center
+                  justify-between
 
-                    text-[2rem]
-                    leading-none
-                    tracking-[-0.035em]
+                  rounded-2xl
 
-                    sm:px-4
-                    sm:py-5
-                    sm:text-4xl
-                  `
+                  px-4
+                  py-3.5
+
+                  text-[1.35rem]
+                  leading-none
+                  tracking-[-0.025em]
+
+                  hover:bg-[#193A7E]/[0.04]
+
+                  sm:px-5
+                  sm:py-4
+                  sm:text-2xl
+                `
                 : `
-                    px-4
-                    py-2
+                  px-4
+                  py-2
 
-                    text-base
-                  `
+                  text-base
+                `
             }
           `}
         >
@@ -243,21 +245,35 @@ const NavLinks = ({
             {link.name}
           </span>
 
-          {/* Mobile Arrow */}
+          {/* =================================================
+              MOBILE ARROW
+          ================================================= */}
 
           {mobile && (
             <span
               className="
-                text-xl
-                font-normal
+                flex
+                h-8
+                w-8
+                shrink-0
 
-                text-[#193A7E]/30
+                items-center
+                justify-center
+
+                rounded-full
+
+                bg-[#193A7E]/[0.045]
+
+                text-base
+                font-normal
+                text-[#193A7E]/45
 
                 transition-all
                 duration-300
 
                 group-hover:translate-x-1
-                group-hover:text-[#193A7E]
+                group-hover:bg-[#193A7E]
+                group-hover:text-white
               "
             >
               →

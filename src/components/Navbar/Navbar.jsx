@@ -166,7 +166,9 @@ const Navbar = () => {
   // =====================================================
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (
+      event
+    ) => {
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(
@@ -211,17 +213,18 @@ const Navbar = () => {
 
     menuTimelineRef.current?.kill();
 
-    const timeline = gsap.timeline({
-      defaults: {
-        ease: "power3.inOut",
-      },
+    const timeline =
+      gsap.timeline({
+        defaults: {
+          ease: "power3.inOut",
+        },
 
-      onComplete: () => {
-        setMenuOpen(false);
+        onComplete: () => {
+          setMenuOpen(false);
 
-        callback?.();
-      },
-    });
+          callback?.();
+        },
+      });
 
     timeline.to(
       mobilePanelRef.current,
@@ -238,7 +241,10 @@ const Navbar = () => {
 
   const handleMobileEnquiry = () => {
     closeMenuWithAnimation(() => {
-      // Scroll to Hero
+      // -------------------------------------------------
+      // SCROLL TO HERO
+      // -------------------------------------------------
+
       const hero =
         document.getElementById("home");
 
@@ -249,7 +255,10 @@ const Navbar = () => {
         });
       }
 
-      // Tell Hero to open the enquiry form
+      // -------------------------------------------------
+      // OPEN HERO ENQUIRY FORM
+      // -------------------------------------------------
+
       setTimeout(() => {
         window.dispatchEvent(
           new CustomEvent(
@@ -266,6 +275,7 @@ const Navbar = () => {
         fixed
         left-0
         top-0
+
         z-30
 
         flex
@@ -335,314 +345,361 @@ const Navbar = () => {
       />
 
       {/* =====================================================
-          CONTACT BUTTONS
-      ===================================================== */}
+          ACTION AREA
 
-      <ContactActions
-        isLight={true}
-      />
+          IMPORTANT:
+          One parent controls the spacing between:
 
-      {/* =====================================================
-          MOBILE CONTROLLER
+          CALL → WHATSAPP → HAMBURGER
+
+          gap-2 = 8px
       ===================================================== */}
 
       <div
-        ref={mobileMenuRef}
         className="
-          relative
-          z-[70]
+          ml-auto
 
-          md:hidden
+          flex
+          items-center
+          gap-2
+
+          md:ml-0
         "
       >
         {/* =================================================
-            MENU BUTTON
+            CALL + WHATSAPP
         ================================================= */}
 
-        <button
-          type="button"
-          aria-label={
-            menuOpen
-              ? "Close navigation menu"
-              : "Open navigation menu"
-          }
-          aria-expanded={menuOpen}
-          onClick={() =>
-            setMenuOpen(
-              (previous) => !previous
-            )
-          }
-          className="
-            relative
-            z-[80]
-
-            flex
-            h-10
-            w-10
-            shrink-0
-
-            items-center
-            justify-center
-
-            rounded-full
-
-            bg-black/[0.05]
-
-            text-black
-
-            shadow-[inset_0_1px_1px_rgba(255,255,255,0.80)]
-
-            backdrop-blur-xl
-
-            transition-all
-            duration-300
-
-            hover:bg-black/[0.09]
-          "
-        >
-          {/* TOP */}
-
-          <span
-            className={`
-              absolute
-              h-[1.5px]
-              w-4
-              rounded-full
-              bg-black
-              transition-all
-              duration-300
-
-              ${
-                menuOpen
-                  ? "rotate-45"
-                  : "-translate-y-[5px]"
-              }
-            `}
-          />
-
-          {/* MIDDLE */}
-
-          <span
-            className={`
-              absolute
-              h-[1.5px]
-              w-4
-              rounded-full
-              bg-black
-              transition-all
-              duration-300
-
-              ${
-                menuOpen
-                  ? "opacity-0"
-                  : "opacity-100"
-              }
-            `}
-          />
-
-          {/* BOTTOM */}
-
-          <span
-            className={`
-              absolute
-              h-[1.5px]
-              w-4
-              rounded-full
-              bg-black
-              transition-all
-              duration-300
-
-              ${
-                menuOpen
-                  ? "-rotate-45"
-                  : "translate-y-[5px]"
-              }
-            `}
-          />
-        </button>
+        <ContactActions
+          isLight={true}
+        />
 
         {/* =================================================
-            FULL SCREEN MOBILE MENU
+            MOBILE CONTROLLER
         ================================================= */}
 
-        {menuOpen && (
-          <div
-            ref={mobilePanelRef}
+        <div
+          ref={mobileMenuRef}
+          className="
+            relative
+            z-[70]
+
+            md:hidden
+          "
+        >
+          {/* =================================================
+              MENU BUTTON
+          ================================================= */}
+
+          <button
+            type="button"
+            aria-label={
+              menuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
+            aria-expanded={menuOpen}
+            onClick={() =>
+              setMenuOpen(
+                (previous) => !previous
+              )
+            }
             className="
-              fixed
-              inset-0
+              relative
+              z-[80]
 
-              z-40
+              flex
+              h-10
+              w-10
+              shrink-0
 
-              h-screen
-              w-screen
+              cursor-pointer
 
-              overflow-y-auto
+              items-center
+              justify-center
 
-              bg-white
+              rounded-full
 
-              md:hidden
+              bg-black/[0.05]
+
+              text-black
+
+              shadow-[inset_0_1px_1px_rgba(255,255,255,0.80)]
+
+              backdrop-blur-xl
+
+              transition-all
+              duration-300
+
+              hover:bg-black/[0.09]
             "
           >
-            {/* =================================================
-                SUBTLE BACKGROUND
-            ================================================= */}
+            {/* TOP */}
 
-            <div
-              className="
-                pointer-events-none
-
+            <span
+              className={`
                 absolute
-                right-[-120px]
-                top-[15%]
 
-                h-[350px]
-                w-[350px]
+                h-[1.5px]
+                w-4
 
                 rounded-full
 
-                bg-[#193A7E]/[0.035]
+                bg-black
 
-                blur-[90px]
-              "
+                transition-all
+                duration-300
+
+                ${
+                  menuOpen
+                    ? "rotate-45"
+                    : "-translate-y-[5px]"
+                }
+              `}
             />
 
-            <div
-              className="
-                pointer-events-none
+            {/* MIDDLE */}
 
+            <span
+              className={`
                 absolute
-                bottom-[-150px]
-                left-[-120px]
 
-                h-[350px]
-                w-[350px]
+                h-[1.5px]
+                w-4
 
                 rounded-full
 
-                bg-[#193A7E]/[0.025]
+                bg-black
 
-                blur-[90px]
-              "
+                transition-all
+                duration-300
+
+                ${
+                  menuOpen
+                    ? "opacity-0"
+                    : "opacity-100"
+                }
+              `}
             />
 
-            {/* =================================================
-                MENU CONTENT
-            ================================================= */}
+            {/* BOTTOM */}
 
+            <span
+              className={`
+                absolute
+
+                h-[1.5px]
+                w-4
+
+                rounded-full
+
+                bg-black
+
+                transition-all
+                duration-300
+
+                ${
+                  menuOpen
+                    ? "-rotate-45"
+                    : "translate-y-[5px]"
+                }
+              `}
+            />
+          </button>
+
+          {/* =================================================
+              FULL SCREEN MOBILE MENU
+          ================================================= */}
+
+          {menuOpen && (
             <div
+              ref={mobilePanelRef}
               className="
-                relative
-                z-10
+                fixed
+                inset-0
 
-                flex
-                min-h-screen
-                flex-col
+                z-40
 
-                px-6
+                h-screen
+                w-screen
 
-                pb-8
-                pt-[110px]
+                overflow-y-auto
 
-                sm:px-10
+                bg-white
+
+                md:hidden
               "
             >
               {/* =================================================
-                  MENU HEADING
+                  SUBTLE BACKGROUND
               ================================================= */}
 
               <div
                 className="
-                  mb-10
+                  pointer-events-none
+
+                  absolute
+                  right-[-120px]
+                  top-[15%]
+
+                  h-[350px]
+                  w-[350px]
+
+                  rounded-full
+
+                  bg-[#193A7E]/[0.035]
+
+                  blur-[90px]
                 "
-              >
-                <h2
-                  className="
-                    text-5xl
-                    font-semibold
+              />
 
-                    tracking-[-0.045em]
+              <div
+                className="
+                  pointer-events-none
 
-                    text-[#193A7E]
+                  absolute
+                  bottom-[-150px]
+                  left-[-120px]
 
-                    sm:text-6xl
-                  "
-                >
-                  Menu
-                </h2>
-              </div>
+                  h-[350px]
+                  w-[350px]
 
-              {/* =================================================
-                  NAV LINKS
-              ================================================= */}
+                  rounded-full
 
-              <NavLinks
-                mobile
-                setMenuOpen={setMenuOpen}
-                isLight={true}
-                closeMenuWithAnimation={
-                  closeMenuWithAnimation
-                }
+                  bg-[#193A7E]/[0.025]
+
+                  blur-[90px]
+                "
               />
 
               {/* =================================================
-                  SEND ENQUIRY BUTTON
+                  MOBILE MENU CONTENT
               ================================================= */}
 
               <div
                 className="
-                  mt-auto
+                  relative
+                  z-10
 
-                  pt-10
+                  flex
+                  min-h-screen
+                  flex-col
+
+                  px-6
+                  pb-8
+                  pt-[105px]
+
+                  sm:px-10
+                  sm:pt-[115px]
                 "
               >
-                <button
-                  type="button"
-                  onClick={
-                    handleMobileEnquiry
-                  }
+                {/* =================================================
+                    LOGO
+                ================================================= */}
+
+                <div
                   className="
+                    mb-8
+
                     flex
-                    w-full
-
                     items-center
-                    justify-center
-                    gap-2
 
-                    rounded-full
+                    border-b
+                    border-black/[0.07]
 
-                    bg-[#193A7E]
+                    pb-7
 
-                    px-6
-                    py-4
-
-                    text-sm
-                    font-semibold
-
-                    text-white
-
-                    shadow-[0_12px_30px_rgba(25,58,126,0.18)]
-
-                    transition-all
-                    duration-300
-
-                    hover:-translate-y-1
-                    hover:bg-[#123064]
-                    hover:shadow-[0_16px_35px_rgba(25,58,126,0.24)]
-
-                    active:translate-y-0
+                    sm:mb-10
+                    sm:pb-8
                   "
                 >
-                  Send Enquiry
+                  <img
+                    src={logo}
+                    alt="DeedBanwao"
+                    className="
+                      h-10
+                      w-auto
 
-                  <span>
-                    →
-                  </span>
-                </button>
+                      sm:h-11
+                    "
+                  />
+                </div>
+
+                {/* =================================================
+                    NAV LINKS
+                ================================================= */}
+
+                <NavLinks
+                  mobile
+                  setMenuOpen={
+                    setMenuOpen
+                  }
+                  isLight={true}
+                  closeMenuWithAnimation={
+                    closeMenuWithAnimation
+                  }
+                />
+
+                {/* =================================================
+                    SEND ENQUIRY BUTTON
+                ================================================= */}
+
+                <div
+                  className="
+                    mt-auto
+
+                    pt-8
+                  "
+                >
+                  <button
+                    type="button"
+                    onClick={
+                      handleMobileEnquiry
+                    }
+                    className="
+                      flex
+                      w-full
+
+                      items-center
+                      justify-center
+                      gap-2
+
+                      rounded-full
+
+                      bg-[#193A7E]
+
+                      px-6
+                      py-4
+
+                      text-sm
+                      font-semibold
+
+                      text-white
+
+                      shadow-[0_12px_30px_rgba(25,58,126,0.18)]
+
+                      transition-all
+                      duration-300
+
+                      hover:-translate-y-1
+                      hover:bg-[#123064]
+
+                      hover:shadow-[0_16px_35px_rgba(25,58,126,0.24)]
+
+                      active:translate-y-0
+                    "
+                  >
+                    Send Enquiry
+
+                    <span>
+                      →
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </nav>
   );

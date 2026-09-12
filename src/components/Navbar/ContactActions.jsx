@@ -23,7 +23,9 @@ const ContactActions = ({
     const handleClickOutside = (event) => {
       if (
         callOptionsRef.current &&
-        !callOptionsRef.current.contains(event.target)
+        !callOptionsRef.current.contains(
+          event.target
+        )
       ) {
         setShowCallOptions(false);
       }
@@ -49,15 +51,9 @@ const ContactActions = ({
         relative
         z-10
 
-        ml-auto
-
         flex
         items-center
-        gap-1.5
-
-        sm:gap-2
-
-        md:ml-0
+        gap-2
       "
     >
       {/* =====================================================
@@ -73,7 +69,6 @@ const ContactActions = ({
         }
         className={`
           flex
-
           h-10
           w-10
           shrink-0
@@ -267,9 +262,9 @@ const ContactActions = ({
         href={`https://wa.me/${contactData.whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="WhatsApp"
         className="
           flex
-
           h-10
           w-10
           shrink-0

@@ -2,15 +2,12 @@ import { useEffect } from "react";
 
 import {
   FaArrowRight,
-  FaCheck,
   FaChevronDown,
-  FaFileContract,
-  FaLocationDot,
-  FaPenNib,
-  FaShieldHalved,
   FaWhatsapp,
   FaXmark,
 } from "react-icons/fa6";
+
+import propertyDocument from "../../assets/images/property-document.png";
 
 const HeroContent = ({
   contentRef,
@@ -21,7 +18,7 @@ const HeroContent = ({
   setShowEnquiry,
 }) => {
   // =====================================================
-  // OPEN ENQUIRY FORM FROM MOBILE MENU
+  // OPEN ENQUIRY FROM MOBILE MENU
   // =====================================================
 
   useEffect(() => {
@@ -52,10 +49,17 @@ const HeroContent = ({
     const formData =
       new FormData(event.currentTarget);
 
-    const name = formData.get("name");
-    const phone = formData.get("phone");
-    const service = formData.get("service");
-    const message = formData.get("message");
+    const name =
+      formData.get("name");
+
+    const phone =
+      formData.get("phone");
+
+    const service =
+      formData.get("service");
+
+    const message =
+      formData.get("message");
 
     const whatsappMessage = `
 Hello DeedBanwao,
@@ -89,11 +93,14 @@ Please guide me regarding the next steps.
 
         mx-auto
         flex
+
         min-h-screen
-        max-w-[1500px]
+
+        max-w-[1400px]
+
         items-center
 
-        px-4
+        px-5
         pb-16
         pt-28
 
@@ -101,11 +108,9 @@ Please guide me regarding the next steps.
         sm:pb-20
         sm:pt-32
 
-        lg:px-6
-        lg:pb-16
+        lg:px-8
+        lg:pb-12
         lg:pt-28
-
-        xl:px-8
       "
     >
       <div
@@ -117,18 +122,18 @@ Please guide me regarding the next steps.
 
           items-center
 
-          gap-12
+          gap-10
 
-          lg:grid-cols-[0.9fr_1.1fr]
-          lg:gap-16
+          lg:grid-cols-[0.95fr_1.05fr]
 
-          xl:grid-cols-[0.9fr_1.1fr]
-          xl:gap-24
+          lg:gap-12
+
+          xl:gap-16
         "
       >
-        {/* =====================================================
+        {/* =================================================
             LEFT CONTENT
-        ===================================================== */}
+        ================================================= */}
 
         <div
           ref={contentRef}
@@ -139,76 +144,49 @@ Please guide me regarding the next steps.
             text-left
           "
         >
-          {/* =====================================================
-              EYEBROW
-          ===================================================== */}
+          {/* EYEBROW */}
 
-          <div
+          <p
             className="
               mb-6
 
-              flex
-              w-fit
-              items-center
-              gap-2
-
-              rounded-full
-
-              border
-              border-[#193A7E]/10
-
-              bg-[#193A7E]/[0.035]
-
-              px-3.5
-              py-2
-
-              text-[10px]
-              font-semibold
-              tracking-[0.16em]
+              text-[11px]
+              font-bold
+              uppercase
+              tracking-[0.25em]
 
               text-[#193A7E]
 
               sm:mb-7
-              sm:px-4
+              sm:text-xs
+              sm:tracking-[0.28em]
             "
           >
-            <span
-              className="
-                h-1.5
-                w-1.5
+            Your Trusted Partner for Property Documentation
+          </p>
 
-                rounded-full
-
-                bg-[#193A7E]
-              "
-            />
-
-            LEGAL PROPERTY SUPPORT
-          </div>
-
-          {/* =====================================================
-              MAIN HEADING
-          ===================================================== */}
+          {/* HEADING */}
 
           <h1
             className="
-              max-w-[760px]
+              max-w-[650px]
 
-              text-[3.35rem]
+              text-[3rem]
               font-semibold
 
-              leading-[0.94]
-              tracking-[-0.055em]
+              leading-[0.95]
+
+              tracking-[-0.045em]
 
               text-[#193A7E]
 
-              sm:text-6xl
+              sm:text-[4rem]
 
-              md:text-7xl
+              md:text-[4.5rem]
 
-              lg:text-[5.7rem]
+              lg:text-[5rem]
 
-              xl:text-[6.4rem]
+              xl:text-[5.6rem]
             "
           >
             Paper Sahi Toh
@@ -216,13 +194,11 @@ Please guide me regarding the next steps.
             Property Sahi.
           </h1>
 
-          {/* =====================================================
-              DESCRIPTION
-          ===================================================== */}
+          {/* DESCRIPTION */}
 
           <p
             className="
-              mt-7
+              mt-6
 
               max-w-[500px]
 
@@ -232,18 +208,15 @@ Please guide me regarding the next steps.
 
               text-[#294A76]/75
 
-              sm:mt-8
+              sm:mt-7
               sm:text-lg
               sm:leading-8
             "
           >
-            Your trusted partner for property documentation,
-            deed drafting and registration assistance in Meerut.
+           Expert drafting, review, and coordination for Sale Deeds, Gift Deeds, Wills, and Rent Agreements and all other Property Related Deeds, right from the comfort of your home.
           </p>
 
-          {/* =====================================================
-              CTA BUTTONS
-          ===================================================== */}
+          {/* BUTTONS */}
 
           <div
             className="
@@ -259,9 +232,7 @@ Please guide me regarding the next steps.
               sm:items-center
             "
           >
-            {/* =================================================
-                GET IN TOUCH
-            ================================================= */}
+            {/* GET IN TOUCH */}
 
             <a
               href="/contact"
@@ -270,6 +241,7 @@ Please guide me regarding the next steps.
 
                 flex
                 h-12
+
                 items-center
                 justify-center
                 gap-2
@@ -291,7 +263,6 @@ Please guide me regarding the next steps.
 
                 hover:-translate-y-1
                 hover:bg-[#123064]
-                hover:shadow-[0_18px_40px_rgba(25,58,126,0.22)]
 
                 sm:h-13
                 sm:px-7
@@ -311,9 +282,7 @@ Please guide me regarding the next steps.
               />
             </a>
 
-            {/* =================================================
-                GET ENQUIRY
-            ================================================= */}
+            {/* GET ENQUIRY */}
 
             <button
               type="button"
@@ -325,6 +294,7 @@ Please guide me regarding the next steps.
 
                 flex
                 h-12
+
                 items-center
                 justify-center
                 gap-2
@@ -370,37 +340,27 @@ Please guide me regarding the next steps.
             </button>
           </div>
 
-          {/* =====================================================
-              TRUST LINE
-          ===================================================== */}
+          {/* TRUST */}
 
           <div
             className="
               mt-7
 
-              flex
-              items-center
-              gap-2
-
               text-xs
               font-medium
 
-              text-black/40
+              text-black/35
 
               sm:mt-8
             "
           >
-            <FaShieldHalved
-              className="text-[#193A7E]/50"
-            />
-
-            Clear process • Document focused • Meerut
+            Guided • Professional • Trusted • Reliable
           </div>
         </div>
 
-        {/* =====================================================
-            RIGHT VISUAL AREA
-        ===================================================== */}
+        {/* =================================================
+            RIGHT SIDE
+        ================================================= */}
 
         <div
           ref={visualRef}
@@ -409,17 +369,17 @@ Please guide me regarding the next steps.
 
             mx-auto
 
-            h-[430px]
+            h-[390px]
             w-full
-            max-w-[640px]
+            max-w-[560px]
 
             lg:mx-0
-            lg:h-[560px]
+            lg:h-[500px]
             lg:max-w-none
           "
         >
           {/* =================================================
-              DOCUMENT GRAPHICS
+              SINGLE HERO IMAGE
           ================================================= */}
 
           <div
@@ -427,520 +387,43 @@ Please guide me regarding the next steps.
             className="
               absolute
               inset-0
+
+              flex
+              items-center
+              justify-center
             "
           >
-            {/* =================================================
-                BACK DOCUMENT
-            ================================================= */}
-
-            <div
+            <img
+              src={propertyDocument}
+              alt="Property deeds and documentation"
               className="
-                absolute
+                block
 
-                right-[2%]
-                top-[16%]
+                h-auto
+                w-full
 
-                h-[265px]
-                w-[65%]
+                max-w-[520px]
 
-                rotate-[7deg]
+                object-contain
 
-                rounded-[26px]
+                select-none
 
-                border
-                border-black/[0.05]
+                lg:max-w-[570px]
 
-                bg-[#F8F9FB]
-
-                shadow-[0_25px_60px_rgba(15,35,70,0.07)]
-
-                lg:right-[4%]
-                lg:top-[14%]
-                lg:h-[330px]
-              "
-            />
-
-            {/* =================================================
-                MAIN DOCUMENT
-            ================================================= */}
-
-            <div
-              className="
-                absolute
-
-                left-[5%]
-                top-[9%]
-
-                h-[310px]
-                w-[78%]
-
-                rotate-[-5deg]
-
-                rounded-[28px]
-
-                border
-                border-black/[0.07]
-
-                bg-white
-
-                p-6
-
-                shadow-[0_35px_80px_rgba(15,35,70,0.10)]
-
-                sm:h-[350px]
-                sm:p-8
-
-                lg:left-[8%]
-                lg:top-[11%]
-                lg:h-[390px]
-                lg:w-[72%]
-              "
-            >
-              {/* Document Header */}
-
-              <div
-                className="
-                  flex
-                  items-start
-                  justify-between
-                "
-              >
-                <div>
-                  <div
-                    className="
-                      h-2
-                      w-20
-
-                      rounded-full
-
-                      bg-[#193A7E]/20
-                    "
-                  />
-
-                  <div
-                    className="
-                      mt-3
-                      h-2
-                      w-32
-
-                      rounded-full
-
-                      bg-black/[0.07]
-                    "
-                  />
-                </div>
-
-                <div
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-
-                    rounded-full
-
-                    bg-[#193A7E]/[0.06]
-
-                    text-[#193A7E]
-                  "
-                >
-                  <FaFileContract />
-                </div>
-              </div>
-
-              {/* Document Lines */}
-
-              <div className="mt-10 space-y-4">
-                <div
-                  className="
-                    h-2
-                    w-full
-                    rounded-full
-                    bg-black/[0.055]
-                  "
-                />
-
-                <div
-                  className="
-                    h-2
-                    w-[88%]
-                    rounded-full
-                    bg-black/[0.055]
-                  "
-                />
-
-                <div
-                  className="
-                    h-2
-                    w-[94%]
-                    rounded-full
-                    bg-black/[0.055]
-                  "
-                />
-
-                <div
-                  className="
-                    h-2
-                    w-[72%]
-                    rounded-full
-                    bg-black/[0.055]
-                  "
-                />
-              </div>
-
-              {/* Property Details */}
-
-              <div
-                className="
-                  mt-9
-
-                  rounded-2xl
-
-                  border
-                  border-[#193A7E]/[0.07]
-
-                  bg-[#193A7E]/[0.025]
-
-                  p-4
-                "
-              >
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-2
-
-                    text-[10px]
-                    font-bold
-                    uppercase
-                    tracking-[0.18em]
-
-                    text-[#193A7E]/50
-                  "
-                >
-                  <FaLocationDot />
-
-                  Property Details
-                </div>
-
-                <div
-                  className="
-                    mt-4
-
-                    space-y-3
-                  "
-                >
-                  <div
-                    className="
-                      h-2
-                      w-[85%]
-                      rounded-full
-                      bg-black/[0.06]
-                    "
-                  />
-
-                  <div
-                    className="
-                      h-2
-                      w-[65%]
-                      rounded-full
-                      bg-black/[0.06]
-                    "
-                  />
-                </div>
-              </div>
-
-              {/* Signature */}
-
-              <div
-                className="
-                  absolute
-                  bottom-7
-                  left-7
-                  right-7
-
-                  flex
-                  items-end
-                  justify-between
-                "
-              >
-                <div>
-                  <div
-                    className="
-                      h-px
-                      w-28
-
-                      bg-black/10
-                    "
-                  />
-
-                  <p
-                    className="
-                      mt-2
-
-                      text-[9px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.12em]
-
-                      text-black/30
-                    "
-                  >
-                    Applicant
-                  </p>
-                </div>
-
-                <FaPenNib
-                  className="
-                    text-[#193A7E]/30
-                  "
-                />
-              </div>
-            </div>
-
-            {/* =================================================
-                VERIFICATION CARD
-            ================================================= */}
-
-            <div
-              className="
-                absolute
-
-                bottom-[9%]
-                right-[2%]
-
-                z-20
-
-                w-[260px]
-
-                rounded-[24px]
-
-                border
-                border-black/[0.07]
-
-                bg-white/95
-
-                p-5
-
-                shadow-[0_25px_60px_rgba(15,35,70,0.13)]
-
-                backdrop-blur-xl
-
-                sm:w-[290px]
-
-                lg:bottom-[10%]
-                lg:right-[4%]
-                lg:w-[315px]
-                lg:p-6
-              "
-            >
-              <div
-                className="
-                  flex
-                  items-center
-                  justify-between
-                "
-              >
-                <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    items-center
-                    justify-center
-
-                    rounded-full
-
-                    bg-[#193A7E]/[0.07]
-
-                    text-[#193A7E]
-                  "
-                >
-                  <FaCheck />
-                </div>
-
-                <span
-                  className="
-                    rounded-full
-
-                    bg-[#193A7E]/[0.06]
-
-                    px-3
-                    py-1.5
-
-                    text-[9px]
-                    font-bold
-                    uppercase
-                    tracking-[0.12em]
-
-                    text-[#193A7E]
-                  "
-                >
-                  Verified
-                </span>
-              </div>
-
-              <h3
-                className="
-                  mt-5
-
-                  text-base
-                  font-semibold
-                  tracking-tight
-
-                  text-black/85
-                "
-              >
-                Documentation Ready
-              </h3>
-
-              <p
-                className="
-                  mt-2
-
-                  text-xs
-                  leading-5
-
-                  text-black/40
-                "
-              >
-                Clear documentation and a guided process
-                for your property matter.
-              </p>
-
-              <div
-                className="
-                  mt-5
-
-                  flex
-                  items-center
-                  gap-2
-                "
-              >
-                <span
-                  className="
-                    h-1.5
-                    w-1.5
-
-                    rounded-full
-
-                    bg-[#193A7E]
-                  "
-                />
-
-                <span
-                  className="
-                    text-[10px]
-                    font-semibold
-
-                    text-black/40
-                  "
-                >
-                  MEERUT • UTTAR PRADESH
-                </span>
-              </div>
-            </div>
-
-            {/* =================================================
-                FLOATING LOCATION ICON
-            ================================================= */}
-
-            <div
-              className="
-                absolute
-
-                bottom-[18%]
-                left-[5%]
-
-                z-30
-
-                flex
-                h-14
-                w-14
-                items-center
-                justify-center
-
-                rounded-2xl
-
-                border
-                border-black/[0.06]
-
-                bg-white
-
-                text-[#193A7E]
-
-                shadow-[0_20px_45px_rgba(15,35,70,0.10)]
-
-                lg:left-[6%]
-              "
-            >
-              <FaLocationDot />
-            </div>
-
-            {/* =================================================
-                FLOATING SHIELD
-            ================================================= */}
-
-            <div
-              className="
-                absolute
-
-                right-[13%]
-                top-[5%]
-
-                z-30
-
-                flex
-                h-12
-                w-12
-                items-center
-                justify-center
-
-                rounded-full
-
-                bg-[#193A7E]
-
-                text-white
-
-                shadow-[0_15px_35px_rgba(25,58,126,0.22)]
-              "
-            >
-              <FaShieldHalved className="text-sm" />
-            </div>
-
-            {/* =================================================
-                DECORATIVE LINE
-            ================================================= */}
-
-            <div
-              className="
-                absolute
-
-                bottom-[7%]
-                left-[27%]
-
-                h-px
-                w-20
-
-                bg-[#193A7E]/10
-
-                lg:left-[29%]
+                xl:max-w-[610px]
               "
             />
           </div>
 
-          {/* =====================================================
+          {/* =================================================
               ENQUIRY FORM
-          ===================================================== */}
+          ================================================= */}
 
           <div
             ref={formRef}
             className="
               absolute
               inset-0
-
-              hidden
 
               overflow-hidden
 
@@ -961,7 +444,7 @@ Please guide me regarding the next steps.
               lg:p-8
             "
           >
-            {/* Form Header */}
+            {/* FORM HEADER */}
 
             <div
               className="
@@ -1014,12 +497,12 @@ Please guide me regarding the next steps.
                     sm:text-sm
                   "
                 >
-                  Share a few details and we'll guide you
-                  through the next step.
+                  Share a few details and we'll
+                  guide you through the next step.
                 </p>
               </div>
 
-              {/* Close */}
+              {/* CLOSE */}
 
               <button
                 type="button"
@@ -1031,6 +514,7 @@ Please guide me regarding the next steps.
                   h-9
                   w-9
                   shrink-0
+
                   items-center
                   justify-center
 
@@ -1059,13 +543,14 @@ Please guide me regarding the next steps.
               onSubmit={handleSubmit}
               className="
                 mt-5
+
                 space-y-3
 
                 sm:mt-6
                 sm:space-y-3.5
               "
             >
-              {/* Name + Phone */}
+              {/* NAME + PHONE */}
 
               <div
                 className="
@@ -1076,7 +561,7 @@ Please guide me regarding the next steps.
                   sm:grid-cols-2
                 "
               >
-                {/* Name */}
+                {/* NAME */}
 
                 <div>
                   <label
@@ -1133,7 +618,7 @@ Please guide me regarding the next steps.
                   />
                 </div>
 
-                {/* Phone */}
+                {/* PHONE */}
 
                 <div>
                   <label
@@ -1191,7 +676,7 @@ Please guide me regarding the next steps.
                 </div>
               </div>
 
-              {/* Requirement */}
+              {/* REQUIREMENT */}
 
               <div>
                 <label
@@ -1220,6 +705,7 @@ Please guide me regarding the next steps.
                     className="
                       h-11
                       w-full
+
                       appearance-none
 
                       rounded-xl
@@ -1311,7 +797,7 @@ Please guide me regarding the next steps.
                 </div>
               </div>
 
-              {/* Message */}
+              {/* MESSAGE */}
 
               <div>
                 <label
@@ -1338,6 +824,7 @@ Please guide me regarding the next steps.
                   placeholder="Tell us briefly about your requirement..."
                   className="
                     w-full
+
                     resize-none
 
                     rounded-xl
@@ -1369,7 +856,7 @@ Please guide me regarding the next steps.
                 />
               </div>
 
-              {/* Submit */}
+              {/* SUBMIT */}
 
               <button
                 type="submit"
@@ -1379,13 +866,14 @@ Please guide me regarding the next steps.
                   flex
                   h-12
                   w-full
+
                   items-center
                   justify-center
                   gap-2
 
                   rounded-xl
 
-                  bg-[#193A7E]
+                  bg-[#25D366]
 
                   text-sm
                   font-semibold
@@ -1415,22 +903,6 @@ Please guide me regarding the next steps.
                   "
                 />
               </button>
-
-              {/* Privacy note */}
-
-              <p
-                className="
-                  text-center
-
-                  text-[9px]
-                  font-medium
-
-                  text-black/25
-                "
-              >
-                We'll use your details only to respond to
-                your enquiry.
-              </p>
             </form>
           </div>
         </div>

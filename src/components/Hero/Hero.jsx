@@ -1,11 +1,17 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
+
 import { gsap } from "gsap";
 
 import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
 
 const Hero = () => {
-  const [showEnquiry, setShowEnquiry] = useState(false);
+  const [showEnquiry, setShowEnquiry] =
+    useState(false);
 
   const heroRef = useRef(null);
   const contentRef = useRef(null);
@@ -14,135 +20,264 @@ const Hero = () => {
   const formRef = useRef(null);
 
   // =====================================================
-  // HERO ENTRANCE ANIMATION
+  // INITIAL HERO SETUP + ENTRANCE
   // =====================================================
 
   useLayoutEffect(() => {
-    const context = gsap.context(() => {
-      const timeline = gsap.timeline({
-        defaults: {
-          ease: "power3.out",
-        },
-      });
+    const content = contentRef.current;
+    const visual = visualRef.current;
+    const graphics = graphicsRef.current;
+    const form = formRef.current;
 
-      timeline
-        .from(contentRef.current, {
-          x: -35,
+    if (
+      !content ||
+      !visual ||
+      !graphics ||
+      !form
+    ) {
+      return;
+    }
+
+    gsap.killTweensOf([
+      content,
+      visual,
+      graphics,
+      form,
+    ]);
+
+    // ---------------------------------------------------
+    // INITIAL FORM STATE
+    // ---------------------------------------------------
+
+    gsap.set(form, {
+      display: "none",
+      opacity: 0,
+      scale: 0.97,
+      x: 25,
+      y: 15,
+      filter: "blur(7px)",
+      pointerEvents: "none",
+    });
+
+    // ---------------------------------------------------
+    // INITIAL IMAGE STATE
+    // ---------------------------------------------------
+
+    gsap.set(graphics, {
+      display: "flex",
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      y: 0,
+      filter: "blur(0px)",
+      pointerEvents: "auto",
+    });
+
+    // ---------------------------------------------------
+    // HERO ENTRANCE
+    // ---------------------------------------------------
+
+    const timeline = gsap.timeline({
+      defaults: {
+        ease: "power3.out",
+      },
+    });
+
+    timeline
+      .from(content, {
+        x: -35,
+        opacity: 0,
+        duration: 0.8,
+      })
+      .from(
+        visual,
+        {
+          x: 35,
           opacity: 0,
-          duration: 0.9,
-        })
-        .from(
-          visualRef.current,
-          {
-            x: 45,
-            opacity: 0,
-            duration: 1,
-          },
-          "-=0.65"
-        )
-        .from(
-          graphicsRef.current?.children || [],
-          {
-            y: 25,
-            opacity: 0,
-            scale: 0.97,
-            stagger: 0.08,
-            duration: 0.7,
-          },
-          "-=0.55"
-        );
-    }, heroRef);
+          duration: 0.85,
+        },
+        "-=0.55"
+      )
+      .from(
+        graphics,
+        {
+          y: 18,
+          opacity: 0,
+          scale: 0.98,
+          duration: 0.7,
+        },
+        "-=0.55"
+      );
 
-    return () => context.revert();
+    return () => {
+      timeline.kill();
+
+      gsap.killTweensOf([
+        content,
+        visual,
+        graphics,
+        form,
+      ]);
+    };
   }, []);
 
   // =====================================================
-  // ENQUIRY OPEN / CLOSE ANIMATION
+  // ENQUIRY OPEN / CLOSE
   // =====================================================
 
   useLayoutEffect(() => {
-    if (!graphicsRef.current || !formRef.current) return;
+    const content = contentRef.current;
+    const graphics = graphicsRef.current;
+    const form = formRef.current;
 
-    const context = gsap.context(() => {
-      if (showEnquiry) {
-        const timeline = gsap.timeline({
-          defaults: {
-            ease: "power3.inOut",
+    if (
+      !content ||
+      !graphics ||
+      !form
+    ) {
+      return;
+    }
+
+    gsap.killTweensOf([
+      content,
+      graphics,
+      form,
+    ]);
+
+    const timeline = gsap.timeline({
+      defaults: {
+        ease: "power3.inOut",
+      },
+    });
+
+    // ===================================================
+    // OPEN ENQUIRY
+    // ===================================================
+
+    if (showEnquiry) {
+      timeline
+
+        // Move left content slightly left
+        .to(
+          content,
+          {
+            x: -20,
+            duration: 0.45,
           },
-        });
+          0
+        )
 
-        timeline
-          .to(graphicsRef.current, {
+        // Fade / move image away
+        .to(
+          graphics,
+          {
             opacity: 0,
             scale: 0.96,
-            y: -10,
-            filter: "blur(10px)",
-            duration: 0.45,
-            pointerEvents: "none",
-          })
-          .set(graphicsRef.current, {
-            display: "none",
-          })
-          .set(formRef.current, {
-            display: "block",
-          })
-          .fromTo(
-            formRef.current,
-            {
-              opacity: 0,
-              scale: 0.97,
-              y: 20,
-              filter: "blur(8px)",
-            },
-            {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              filter: "blur(0px)",
-              duration: 0.65,
-            }
-          );
-      } else {
-        const timeline = gsap.timeline({
-          defaults: {
-            ease: "power3.inOut",
+            x: 25,
+            filter: "blur(7px)",
+            duration: 0.4,
           },
-        });
+          0
+        )
 
-        timeline
-          .to(formRef.current, {
+        // Hide image after animation
+        .set(graphics, {
+          display: "none",
+        })
+
+        // Prepare form
+        .set(form, {
+          display: "block",
+          opacity: 0,
+          scale: 0.97,
+          x: 25,
+          y: 15,
+          filter: "blur(7px)",
+          pointerEvents: "auto",
+        })
+
+        // Bring form in
+        .to(form, {
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.55,
+        });
+    }
+
+    // ===================================================
+    // CLOSE ENQUIRY
+    // ===================================================
+
+    else {
+      timeline
+
+        // Move form out
+        .to(
+          form,
+          {
             opacity: 0,
             scale: 0.97,
+            x: 25,
             y: 15,
-            filter: "blur(8px)",
-            duration: 0.4,
-          })
-          .set(formRef.current, {
-            display: "none",
-          })
-          .set(graphicsRef.current, {
-            display: "block",
-          })
-          .fromTo(
-            graphicsRef.current,
-            {
-              opacity: 0,
-              scale: 0.96,
-              y: 10,
-              filter: "blur(10px)",
-            },
-            {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              filter: "blur(0px)",
-              duration: 0.6,
-            }
-          );
-      }
-    }, heroRef);
+            filter: "blur(7px)",
+            duration: 0.35,
+            pointerEvents: "none",
+          },
+          0
+        )
 
-    return () => context.revert();
+        // Hide form
+        .set(form, {
+          display: "none",
+        })
+
+        // Prepare image
+        .set(graphics, {
+          display: "flex",
+          opacity: 0,
+          scale: 0.96,
+          x: 25,
+          y: 0,
+          filter: "blur(7px)",
+          pointerEvents: "auto",
+        })
+
+        // Bring image back
+        .to(
+          graphics,
+          {
+            opacity: 1,
+            scale: 1,
+            x: 0,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 0.6,
+          }
+        )
+
+        // Restore content
+        .to(
+          content,
+          {
+            x: 0,
+            duration: 0.45,
+          },
+          "<"
+        );
+    }
+
+    return () => {
+      timeline.kill();
+
+      gsap.killTweensOf([
+        content,
+        graphics,
+        form,
+      ]);
+    };
   }, [showEnquiry]);
 
   return (
@@ -151,15 +286,14 @@ const Hero = () => {
       id="home"
       className="
         relative
-        min-h-screen
+
         overflow-hidden
+
         bg-white
       "
     >
-      {/* Background */}
       <HeroBackground />
 
-      {/* Content */}
       <HeroContent
         contentRef={contentRef}
         visualRef={visualRef}

@@ -1,7 +1,7 @@
 import {
   FaArrowRight,
   FaCalculator,
-  FaWhatsapp,
+  FaCommentDots,
 } from "react-icons/fa";
 
 const CTA = () => {
@@ -31,21 +31,21 @@ const CTA = () => {
   };
 
   // =====================================================
-  // WHATSAPP US — DIRECT CHAT LINK
+  // GET IN TOUCH — SCROLL TO CONTACT SECTION
   // =====================================================
-  // Same number used in HeroContent.jsx's WhatsApp submission.
+  // Assumes the Contact section (linked in the nav as "Contact")
+  // has id="contact". Update the id below if yours differs.
 
-  const handleWhatsApp = () => {
-    const whatsappUrl =
-      "https://wa.me/917983320163?text=" +
-      encodeURIComponent(
-        "Hello DeedBanwao, I need help with my property documents."
-      );
+  const handleGetInTouch = () => {
+    const contactSection =
+      document.getElementById("contact");
 
-    window.open(
-      whatsappUrl,
-      "_blank"
-    );
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   return (
@@ -58,13 +58,13 @@ const CTA = () => {
         bg-white
 
         px-6
-        py-16
+        py-14
 
         sm:px-8
-        sm:py-20
+        sm:py-16
 
         lg:px-12
-        lg:py-24
+        lg:py-20
       "
     >
       <div
@@ -84,21 +84,21 @@ const CTA = () => {
             relative
             overflow-hidden
 
-            rounded-[28px]
+            rounded-[24px]
 
             bg-[#0B2348]
 
             px-6
-            py-10
+            py-7
 
             shadow-[0_30px_70px_rgba(11,35,72,0.28)]
 
-            sm:rounded-[36px]
-            sm:px-12
-            sm:py-14
+            sm:rounded-[32px]
+            sm:px-10
+            sm:py-9
 
-            lg:px-16
-            lg:py-16
+            lg:px-12
+            lg:py-10
           "
         >
           {/* =================================================
@@ -160,12 +160,12 @@ const CTA = () => {
 
               flex
               flex-col
-              gap-8
+              gap-6
 
               lg:flex-row
               lg:items-center
               lg:justify-between
-              lg:gap-10
+              lg:gap-8
             "
           >
             {/* ===============================================
@@ -176,40 +176,39 @@ const CTA = () => {
               <h2
                 id="cta-heading"
                 className="
-                  max-w-xl
+                  whitespace-normal
 
-                  text-[2rem]
+                  text-xl
                   font-semibold
 
-                  leading-[1.05]
-                  tracking-[-0.04em]
+                  leading-[1.15]
+                  tracking-[-0.03em]
 
                   text-white
 
-                  sm:text-[2.75rem]
+                  sm:whitespace-nowrap
+                  sm:text-[1.85rem]
 
-                  lg:text-5xl
+                  lg:text-3xl
                 "
               >
-                Need help with your
-                <br className="hidden sm:block" />{" "}
-                property documents?
+                Need help with your property documents?
               </h2>
 
               <p
                 className="
-                  mt-3
+                  mt-2
 
                   max-w-md
 
-                  text-sm
-                  leading-6
+                  text-xs
+                  leading-5
 
                   text-white/55
 
-                  sm:mt-4
-                  sm:text-lg
-                  sm:leading-7
+                  sm:mt-2.5
+                  sm:text-base
+                  sm:leading-6
                 "
               >
                 Tell us what you need and get a clear next step.
@@ -224,7 +223,7 @@ const CTA = () => {
               className="
                 flex
                 flex-col
-                gap-4
+                gap-3
 
                 sm:flex-row
                 sm:items-center
@@ -241,17 +240,17 @@ const CTA = () => {
                   group
 
                   flex
-                  h-14
+                  h-12
 
                   items-center
                   justify-center
-                  gap-2.5
+                  gap-2
 
                   rounded-full
 
                   bg-white
 
-                  px-7
+                  px-6
 
                   text-sm
                   font-semibold
@@ -265,18 +264,17 @@ const CTA = () => {
                   hover:-translate-y-1
                   hover:bg-white/90
 
-                  sm:h-16
-                  sm:px-9
-                  sm:text-base
+                  sm:h-14
+                  sm:px-7
                 "
               >
-                <FaCalculator className="text-sm" />
+                <FaCalculator className="text-xs" />
 
                 Get Estimate
 
                 <FaArrowRight
                   className="
-                    text-sm
+                    text-xs
 
                     transition-transform
                     duration-300
@@ -286,51 +284,53 @@ const CTA = () => {
                 />
               </button>
 
-              {/* WHATSAPP US */}
+              {/* GET IN TOUCH */}
 
               <button
                 type="button"
-                onClick={handleWhatsApp}
+                onClick={handleGetInTouch}
                 className="
                   group
 
                   flex
-                  h-14
+                  h-12
 
                   items-center
                   justify-center
-                  gap-2.5
+                  gap-2
 
                   rounded-full
 
-                  bg-[#25D366]
+                  border
+                  border-[#4FB3BF]/40
 
-                  px-7
+                  bg-[#4FB3BF]/[0.08]
+
+                  px-6
 
                   text-sm
                   font-semibold
-                  text-white
-
-                  shadow-[0_10px_28px_rgba(37,211,102,0.25)]
+                  text-[#7FD4DC]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
-                  hover:bg-[#20BD5A]
+                  hover:border-[#4FB3BF]/70
+                  hover:bg-[#4FB3BF]/[0.16]
+                  hover:text-white
 
-                  sm:h-16
-                  sm:px-9
-                  sm:text-base
+                  sm:h-14
+                  sm:px-7
                 "
               >
-                <FaWhatsapp className="text-base" />
+                <FaCommentDots className="text-xs" />
 
-                WhatsApp Us
+                Get in Touch
 
                 <FaArrowRight
                   className="
-                    text-sm
+                    text-xs
 
                     transition-transform
                     duration-300

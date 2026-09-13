@@ -194,18 +194,21 @@ Please guide me regarding the next steps.
 
           <p
             className="
-              mb-6
+              mb-5
 
-              text-xs
+              text-[10px]
               font-bold
               uppercase
-              tracking-[0.25em]
+              tracking-[0.2em]
 
               text-[#193A7E]
 
               sm:mb-7
-              sm:text-sm
-              sm:tracking-[0.3em]
+              sm:text-xs
+              sm:tracking-[0.25em]
+
+              lg:text-sm
+              lg:tracking-[0.3em]
             "
           >
             Property Documentation & Deed Drafting In Meerut
@@ -219,20 +222,20 @@ Please guide me regarding the next steps.
             className="
               max-w-[760px]
 
-              text-[3.75rem]
+              text-[2.9rem]
               font-semibold
 
-              leading-[0.94]
+              leading-[0.98]
 
-              tracking-[-0.045em]
+              tracking-[-0.04em]
 
               text-[#193A7E]
 
-              sm:text-[4.75rem]
+              sm:text-[3.75rem]
 
-              md:text-[5.25rem]
+              md:text-[4.5rem]
 
-              lg:text-[6rem]
+              lg:text-[5.25rem]
 
               xl:text-[6.75rem]
             "
@@ -248,19 +251,22 @@ Please guide me regarding the next steps.
 
           <p
             className="
-              mt-7
+              mt-6
 
               max-w-[580px]
 
-              text-lg
+              text-base
               font-medium
-              leading-8
+              leading-7
 
               text-[#294A76]/75
 
               sm:mt-8
-              sm:text-xl
-              sm:leading-9
+              sm:text-lg
+              sm:leading-8
+
+              lg:text-xl
+              lg:leading-9
             "
           >
             Professional property documentation and deed
@@ -276,16 +282,17 @@ Please guide me regarding the next steps.
 
           <div
             className="
-              mt-10
+              mt-8
 
               flex
               flex-col
               items-stretch
-              gap-4
+              gap-3
 
-              sm:mt-12
+              sm:mt-10
               sm:flex-row
               sm:items-center
+              sm:gap-4
             "
           >
             {/* HOW IT WORKS */}
@@ -297,19 +304,19 @@ Please guide me regarding the next steps.
                 group
 
                 flex
-                h-14
+                h-12
 
                 items-center
                 justify-center
-                gap-2.5
+                gap-2
 
                 rounded-full
 
                 bg-[#193A7E]
 
-                px-8
+                px-6
 
-                text-base
+                text-sm
                 font-semibold
                 text-white
 
@@ -321,23 +328,29 @@ Please guide me regarding the next steps.
                 hover:-translate-y-1
                 hover:bg-[#123064]
 
-                sm:h-16
-                sm:px-9
-                sm:text-lg
+                sm:h-14
+                sm:px-8
+                sm:text-base
+
+                lg:h-16
+                lg:px-9
+                lg:text-lg
               "
             >
-              <FaFileLines className="text-sm" />
+              <FaFileLines className="text-xs sm:text-sm" />
 
               How It Works
 
               <FaArrowRight
                 className="
-                  text-sm
+                  text-xs
 
                   transition-transform
                   duration-300
 
                   group-hover:translate-x-1
+
+                  sm:text-sm
                 "
               />
             </button>
@@ -353,11 +366,11 @@ Please guide me regarding the next steps.
                 group
 
                 flex
-                h-14
+                h-12
 
                 items-center
                 justify-center
-                gap-2.5
+                gap-2
 
                 rounded-full
 
@@ -366,9 +379,9 @@ Please guide me regarding the next steps.
 
                 bg-white
 
-                px-8
+                px-6
 
-                text-base
+                text-sm
                 font-semibold
                 text-black/80
 
@@ -381,23 +394,29 @@ Please guide me regarding the next steps.
                 hover:border-[#193A7E]/20
                 hover:text-[#193A7E]
 
-                sm:h-16
-                sm:px-9
-                sm:text-lg
+                sm:h-14
+                sm:px-8
+                sm:text-base
+
+                lg:h-16
+                lg:px-9
+                lg:text-lg
               "
             >
-              <FaCalculator className="text-sm" />
+              <FaCalculator className="text-xs sm:text-sm" />
 
               Get Estimate
 
               <FaArrowRight
                 className="
-                  text-sm
+                  text-xs
 
                   transition-transform
                   duration-300
 
                   group-hover:translate-x-1
+
+                  sm:text-sm
                 "
               />
             </button>
@@ -1003,16 +1022,18 @@ Please guide me regarding the next steps.
             grid
             grid-cols-2
 
-            gap-x-8
-            gap-y-10
+            gap-x-6
+            gap-y-8
 
             border-t
             border-black/[0.07]
 
-            pt-12
+            pt-10
 
             sm:grid-cols-4
             sm:gap-x-10
+            sm:gap-y-10
+            sm:pt-12
 
             lg:col-span-2
             lg:mt-4
@@ -1027,14 +1048,16 @@ Please guide me regarding the next steps.
                 className="
                   flex
                   items-start
-                  gap-5
+                  gap-4
+
+                  sm:gap-5
                 "
               >
                 <span
                   className="
                     flex
-                    h-14
-                    w-14
+                    h-11
+                    w-11
                     shrink-0
 
                     items-center
@@ -1044,8 +1067,12 @@ Please guide me regarding the next steps.
 
                     bg-[#193A7E]/[0.07]
 
-                    text-lg
+                    text-base
                     text-[#193A7E]
+
+                    sm:h-14
+                    sm:w-14
+                    sm:text-lg
                   "
                 >
                   <Icon />
@@ -1054,7 +1081,7 @@ Please guide me regarding the next steps.
                 <div className="min-w-0">
                   <p
                     className="
-                      text-base
+                      text-sm
                       font-semibold
                       leading-tight
 
@@ -1068,13 +1095,14 @@ Please guide me regarding the next steps.
 
                   <p
                     className="
-                      mt-1.5
+                      mt-1
 
-                      text-sm
+                      text-xs
                       leading-tight
 
                       text-black/45
 
+                      sm:mt-1.5
                       sm:text-base
                     "
                   >

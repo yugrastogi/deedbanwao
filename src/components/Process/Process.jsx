@@ -12,13 +12,14 @@ const Process = () => {
 
         bg-[#0B2348]
 
-        px-5
-        py-24
+        px-6
+        py-28
 
-        sm:px-6
-        sm:py-32
+        sm:px-8
+        sm:py-36
 
-        lg:py-40
+        lg:px-12
+        lg:py-44
       "
     >
       {/* =====================================================
@@ -42,9 +43,12 @@ const Process = () => {
 
           blur-[100px]
 
-          sm:h-[600px]
-          sm:w-[600px]
-          sm:blur-[120px]
+          sm:h-[650px]
+          sm:w-[650px]
+          sm:blur-[130px]
+
+          lg:h-[750px]
+          lg:w-[750px]
         "
       />
 
@@ -65,9 +69,12 @@ const Process = () => {
 
           blur-[85px]
 
-          sm:h-[550px]
-          sm:w-[550px]
-          sm:blur-[100px]
+          sm:h-[600px]
+          sm:w-[600px]
+          sm:blur-[110px]
+
+          lg:h-[700px]
+          lg:w-[700px]
         "
       />
 
@@ -75,7 +82,7 @@ const Process = () => {
           CONTENT
       ===================================================== */}
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-[1560px]">
 
         {/* ===================================================
             HEADER
@@ -91,7 +98,7 @@ const Process = () => {
             lg:grid-cols-[0.85fr_1.15fr]
             lg:items-end
 
-            lg:gap-10
+            lg:gap-12
           "
         >
           {/* =================================================
@@ -126,9 +133,9 @@ const Process = () => {
                   from-transparent
                   to-white/20
 
-                  sm:w-20
+                  sm:w-24
 
-                  lg:w-24
+                  lg:w-28
                 "
               />
 
@@ -145,11 +152,11 @@ const Process = () => {
 
                   text-white/55
 
-                  sm:text-[15px]
-                  sm:tracking-[0.3em]
+                  sm:text-base
+                  sm:tracking-[0.32em]
                 "
               >
-                How We Work
+                How It Works
               </span>
 
               {/* RIGHT LINE */}
@@ -163,9 +170,9 @@ const Process = () => {
                   from-transparent
                   to-white/20
 
-                  sm:w-20
+                  sm:w-24
 
-                  lg:w-24
+                  lg:w-28
                 "
               />
             </div>
@@ -179,9 +186,9 @@ const Process = () => {
               className="
                 mt-6
 
-                max-w-xl
+                max-w-2xl
 
-                text-[2.7rem]
+                text-[2.9rem]
                 font-semibold
 
                 leading-[0.94]
@@ -189,15 +196,15 @@ const Process = () => {
 
                 text-white
 
-                sm:mt-7
-                sm:text-5xl
+                sm:mt-8
+                sm:text-6xl
 
-                md:text-6xl
+                md:text-7xl
 
-                lg:text-7xl
+                lg:text-8xl
               "
             >
-              From Enquiry,
+              From Enquiry
               <br />
 
               <span
@@ -205,7 +212,7 @@ const Process = () => {
                   font-normal
                   italic
 
-                  text-white/55
+                 text-[#16A66A]
                 "
               >
                 To Registration.
@@ -221,14 +228,15 @@ const Process = () => {
 
             <p
               className="
-                max-w-lg
+                max-w-xl
 
                 text-sm
                 leading-7
 
                 text-white/55
 
-                sm:text-lg
+                sm:text-xl
+                sm:leading-9
               "
             >
               A straightforward process for property documentation
@@ -249,6 +257,8 @@ const Process = () => {
             mt-16
 
             sm:mt-24
+
+            lg:mt-28
           "
         >
           {processSteps.map((step, index) => (

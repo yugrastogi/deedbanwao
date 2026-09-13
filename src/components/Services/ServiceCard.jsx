@@ -415,14 +415,14 @@ const ServiceCard = ({ service }) => {
 
         cursor-pointer
 
-        rounded-[18px]
+        rounded-[20px]
 
         border
         border-[#193A7E]/[0.08]
 
         bg-white
 
-        p-4
+        p-5
 
         shadow-[0_8px_30px_rgba(25,58,126,0.035)]
 
@@ -436,9 +436,9 @@ const ServiceCard = ({ service }) => {
 
         hover:shadow-[0_20px_45px_rgba(25,58,126,0.10)]
 
-        sm:min-h-[300px]
-        sm:rounded-[28px]
-        sm:p-7
+        sm:min-h-[340px]
+        sm:rounded-[32px]
+        sm:p-8
       "
     >
       {/* =====================================================
@@ -455,8 +455,8 @@ const ServiceCard = ({ service }) => {
           className="
             flex
 
-            h-9
-            w-9
+            h-11
+            w-11
 
             items-center
             justify-center
@@ -473,13 +473,13 @@ const ServiceCard = ({ service }) => {
             group-hover:bg-[#193A7E]
             group-hover:text-white
 
-            sm:h-12
-            sm:w-12
+            sm:h-16
+            sm:w-16
 
             sm:rounded-2xl
           "
         >
-          <Icon className="text-sm sm:text-lg" />
+          <Icon className="text-lg sm:text-2xl" />
         </div>
 
         {/* =================================================
@@ -488,14 +488,14 @@ const ServiceCard = ({ service }) => {
 
         <span
           className="
-            text-[10px]
+            text-xs
             font-medium
             italic
             tracking-tight
 
             text-[#193A7E]/30
 
-            sm:text-sm
+            sm:text-lg
           "
         >
           {String(service.id).padStart(2, "0")}
@@ -515,12 +515,12 @@ const ServiceCard = ({ service }) => {
           justify-between
           gap-3
 
-          sm:mt-8
+          sm:mt-9
         "
       >
         <h3
           className="
-            text-[16px]
+            text-lg
             font-semibold
 
             leading-[1.15]
@@ -528,9 +528,11 @@ const ServiceCard = ({ service }) => {
 
             text-[#172B4D]
 
-            sm:text-[22px]
+            sm:text-[28px]
 
             sm:leading-[1.08]
+
+            lg:text-[30px]
           "
         >
           {service.title}
@@ -544,7 +546,7 @@ const ServiceCard = ({ service }) => {
           className="
             shrink-0
 
-            text-xs
+            text-sm
 
             text-[#193A7E]/30
 
@@ -557,7 +559,7 @@ const ServiceCard = ({ service }) => {
             group-hover:text-[#25D366]
             group-hover:opacity-100
 
-            sm:text-sm
+            sm:text-lg
           "
         />
       </div>
@@ -568,14 +570,14 @@ const ServiceCard = ({ service }) => {
 
       <div
         className="
-          my-2.5
+          my-3
 
           h-px
           w-full
 
           bg-[#193A7E]/[0.07]
 
-          sm:my-5
+          sm:my-6
         "
       />
 
@@ -589,15 +591,15 @@ const ServiceCard = ({ service }) => {
 
           line-clamp-3
 
-          text-[12px]
-          leading-5
+          text-sm
+          leading-6
 
           text-[#294A76]/70
 
           sm:pt-5
-          sm:text-sm
+          sm:text-lg
 
-          sm:leading-6
+          sm:leading-8
 
           sm:line-clamp-none
         "
@@ -626,8 +628,8 @@ const ServiceCard = ({ service }) => {
           via-[#193A7E]/10
           to-transparent
 
-          sm:left-7
-          sm:right-7
+          sm:left-8
+          sm:right-8
         "
       />
     </article>

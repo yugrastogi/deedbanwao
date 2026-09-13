@@ -30,14 +30,14 @@ const FAQItem = ({
 
           gap-3
 
-          py-6
+          py-7
 
           text-left
 
           focus:outline-none
 
-          sm:gap-5
-          sm:py-8
+          sm:gap-6
+          sm:py-10
         "
       >
         {/* =================================================
@@ -58,7 +58,7 @@ const FAQItem = ({
             transition-all
             duration-300
 
-            sm:w-8
+            sm:w-10
 
             ${
               isOpen
@@ -71,7 +71,7 @@ const FAQItem = ({
             className="
               text-[10px]
 
-              sm:text-[11px]
+              sm:text-sm
             "
           />
         </span>
@@ -85,7 +85,7 @@ const FAQItem = ({
             min-w-0
             flex-1
 
-            text-[16px]
+            text-[17px]
             font-semibold
 
             leading-snug
@@ -93,7 +93,7 @@ const FAQItem = ({
 
             text-black/70
 
-            sm:text-xl
+            sm:text-2xl
           "
         >
           {item.question}
@@ -123,27 +123,27 @@ const FAQItem = ({
 
           <div
             className="
-              pb-6
+              pb-7
 
               pl-0
               pr-5
 
-              sm:pb-8
-              sm:pl-[52px]
-              sm:pr-12
+              sm:pb-10
+              sm:pl-[64px]
+              sm:pr-14
             "
           >
             <p
               className="
                 max-w-4xl
 
-                text-[13px]
+                text-sm
                 leading-6
 
                 text-[#294A76]/65
 
-                sm:text-base
-                sm:leading-7
+                sm:text-lg
+                sm:leading-8
               "
             >
               {item.answer}

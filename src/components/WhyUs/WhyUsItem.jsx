@@ -8,15 +8,15 @@ const WhyUsItem = ({ item, isLast }) => {
         relative
 
         grid
-        grid-cols-[32px_1fr]
+        grid-cols-[36px_1fr]
 
         gap-4
 
-        py-7
+        py-8
 
-        sm:grid-cols-[70px_48px_1fr]
-        sm:gap-6
-        sm:py-10
+        sm:grid-cols-[84px_60px_1fr]
+        sm:gap-7
+        sm:py-12
 
         ${
           !isLast
@@ -33,14 +33,14 @@ const WhyUsItem = ({ item, isLast }) => {
         className="
           pt-1
 
-          text-[11px]
+          text-xs
           font-semibold
           tracking-[0.12em]
 
           text-[#193A7E]/35
 
-          sm:text-xs
-          sm:tracking-[0.15em]
+          sm:text-base
+          sm:tracking-[0.18em]
         "
       >
         {String(item.id).padStart(2, "0")}
@@ -54,8 +54,8 @@ const WhyUsItem = ({ item, isLast }) => {
         className="
           hidden
 
-          h-10
-          w-10
+          h-12
+          w-12
 
           items-center
           justify-center
@@ -80,7 +80,7 @@ const WhyUsItem = ({ item, isLast }) => {
           sm:flex
         "
       >
-        <Icon className="text-sm" />
+        <Icon className="text-lg" />
       </div>
 
       {/* =================================================
@@ -92,7 +92,7 @@ const WhyUsItem = ({ item, isLast }) => {
 
         <h3
           className="
-            text-[21px]
+            text-2xl
             font-semibold
 
             leading-tight
@@ -103,7 +103,7 @@ const WhyUsItem = ({ item, isLast }) => {
             transition-colors
             duration-300
 
-            sm:text-[28px]
+            sm:text-[38px]
           "
         >
           {item.title}
@@ -115,16 +115,16 @@ const WhyUsItem = ({ item, isLast }) => {
           className="
             mt-2.5
 
-            max-w-2xl
+            max-w-3xl
 
-            text-[13px]
+            text-sm
             leading-6
 
             text-[#294A76]/65
 
-            sm:mt-3
-            sm:text-base
-            sm:leading-7
+            sm:mt-3.5
+            sm:text-xl
+            sm:leading-8
           "
         >
           {item.description}

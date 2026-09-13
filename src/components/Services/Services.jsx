@@ -58,6 +58,22 @@ const Services = () => {
       return;
     }
 
+    // -----------------------------------------------------
+    // ALWAYS bring the top of the Services section into view
+    // on toggle (expand AND collapse) — otherwise, expanding
+    // the list while scrolled down gives no visual feedback
+    // and the user can't tell whether it actually opened.
+    // -----------------------------------------------------
+
+    const section = document.getElementById("services");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
     const cards = container.querySelectorAll(
       ".service-card-item"
     );
@@ -77,22 +93,6 @@ const Services = () => {
         isAnimating.current = false;
       },
     });
-
-    // After collapsing back to the six-card view, bring the
-    // Services section back into view automatically.
-    if (!showAll) {
-      requestAnimationFrame(() => {
-        const section =
-          document.getElementById("services");
-
-        if (section) {
-          section.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
-    }
   }, [showAll]);
 
   // =====================================================
@@ -136,15 +136,16 @@ const Services = () => {
       className="
         relative
         overflow-hidden
-        bg-[#FAFAFA]
+        bg-white
 
-        px-5
-        py-24
+        px-6
+        py-28
 
-        sm:px-6
-        sm:py-32
+        sm:px-8
+        sm:py-36
 
-        lg:py-36
+        lg:px-12
+        lg:py-44
       "
     >
       {/* =====================================================
@@ -170,6 +171,9 @@ const Services = () => {
 
           sm:h-[500px]
           sm:w-[500px]
+
+          lg:h-[600px]
+          lg:w-[600px]
         "
       />
 
@@ -192,6 +196,9 @@ const Services = () => {
 
           sm:h-[450px]
           sm:w-[450px]
+
+          lg:h-[550px]
+          lg:w-[550px]
         "
       />
 
@@ -199,13 +206,13 @@ const Services = () => {
           CONTENT
       ===================================================== */}
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-[1560px]">
 
         {/* ===================================================
             HEADER
         =================================================== */}
 
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
 
           {/* =================================================
               SECTION LABEL
@@ -234,9 +241,9 @@ const Services = () => {
                 via-[#193A7E]/10
                 to-[#193A7E]/20
 
-                sm:w-20
+                sm:w-24
 
-                lg:w-24
+                lg:w-28
               "
             />
 
@@ -253,8 +260,8 @@ const Services = () => {
 
                 text-[#193A7E]/60
 
-                sm:text-[15px]
-                sm:tracking-[0.28em]
+                sm:text-base
+                sm:tracking-[0.3em]
               "
             >
               Our Services
@@ -273,9 +280,9 @@ const Services = () => {
                 via-[#193A7E]/10
                 to-[#193A7E]/20
 
-                sm:w-20
+                sm:w-24
 
-                lg:w-24
+                lg:w-28
               "
             />
           </div>
@@ -289,7 +296,7 @@ const Services = () => {
             className="
               mt-6
 
-              text-[2.65rem]
+              text-[2.9rem]
               font-semibold
 
               leading-[0.94]
@@ -297,15 +304,15 @@ const Services = () => {
 
               text-[#193A7E]
 
-              sm:mt-7
-              sm:text-5xl
+              sm:mt-8
+              sm:text-6xl
 
-              md:text-6xl
+              md:text-7xl
 
-              lg:text-7xl
+              lg:text-8xl
             "
           >
-            Property Paperwork,
+            Property Paperwork
 
             <br />
 
@@ -330,17 +337,17 @@ const Services = () => {
 
               mt-5
 
-              max-w-[340px]
+              max-w-[380px]
 
-              text-sm
+              text-[15px]
               leading-6
 
               text-[#294A76]/65
 
-              sm:mt-6
-              sm:max-w-xl
-              sm:text-sm
-              sm:leading-7
+              sm:mt-7
+              sm:max-w-2xl
+              sm:text-lg
+              sm:leading-8
             "
           >
             DeedBanwao provides property documentation and
@@ -365,17 +372,18 @@ const Services = () => {
           {!showAll && (
             <div
               className="
-                mt-14
+                mt-16
 
                 grid
                 grid-cols-1
-                gap-4
+                gap-5
 
-                sm:mt-20
+                sm:mt-24
                 sm:grid-cols-2
-                sm:gap-5
+                sm:gap-7
 
                 lg:grid-cols-3
+                lg:gap-8
               "
             >
               {initialServices.map((service) => (
@@ -394,12 +402,12 @@ const Services = () => {
           {showAll && (
             <div
               className="
-                mt-14
+                mt-16
 
                 space-y-16
 
-                sm:mt-20
-                sm:space-y-24
+                sm:mt-24
+                sm:space-y-28
               "
             >
               {groupedServices.map(
@@ -436,8 +444,8 @@ const Services = () => {
 
                             text-[#193A7E]/45
 
-                            sm:text-[10px]
-                            sm:tracking-[0.2em]
+                            sm:text-[11px]
+                            sm:tracking-[0.22em]
                           "
                         >
                           {String(
@@ -461,7 +469,7 @@ const Services = () => {
 
                             sm:mt-2
                             sm:max-w-none
-                            sm:text-3xl
+                            sm:text-4xl
                           "
                         >
                           {category}
@@ -496,12 +504,13 @@ const Services = () => {
                       className="
                         grid
                         grid-cols-1
-                        gap-4
+                        gap-5
 
                         sm:grid-cols-2
-                        sm:gap-5
+                        sm:gap-7
 
                         lg:grid-cols-3
+                        lg:gap-8
                       "
                     >
                       {categoryServices.map((service) => (
@@ -527,7 +536,7 @@ const Services = () => {
             flex
             justify-center
 
-            ${showAll ? "mt-12 sm:mt-16" : "mt-12 sm:mt-14"}
+            ${showAll ? "mt-14 sm:mt-20" : "mt-14 sm:mt-16"}
           `}
         >
           <button
@@ -537,22 +546,24 @@ const Services = () => {
               group
 
               flex
+              h-14
+
               items-center
+              justify-center
               gap-2.5
 
               rounded-full
 
               bg-[#193A7E]
 
-              px-5
-              py-3
+              px-7
 
-              text-xs
+              text-sm
               font-semibold
 
               text-white
 
-              shadow-[0_12px_30px_rgba(25,58,126,0.18)]
+              shadow-[0_14px_34px_rgba(25,58,126,0.20)]
 
               transition-all
               duration-300
@@ -563,10 +574,10 @@ const Services = () => {
 
               hover:shadow-[0_18px_40px_rgba(25,58,126,0.24)]
 
+              sm:h-16
               sm:gap-3
-              sm:px-6
-              sm:py-3.5
-              sm:text-sm
+              sm:px-9
+              sm:text-base
             "
           >
             {showAll
@@ -578,8 +589,8 @@ const Services = () => {
             <span
               className="
                 flex
-                h-6
-                w-6
+                h-7
+                w-7
 
                 items-center
                 justify-center
@@ -595,14 +606,14 @@ const Services = () => {
 
                 group-hover:scale-105
 
-                sm:h-7
-                sm:w-7
+                sm:h-8
+                sm:w-8
               "
             >
               {showAll ? (
-                <FaArrowUp className="text-[9px] sm:text-[10px]" />
+                <FaArrowUp className="text-[10px] sm:text-xs" />
               ) : (
-                <FaArrowDown className="text-[9px] sm:text-[10px]" />
+                <FaArrowDown className="text-[10px] sm:text-xs" />
               )}
             </span>
           </button>
@@ -624,7 +635,7 @@ const Services = () => {
             text-[#294A76]/35
 
             sm:mt-5
-            sm:text-xs
+            sm:text-sm
           "
         >
           {showAll

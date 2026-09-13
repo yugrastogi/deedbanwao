@@ -7,12 +7,12 @@ const ProcessStep = ({ step, isLast }) => {
         relative
 
         grid
-        grid-cols-[52px_1fr]
+        grid-cols-[56px_1fr]
 
         gap-4
 
-        sm:grid-cols-[100px_1fr]
-        sm:gap-10
+        sm:grid-cols-[120px_1fr]
+        sm:gap-12
       "
     >
       {/* =================================================
@@ -32,7 +32,7 @@ const ProcessStep = ({ step, isLast }) => {
 
               left-1/2
 
-              top-12
+              top-14
               bottom-0
 
               w-px
@@ -41,7 +41,7 @@ const ProcessStep = ({ step, isLast }) => {
 
               bg-white/10
 
-              sm:top-14
+              sm:top-[68px]
             "
           />
         )}
@@ -57,8 +57,8 @@ const ProcessStep = ({ step, isLast }) => {
 
             flex
 
-            h-12
-            w-12
+            h-14
+            w-14
             shrink-0
 
             items-center
@@ -71,16 +71,16 @@ const ProcessStep = ({ step, isLast }) => {
 
             bg-[#193A7E]
 
-            text-base
+            text-lg
             font-semibold
 
             text-white
 
             shadow-[0_10px_30px_rgba(0,0,0,0.18)]
 
-            sm:h-16
-            sm:w-16
-            sm:text-lg
+            sm:h-[76px]
+            sm:w-[76px]
+            sm:text-2xl
           "
         >
           {String(step.id).padStart(2, "0")}
@@ -95,9 +95,9 @@ const ProcessStep = ({ step, isLast }) => {
         className="
           min-w-0
 
-          pb-12
+          pb-14
 
-          sm:pb-20
+          sm:pb-24
         "
       >
         {/* =================================================
@@ -111,7 +111,7 @@ const ProcessStep = ({ step, isLast }) => {
             items-center
             gap-2.5
 
-            sm:gap-3
+            sm:gap-3.5
           "
         >
           {/* ICON */}
@@ -119,8 +119,8 @@ const ProcessStep = ({ step, isLast }) => {
           <div
             className="
               flex
-              h-8
-              w-8
+              h-9
+              w-9
               shrink-0
 
               items-center
@@ -137,11 +137,11 @@ const ProcessStep = ({ step, isLast }) => {
 
               backdrop-blur-xl
 
-              sm:h-9
-              sm:w-9
+              sm:h-11
+              sm:w-11
             "
           >
-            <Icon className="text-xs sm:text-sm" />
+            <Icon className="text-sm sm:text-base" />
           </div>
 
           {/* LABEL */}
@@ -150,15 +150,15 @@ const ProcessStep = ({ step, isLast }) => {
             className="
               min-w-0
 
-              text-[8px]
+              text-[9px]
               font-semibold
               uppercase
               tracking-[0.14em]
 
               text-white/40
 
-              sm:text-[10px]
-              sm:tracking-[0.2em]
+              sm:text-xs
+              sm:tracking-[0.24em]
             "
           >
             {step.label}
@@ -173,9 +173,9 @@ const ProcessStep = ({ step, isLast }) => {
           className="
             mt-5
 
-            max-w-2xl
+            max-w-3xl
 
-            text-[1.65rem]
+            text-[1.85rem]
             font-semibold
 
             leading-[1.05]
@@ -183,10 +183,10 @@ const ProcessStep = ({ step, isLast }) => {
 
             text-white
 
-            sm:mt-6
-            sm:text-4xl
+            sm:mt-7
+            sm:text-5xl
 
-            lg:text-[42px]
+            lg:text-[52px]
           "
         >
           {step.title}
@@ -200,16 +200,16 @@ const ProcessStep = ({ step, isLast }) => {
           className="
             mt-4
 
-            max-w-xl
+            max-w-2xl
 
-            text-[13px]
+            text-sm
             leading-6
 
             text-white/55
 
-            sm:mt-5
-            sm:text-base
-            sm:leading-7
+            sm:mt-6
+            sm:text-lg
+            sm:leading-8
           "
         >
           {step.description}
@@ -228,8 +228,8 @@ const ProcessStep = ({ step, isLast }) => {
 
             bg-white
 
-            sm:mt-7
-            sm:w-16
+            sm:mt-8
+            sm:w-20
           "
         />
       </div>

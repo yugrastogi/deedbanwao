@@ -10,124 +10,19 @@ const WhyUs = () => {
         relative
         overflow-hidden
 
-        bg-[#EEF3F8]
+        bg-white
 
-        px-5
-        py-24
+        px-6
+        py-28
 
-        sm:px-6
-        sm:py-32
+        sm:px-8
+        sm:py-36
 
-        lg:py-40
+        lg:px-12
+        lg:py-44
       "
     >
-      {/* =====================================================
-          VISIBLE GRADIENT BACKGROUND
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          inset-0
-
-          bg-gradient-to-br
-          from-[#DCE8F6]
-          via-[#F7F9FC]
-          to-[#D9E8F2]
-        "
-      />
-
-      {/* =====================================================
-          LARGE BLUE GRADIENT GLOW
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          -left-40
-          top-0
-
-          h-[450px]
-          w-[450px]
-
-          rounded-full
-
-          bg-gradient-to-br
-          from-[#193A7E]/20
-          via-[#4F76B5]/10
-          to-transparent
-
-          blur-[75px]
-
-          sm:h-[600px]
-          sm:w-[600px]
-          sm:blur-[90px]
-        "
-      />
-
-      {/* =====================================================
-          SECOND GRADIENT GLOW
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          -right-40
-          top-1/3
-
-          h-[500px]
-          w-[500px]
-
-          rounded-full
-
-          bg-gradient-to-bl
-          from-[#8CB9D4]/25
-          via-[#D7E8F0]/30
-          to-transparent
-
-          blur-[90px]
-
-          sm:h-[650px]
-          sm:w-[650px]
-          sm:blur-[110px]
-        "
-      />
-
-      {/* =====================================================
-          SOFT CENTER LIGHT
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          left-1/2
-          top-1/2
-
-          h-[400px]
-          w-[600px]
-
-          -translate-x-1/2
-          -translate-y-1/2
-
-          rounded-full
-
-          bg-white/50
-
-          blur-[100px]
-
-          sm:h-[500px]
-          sm:w-[800px]
-          sm:blur-[120px]
-        "
-      />
+      
 
       {/* =====================================================
           CONTENT
@@ -139,7 +34,7 @@ const WhyUs = () => {
           z-10
 
           mx-auto
-          max-w-7xl
+          max-w-[1560px]
         "
       >
         {/* ===================================================
@@ -155,7 +50,7 @@ const WhyUs = () => {
 
             lg:grid-cols-[0.95fr_1.05fr]
             lg:items-end
-            lg:gap-20
+            lg:gap-24
           "
         >
           {/* =================================================
@@ -191,9 +86,9 @@ const WhyUs = () => {
                   via-[#193A7E]/10
                   to-[#193A7E]/20
 
-                  sm:w-20
+                  sm:w-24
 
-                  lg:w-24
+                  lg:w-28
                 "
               />
 
@@ -208,8 +103,8 @@ const WhyUs = () => {
                   uppercase
                   tracking-[0.22em]
                   text-[#193A7E]/65
-                  sm:text-[15px]
-                  sm:tracking-[0.3em]
+                  sm:text-base
+                  sm:tracking-[0.32em]
                 "
               >
                 Why DeedBanwao
@@ -228,9 +123,9 @@ const WhyUs = () => {
                   via-[#193A7E]/10
                   to-[#193A7E]/20
 
-                  sm:w-20
+                  sm:w-24
 
-                  lg:w-24
+                  lg:w-28
                 "
               />
             </div>
@@ -244,9 +139,9 @@ const WhyUs = () => {
               className="
                 mt-7
 
-                max-w-2xl
+                max-w-3xl
 
-                text-[3.1rem]
+                text-[3.3rem]
                 font-semibold
 
                 leading-[0.92]
@@ -255,13 +150,13 @@ const WhyUs = () => {
                 text-[#193A7E]
 
                 sm:mt-8
-                sm:text-6xl
+                sm:text-7xl
 
-                md:text-7xl
+                md:text-8xl
 
-                lg:text-[76px]
+                lg:text-[92px]
 
-                xl:text-[82px]
+                xl:text-[100px]
               "
             >
               Less running
@@ -294,15 +189,15 @@ const WhyUs = () => {
           >
             <p
               className="
-                max-w-xl
+                max-w-2xl
 
                 text-sm
                 leading-7
 
                 text-[#294A76]/75
 
-                sm:text-lg
-                sm:leading-8
+                sm:text-xl
+                sm:leading-9
               "
             >
               DeedBanwao helps simplify property documentation and

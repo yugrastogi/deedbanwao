@@ -4,12 +4,40 @@ import {
 
 import {
   FaArrowRight,
+  FaCalculator,
   FaChevronDown,
+  FaClock,
+  FaFileLines,
+  FaLocationDot,
+  FaShieldHalved,
   FaWhatsapp,
   FaXmark,
 } from "react-icons/fa6";
 
 import propertyDocument from "../../assets/images/property-document.png";
+
+const TRUST_FEATURES = [
+  {
+    icon: FaShieldHalved,
+    title: "Trusted & Professional",
+    subtitle: "Legally valid documentation",
+  },
+  {
+    icon: FaClock,
+    title: "Time Saving",
+    subtitle: "Hassle-free process",
+  },
+  {
+    icon: FaFileLines,
+    title: "Wide Range of Services",
+    subtitle: "All major property documents",
+  },
+  {
+    icon: FaLocationDot,
+    title: "Meerut & Nearby Areas",
+    subtitle: "Local support, easy coordination",
+  },
+];
 
 const HeroContent = ({
   contentRef,
@@ -40,6 +68,21 @@ const HeroContent = ({
       );
     };
   }, [setShowEnquiry]);
+
+  // =====================================================
+  // SCROLL TO PROCESS SECTION (HOW IT WORKS)
+  // =====================================================
+
+  const scrollToProcess = () => {
+    const section = document.getElementById("process");
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   // =====================================================
   // SUBMIT ENQUIRY
@@ -98,21 +141,22 @@ Please guide me regarding the next steps.
 
         min-h-screen
 
-        max-w-[1400px]
+        max-w-[1560px]
 
         items-center
 
-        px-5
-        pb-16
-        pt-36
+        px-6
+        pb-20
 
-        sm:px-6
-        sm:pb-20
-        sm:pt-32
+        pt-40
 
-        lg:px-8
-        lg:pb-12
-        lg:pt-28
+        sm:px-8
+        sm:pb-24
+        sm:pt-36
+
+        lg:px-12
+        lg:pb-16
+        lg:pt-32
       "
     >
       <div
@@ -124,13 +168,13 @@ Please guide me regarding the next steps.
 
           items-center
 
-          gap-10
+          gap-14
 
           lg:grid-cols-[0.95fr_1.05fr]
 
-          lg:gap-12
+          lg:gap-16
 
-          xl:gap-16
+          xl:gap-24
         "
       >
         {/* =================================================
@@ -146,29 +190,13 @@ Please guide me regarding the next steps.
             text-left
           "
         >
-          {/* EYEBROW */}
-
-          <p
-            className="
-              mb-3
-
-              text-xs
-              font-semibold
-              tracking-[-0.01em]
-
-              text-[#16A66A]
-
-              sm:text-sm
-            "
-          >
-            Property Documentation &amp; Deed Drafting in Meerut
-          </p>
+          {/* LABEL */}
 
           <p
             className="
               mb-6
 
-              text-[11px]
+              text-xs
               font-bold
               uppercase
               tracking-[0.25em]
@@ -176,11 +204,11 @@ Please guide me regarding the next steps.
               text-[#193A7E]
 
               sm:mb-7
-              sm:text-xs
-              sm:tracking-[0.28em]
+              sm:text-sm
+              sm:tracking-[0.3em]
             "
           >
-            Your Trusted Partner for Property Documentation
+            Property Documentation & Deed Drafting In Meerut
           </p>
 
           {/* SEO SUPPORTING HEADING */}
@@ -189,48 +217,50 @@ Please guide me regarding the next steps.
 
           <h1
             className="
-              max-w-[650px]
+              max-w-[760px]
 
-              text-[3rem]
+              text-[3.75rem]
               font-semibold
 
-              leading-[0.95]
+              leading-[0.94]
 
               tracking-[-0.045em]
 
               text-[#193A7E]
 
-              sm:text-[4rem]
+              sm:text-[4.75rem]
 
-              md:text-[4.5rem]
+              md:text-[5.25rem]
 
-              lg:text-[5rem]
+              lg:text-[6rem]
 
-              xl:text-[5.6rem]
+              xl:text-[6.75rem]
             "
           >
             Paper Sahi Toh
             <br />
-            Property Sahi.
+            <span className="text-[#16A66A]">
+              Property Sahi.
+            </span>
           </h1>
 
           {/* DESCRIPTION */}
 
           <p
             className="
-              mt-6
+              mt-7
 
-              max-w-[500px]
+              max-w-[580px]
 
-              text-base
+              text-lg
               font-medium
-              leading-7
+              leading-8
 
               text-[#294A76]/75
 
-              sm:mt-7
-              sm:text-lg
-              sm:leading-8
+              sm:mt-8
+              sm:text-xl
+              sm:leading-9
             "
           >
             Professional property documentation and deed
@@ -246,43 +276,44 @@ Please guide me regarding the next steps.
 
           <div
             className="
-              mt-8
+              mt-10
 
               flex
               flex-col
               items-stretch
-              gap-3
+              gap-4
 
-              sm:mt-9
+              sm:mt-12
               sm:flex-row
               sm:items-center
             "
           >
-            {/* GET IN TOUCH */}
+            {/* HOW IT WORKS */}
 
-            <a
-              href="/contact"
+            <button
+              type="button"
+              onClick={scrollToProcess}
               className="
                 group
 
                 flex
-                h-12
+                h-14
 
                 items-center
                 justify-center
-                gap-2
+                gap-2.5
 
                 rounded-full
 
                 bg-[#193A7E]
 
-                px-6
+                px-8
 
-                text-sm
+                text-base
                 font-semibold
                 text-white
 
-                shadow-[0_12px_30px_rgba(25,58,126,0.18)]
+                shadow-[0_14px_34px_rgba(25,58,126,0.20)]
 
                 transition-all
                 duration-300
@@ -290,15 +321,18 @@ Please guide me regarding the next steps.
                 hover:-translate-y-1
                 hover:bg-[#123064]
 
-                sm:h-13
-                sm:px-7
+                sm:h-16
+                sm:px-9
+                sm:text-lg
               "
             >
-              Get In Touch
+              <FaFileLines className="text-sm" />
+
+              How It Works
 
               <FaArrowRight
                 className="
-                  text-xs
+                  text-sm
 
                   transition-transform
                   duration-300
@@ -306,9 +340,9 @@ Please guide me regarding the next steps.
                   group-hover:translate-x-1
                 "
               />
-            </a>
+            </button>
 
-            {/* GET ENQUIRY */}
+            {/* GET ESTIMATE */}
 
             <button
               type="button"
@@ -319,11 +353,11 @@ Please guide me regarding the next steps.
                 group
 
                 flex
-                h-12
+                h-14
 
                 items-center
                 justify-center
-                gap-2
+                gap-2.5
 
                 rounded-full
 
@@ -332,13 +366,13 @@ Please guide me regarding the next steps.
 
                 bg-white
 
-                px-6
+                px-8
 
-                text-sm
+                text-base
                 font-semibold
                 text-black/80
 
-                shadow-[0_8px_25px_rgba(0,0,0,0.05)]
+                shadow-[0_10px_28px_rgba(0,0,0,0.06)]
 
                 transition-all
                 duration-300
@@ -347,15 +381,18 @@ Please guide me regarding the next steps.
                 hover:border-[#193A7E]/20
                 hover:text-[#193A7E]
 
-                sm:h-13
-                sm:px-7
+                sm:h-16
+                sm:px-9
+                sm:text-lg
               "
             >
-              Send Enquiry
+              <FaCalculator className="text-sm" />
+
+              Get Estimate
 
               <FaArrowRight
                 className="
-                  text-xs
+                  text-sm
 
                   transition-transform
                   duration-300
@@ -364,23 +401,6 @@ Please guide me regarding the next steps.
                 "
               />
             </button>
-          </div>
-
-          {/* TRUST */}
-
-          <div
-            className="
-              mt-7
-
-              text-lg
-              font-medium
-
-              text-black/50
-
-              sm:mt-8
-            "
-          >
-            Professional • Trusted • Reliable
           </div>
         </div>
 
@@ -395,12 +415,12 @@ Please guide me regarding the next steps.
 
             mx-auto
 
-            min-h-[560px]
+            min-h-[640px]
             w-full
-            max-w-[560px]
+            max-w-[640px]
 
             lg:mx-0
-            lg:h-[500px]
+            lg:h-[580px]
             lg:min-h-0
             lg:max-w-none
           "
@@ -429,15 +449,15 @@ Please guide me regarding the next steps.
                 h-auto
                 w-full
 
-                max-w-[520px]
+                max-w-[590px]
 
                 object-contain
 
                 select-none
 
-                lg:max-w-[570px]
+                lg:max-w-[650px]
 
-                xl:max-w-[610px]
+                xl:max-w-[700px]
               "
             />
           </div>
@@ -452,12 +472,14 @@ Please guide me regarding the next steps.
               absolute
               inset-0
 
+              flex
               w-full
+              flex-col
 
               overflow-y-auto
               overflow-x-hidden
 
-              rounded-[30px]
+              rounded-[34px]
 
               border
               border-black/[0.07]
@@ -466,12 +488,12 @@ Please guide me regarding the next steps.
 
               p-5
 
-              shadow-[0_30px_80px_rgba(15,35,70,0.10)]
+              shadow-[0_36px_90px_rgba(15,35,70,0.12)]
 
-              sm:p-7
+              sm:p-6
 
-              lg:rounded-[34px]
-              lg:p-8
+              lg:rounded-[38px]
+              lg:p-7
             "
           >
             {/* FORM HEADER */}
@@ -479,6 +501,7 @@ Please guide me regarding the next steps.
             <div
               className="
                 flex
+                shrink-0
                 items-start
                 justify-between
               "
@@ -491,7 +514,7 @@ Please guide me regarding the next steps.
               >
                 <p
                   className="
-                    text-[10px]
+                    text-xs
                     font-bold
                     uppercase
                     tracking-[0.2em]
@@ -577,14 +600,22 @@ Please guide me regarding the next steps.
             <form
               onSubmit={handleSubmit}
               className="
-                mt-5
+                mt-4
 
-                space-y-3
+                flex
+                flex-1
+                flex-col
 
-                sm:mt-6
-                sm:space-y-3.5
+                sm:mt-5
               "
             >
+              <div
+                className="
+                  space-y-3
+
+                  sm:space-y-3.5
+                "
+              >
               {/* NAME + PHONE */}
 
               <div
@@ -805,7 +836,7 @@ Please guide me regarding the next steps.
 
                       -translate-y-1/2
 
-                      text-[10px]
+                      text-xs
                       text-black/30
                     "
                   />
@@ -871,6 +902,13 @@ Please guide me regarding the next steps.
                   "
                 />
               </div>
+              </div>
+
+              {/* SPACER — absorbs leftover height so the CTA sits at the bottom of the card */}
+
+              <div className="flex-1" />
+
+              <div className="space-y-3">
 
               {/* SUBMIT */}
 
@@ -913,7 +951,7 @@ Please guide me regarding the next steps.
                 <FaArrowRight
                   className="
                     shrink-0
-                    text-xs
+                    text-sm
 
                     transition-transform
                     duration-300
@@ -925,8 +963,127 @@ Please guide me regarding the next steps.
 
               {/* PRIVACY */}
 
+              <p
+                className="
+                  flex
+                  items-center
+                  justify-center
+
+                  gap-2
+
+                  pt-1
+
+                  text-center
+
+                  text-[11px]
+                  leading-tight
+
+                  text-black/35
+
+                  sm:text-xs
+                "
+              >
+                <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
+
+                Your details stay private and are used only
+                to respond to your enquiry.
+              </p>
+
+              </div>
             </form>
           </div>
+        </div>
+
+        {/* =================================================
+            TRUST FEATURES STRIP
+        ================================================= */}
+
+        <div
+          className="
+            grid
+            grid-cols-2
+
+            gap-x-8
+            gap-y-10
+
+            border-t
+            border-black/[0.07]
+
+            pt-12
+
+            sm:grid-cols-4
+            sm:gap-x-10
+
+            lg:col-span-2
+            lg:mt-4
+          "
+        >
+          {TRUST_FEATURES.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.title}
+                className="
+                  flex
+                  items-start
+                  gap-5
+                "
+              >
+                <span
+                  className="
+                    flex
+                    h-14
+                    w-14
+                    shrink-0
+
+                    items-center
+                    justify-center
+
+                    rounded-full
+
+                    bg-[#193A7E]/[0.07]
+
+                    text-lg
+                    text-[#193A7E]
+                  "
+                >
+                  <Icon />
+                </span>
+
+                <div className="min-w-0">
+                  <p
+                    className="
+                      text-base
+                      font-semibold
+                      leading-tight
+
+                      text-[#193A7E]
+
+                      sm:text-lg
+                    "
+                  >
+                    {item.title}
+                  </p>
+
+                  <p
+                    className="
+                      mt-1.5
+
+                      text-sm
+                      leading-tight
+
+                      text-black/45
+
+                      sm:text-base
+                    "
+                  >
+                    {item.subtitle}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -26,13 +26,13 @@ const FAQ = () => {
 
         bg-white
 
-        px-5
-        py-24
+        px-6
+        py-28
 
-        sm:px-6
-        sm:py-32
+        sm:px-8
+        sm:py-36
 
-        lg:py-40
+        lg:py-44
       "
     >
       {/* =====================================================
@@ -45,7 +45,7 @@ const FAQ = () => {
           z-10
 
           mx-auto
-          max-w-5xl
+          max-w-6xl
         "
       >
         {/* ===================================================
@@ -55,7 +55,7 @@ const FAQ = () => {
         <div
           className="
             mx-auto
-            max-w-3xl
+            max-w-4xl
 
             text-center
           "
@@ -88,9 +88,9 @@ const FAQ = () => {
                 via-[#193A7E]/10
                 to-[#193A7E]/20
 
-                sm:w-20
+                sm:w-24
 
-                lg:w-24
+                lg:w-28
               "
             />
 
@@ -107,8 +107,8 @@ const FAQ = () => {
 
                 text-[#193A7E]/60
 
-                sm:text-[15px]
-                sm:tracking-[0.3em]
+                sm:text-base
+                sm:tracking-[0.32em]
               "
             >
               FAQs
@@ -127,9 +127,9 @@ const FAQ = () => {
                 via-[#193A7E]/10
                 to-[#193A7E]/20
 
-                sm:w-20
+                sm:w-24
 
-                lg:w-24
+                lg:w-28
               "
             />
           </div>
@@ -143,7 +143,7 @@ const FAQ = () => {
             className="
               mt-6
 
-              text-[2.7rem]
+              text-[2.9rem]
               font-semibold
 
               leading-[0.94]
@@ -151,12 +151,12 @@ const FAQ = () => {
 
               text-[#193A7E]
 
-              sm:mt-7
-              sm:text-5xl
+              sm:mt-8
+              sm:text-6xl
 
-              md:text-6xl
+              md:text-7xl
 
-              lg:text-7xl
+              lg:text-8xl
             "
           >
             Questions?
@@ -184,17 +184,17 @@ const FAQ = () => {
 
               mt-5
 
-              max-w-[340px]
+              max-w-[380px]
 
-              text-sm
+              text-[15px]
               leading-6
 
               text-[#294A76]/65
 
-              sm:mt-6
-              sm:max-w-2xl
-              sm:text-lg
-              sm:leading-8
+              sm:mt-7
+              sm:max-w-3xl
+              sm:text-xl
+              sm:leading-9
             "
           >
             Find answers to common questions about property

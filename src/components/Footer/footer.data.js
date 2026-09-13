@@ -33,7 +33,7 @@ const footerData = {
 
     whatsapp: "7983320163",
 
-    email: "info@deedbanwao.com",
+    email: "deedbanwao@gmail.com",
 
     location: "Meerut, Uttar Pradesh",
   },

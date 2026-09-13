@@ -4,7 +4,7 @@ const contactData = {
   ],
 
   // Replace this with the actual business email
-  email: "info@deedbanwao.com",
+  email: "deedbanwao@gmail.com",
 
   whatsappNumber: "7983320163",
 };

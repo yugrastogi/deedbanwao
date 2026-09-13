@@ -310,7 +310,7 @@ const CTA = () => {
 
                   text-sm
                   font-semibold
-                  text-[#7FD4DC]
+                  text-white
 
                   transition-all
                   duration-300

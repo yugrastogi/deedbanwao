@@ -80,7 +80,7 @@ const Services = () => {
 
     gsap.set(cards, {
       opacity: 0,
-      y: 22,
+      y: 18,
     });
 
     gsap.to(cards, {
@@ -119,7 +119,7 @@ const Services = () => {
 
     gsap.to(cards, {
       opacity: 0,
-      y: 16,
+      y: 14,
       duration: 0.3,
       ease: "power2.in",
       stagger: 0.02,
@@ -137,15 +137,12 @@ const Services = () => {
         relative
         overflow-hidden
         bg-white
-
         px-6
-        py-28
-
+        py-24
         sm:px-8
-        sm:py-36
-
+        sm:py-30
         lg:px-12
-        lg:py-44
+        lg:py-37
       "
     >
       {/* =====================================================
@@ -155,50 +152,36 @@ const Services = () => {
       <div
         className="
           pointer-events-none
-
           absolute
           -right-52
           top-20
-
-          h-[400px]
-          w-[400px]
-
+          h-[340px]
+          w-[340px]
           rounded-full
-
           bg-[#193A7E]/[0.025]
-
           blur-3xl
-
-          sm:h-[500px]
-          sm:w-[500px]
-
-          lg:h-[600px]
-          lg:w-[600px]
+          sm:h-[425px]
+          sm:w-[425px]
+          lg:h-[510px]
+          lg:w-[510px]
         "
       />
 
       <div
         className="
           pointer-events-none
-
           absolute
           -left-52
           bottom-0
-
-          h-[350px]
-          w-[350px]
-
+          h-[300px]
+          w-[300px]
           rounded-full
-
           bg-[#4FB3BF]/[0.035]
-
           blur-3xl
-
-          sm:h-[450px]
-          sm:w-[450px]
-
-          lg:h-[550px]
-          lg:w-[550px]
+          sm:h-[380px]
+          sm:w-[380px]
+          lg:h-[465px]
+          lg:w-[465px]
         "
       />
 
@@ -224,8 +207,7 @@ const Services = () => {
               items-center
               justify-center
               gap-3
-
-              sm:gap-4
+              sm:gap-3.5
             "
           >
             {/* LEFT LINE */}
@@ -233,17 +215,14 @@ const Services = () => {
             <span
               className="
                 h-px
-                w-8
+                w-7
                 shrink-0
-
                 bg-gradient-to-r
                 from-transparent
                 via-[#193A7E]/10
                 to-[#193A7E]/20
-
-                sm:w-24
-
-                lg:w-28
+                sm:w-20
+                lg:w-24
               "
             />
 
@@ -252,16 +231,15 @@ const Services = () => {
             <span
               className="
                 shrink-0
-
-                text-[11px]
+                text-[9px]
                 font-semibold
                 uppercase
                 tracking-[0.22em]
-
                 text-[#193A7E]/60
-
-                sm:text-base
-                sm:tracking-[0.3em]
+                sm:text-[10px]
+                sm:tracking-[0.25em]
+                lg:text-[12px]
+                lg:tracking-[0.3em]
               "
             >
               Our Services
@@ -272,17 +250,14 @@ const Services = () => {
             <span
               className="
                 h-px
-                w-8
+                w-7
                 shrink-0
-
                 bg-gradient-to-l
                 from-transparent
                 via-[#193A7E]/10
                 to-[#193A7E]/20
-
-                sm:w-24
-
-                lg:w-28
+                sm:w-20
+                lg:w-24
               "
             />
           </div>
@@ -294,22 +269,17 @@ const Services = () => {
           <h2
             id="services-heading"
             className="
-              mt-6
-
-              text-[2.9rem]
+              mt-5
+              text-[2.45rem]
               font-semibold
-
               leading-[0.94]
               tracking-[-0.05em]
-
               text-[#193A7E]
-
-              sm:mt-8
-              sm:text-6xl
-
-              md:text-7xl
-
-              lg:text-8xl
+              sm:mt-7
+              sm:text-[3.2rem]
+              md:text-[3.85rem]
+              lg:text-[4.45rem]
+              xl:text-[5.75rem]
             "
           >
             Property Paperwork
@@ -334,20 +304,17 @@ const Services = () => {
           <p
             className="
               mx-auto
-
-              mt-5
-
+              mt-4
               max-w-[380px]
-
-              text-[15px]
+              text-[14px]
               leading-6
-
               text-[#294A76]/65
-
-              sm:mt-7
+              sm:mt-6
               sm:max-w-2xl
-              sm:text-lg
-              sm:leading-8
+              sm:text-[16px]
+              sm:leading-7
+              lg:text-[18px]
+              lg:leading-8
             "
           >
             DeedBanwao provides property documentation and
@@ -372,18 +339,15 @@ const Services = () => {
           {!showAll && (
             <div
               className="
-                mt-16
-
+                mt-14
                 grid
                 grid-cols-1
-                gap-5
-
-                sm:mt-24
+                gap-4
+                sm:mt-20
                 sm:grid-cols-2
-                sm:gap-7
-
+                sm:gap-6
                 lg:grid-cols-3
-                lg:gap-8
+                lg:gap-7
               "
             >
               {initialServices.map((service) => (
@@ -402,12 +366,10 @@ const Services = () => {
           {showAll && (
             <div
               className="
-                mt-16
-
-                space-y-16
-
-                sm:mt-24
-                sm:space-y-28
+                mt-14
+                space-y-14
+                sm:mt-20
+                sm:space-y-24
               "
             >
               {groupedServices.map(
@@ -423,14 +385,12 @@ const Services = () => {
 
                     <div
                       className="
-                        mb-7
-
+                        mb-6
                         flex
                         items-end
-                        gap-4
-
-                        sm:mb-10
-                        sm:gap-8
+                        gap-3.5
+                        sm:mb-8
+                        sm:gap-7
                       "
                     >
                       <div className="min-w-0 shrink-0">
@@ -441,11 +401,10 @@ const Services = () => {
                             font-semibold
                             uppercase
                             tracking-[0.16em]
-
                             text-[#193A7E]/45
-
-                            sm:text-[11px]
+                            sm:text-[10px]
                             sm:tracking-[0.22em]
+                            lg:text-[12px]
                           "
                         >
                           {String(
@@ -456,20 +415,17 @@ const Services = () => {
 
                         <h3
                           className="
-                            mt-1.5
-
+                            mt-1
                             max-w-[280px]
-
-                            text-xl
+                            text-[14px]
                             font-semibold
                             leading-tight
                             tracking-[-0.03em]
-
                             text-[#193A7E]
-
-                            sm:mt-2
+                            sm:mt-1.5
                             sm:max-w-none
-                            sm:text-4xl
+                            sm:text-[16px]
+                            lg:text-[18px]
                           "
                         >
                           {category}
@@ -483,13 +439,10 @@ const Services = () => {
                       <div
                         className="
                           mb-1.5
-
                           hidden
                           h-px
                           flex-1
-
                           bg-[#193A7E]/10
-
                           sm:mb-2
                           sm:block
                         "
@@ -504,13 +457,11 @@ const Services = () => {
                       className="
                         grid
                         grid-cols-1
-                        gap-5
-
+                        gap-4
                         sm:grid-cols-2
-                        sm:gap-7
-
+                        sm:gap-6
                         lg:grid-cols-3
-                        lg:gap-8
+                        lg:gap-7
                       "
                     >
                       {categoryServices.map((service) => (
@@ -535,8 +486,7 @@ const Services = () => {
           className={`
             flex
             justify-center
-
-            ${showAll ? "mt-14 sm:mt-20" : "mt-14 sm:mt-16"}
+            ${showAll ? "mt-12 sm:mt-17" : "mt-12 sm:mt-14"}
           `}
         >
           <button
@@ -544,40 +494,28 @@ const Services = () => {
             onClick={handleToggle}
             className="
               group
-
               flex
-              h-14
-
+              h-12
               items-center
               justify-center
-              gap-2.5
-
+              gap-2
               rounded-full
-
               bg-[#193A7E]
-
-              px-7
-
-              text-sm
+              px-6
+              text-[14px]
               font-semibold
-
               text-white
-
               shadow-[0_14px_34px_rgba(25,58,126,0.20)]
-
               transition-all
               duration-300
-
               hover:-translate-y-1
-
               hover:bg-[#123064]
-
               hover:shadow-[0_18px_40px_rgba(25,58,126,0.24)]
-
-              sm:h-16
-              sm:gap-3
-              sm:px-9
-              sm:text-base
+              sm:h-14
+              sm:gap-2.5
+              sm:px-8
+              sm:text-[16px]
+              lg:text-[18px]
             "
           >
             {showAll
@@ -589,31 +527,24 @@ const Services = () => {
             <span
               className="
                 flex
-                h-7
-                w-7
-
+                h-6
+                w-6
                 items-center
                 justify-center
-
                 rounded-full
-
                 bg-white
-
                 text-[#193A7E]
-
                 transition-transform
                 duration-300
-
                 group-hover:scale-105
-
-                sm:h-8
-                sm:w-8
+                sm:h-7
+                sm:w-7
               "
             >
               {showAll ? (
-                <FaArrowUp className="text-[10px] sm:text-xs" />
+                <FaArrowUp className="text-[9px] sm:text-[10px]" />
               ) : (
-                <FaArrowDown className="text-[10px] sm:text-xs" />
+                <FaArrowDown className="text-[9px] sm:text-[10px]" />
               )}
             </span>
           </button>
@@ -625,17 +556,14 @@ const Services = () => {
 
         <p
           className="
-            mt-4
-
+            mt-3
             text-center
-
-            text-[11px]
+            text-[9px]
             font-medium
-
             text-[#294A76]/35
-
-            sm:mt-5
-            sm:text-sm
+            sm:mt-4
+            sm:text-[10px]
+            lg:text-[12px]
           "
         >
           {showAll

@@ -135,25 +135,17 @@ Please guide me regarding the next steps.
       className="
         relative
         z-10
-
         mx-auto
         flex
-
         min-h-screen
-
         max-w-[1560px]
-
         items-center
-
         px-6
         pb-20
-
         pt-40
-
         sm:px-8
         sm:pb-24
         sm:pt-36
-
         lg:px-12
         lg:pb-16
         lg:pt-32
@@ -163,17 +155,11 @@ Please guide me regarding the next steps.
         className="
           grid
           w-full
-
           grid-cols-1
-
           items-center
-
           gap-14
-
           lg:grid-cols-[0.95fr_1.05fr]
-
           lg:gap-16
-
           xl:gap-24
         "
       >
@@ -186,7 +172,6 @@ Please guide me regarding the next steps.
           className="
             flex
             flex-col
-
             text-left
           "
         >
@@ -195,49 +180,35 @@ Please guide me regarding the next steps.
           <p
             className="
               mb-5
-
-              text-[10px]
+              text-[9px]
               font-bold
               uppercase
               tracking-[0.2em]
-
               text-[#193A7E]
-
               sm:mb-7
-              sm:text-xs
+              sm:text-[10px]
               sm:tracking-[0.25em]
-
-              lg:text-sm
+              lg:text-xs
               lg:tracking-[0.3em]
             "
           >
             Property Documentation & Deed Drafting In Meerut
           </p>
 
-          {/* SEO SUPPORTING HEADING */}
-
           {/* HEADING */}
 
           <h1
             className="
               max-w-[760px]
-
-              text-[2.9rem]
+              text-[2.45rem]
               font-semibold
-
               leading-[0.98]
-
               tracking-[-0.04em]
-
               text-[#193A7E]
-
-              sm:text-[3.75rem]
-
-              md:text-[4.5rem]
-
-              lg:text-[5.25rem]
-
-              xl:text-[6.75rem]
+              sm:text-[3.2rem]
+              md:text-[3.85rem]
+              lg:text-[4.45rem]
+              xl:text-[5.75rem]
             "
           >
             Paper Sahi Toh
@@ -251,22 +222,17 @@ Please guide me regarding the next steps.
 
           <p
             className="
-              mt-6
-
+              mt-5
               max-w-[580px]
-
-              text-base
+              text-[14px]
               font-medium
-              leading-7
-
+              leading-6
               text-[#294A76]/75
-
-              sm:mt-8
-              sm:text-lg
-              sm:leading-8
-
-              lg:text-xl
-              lg:leading-9
+              sm:mt-7
+              sm:text-base
+              sm:leading-7
+              lg:text-lg
+              lg:leading-8
             "
           >
             Professional property documentation and deed
@@ -282,14 +248,12 @@ Please guide me regarding the next steps.
 
           <div
             className="
-              mt-8
-
+              mt-7
               flex
               flex-col
               items-stretch
               gap-3
-
-              sm:mt-10
+              sm:mt-9
               sm:flex-row
               sm:items-center
               sm:gap-4
@@ -302,55 +266,41 @@ Please guide me regarding the next steps.
               onClick={scrollToProcess}
               className="
                 group
-
                 flex
-                h-12
-
+                h-11
                 items-center
                 justify-center
                 gap-2
-
                 rounded-full
-
                 bg-[#193A7E]
-
-                px-6
-
-                text-sm
+                px-5
+                text-[13px]
                 font-semibold
                 text-white
-
-                shadow-[0_14px_34px_rgba(25,58,126,0.20)]
-
+                shadow-[0_12px_29px_rgba(25,58,126,0.20)]
                 transition-all
                 duration-300
-
                 hover:-translate-y-1
                 hover:bg-[#123064]
-
-                sm:h-14
-                sm:px-8
-                sm:text-base
-
-                lg:h-16
-                lg:px-9
-                lg:text-lg
+                sm:h-12
+                sm:px-7
+                sm:text-sm
+                lg:h-14
+                lg:px-8
+                lg:text-base
               "
             >
-              <FaFileLines className="text-xs sm:text-sm" />
+              <FaFileLines className="text-[11px] sm:text-xs" />
 
               How It Works
 
               <FaArrowRight
                 className="
-                  text-xs
-
+                  text-[11px]
                   transition-transform
                   duration-300
-
                   group-hover:translate-x-1
-
-                  sm:text-sm
+                  sm:text-xs
                 "
               />
             </button>
@@ -364,59 +314,44 @@ Please guide me regarding the next steps.
               }
               className="
                 group
-
                 flex
-                h-12
-
+                h-11
                 items-center
                 justify-center
                 gap-2
-
                 rounded-full
-
                 border
                 border-black/[0.08]
-
                 bg-white
-
-                px-6
-
-                text-sm
+                px-5
+                text-[13px]
                 font-semibold
                 text-black/80
-
-                shadow-[0_10px_28px_rgba(0,0,0,0.06)]
-
+                shadow-[0_8px_24px_rgba(0,0,0,0.06)]
                 transition-all
                 duration-300
-
                 hover:-translate-y-1
                 hover:border-[#193A7E]/20
                 hover:text-[#193A7E]
-
-                sm:h-14
-                sm:px-8
-                sm:text-base
-
-                lg:h-16
-                lg:px-9
-                lg:text-lg
+                sm:h-12
+                sm:px-7
+                sm:text-sm
+                lg:h-14
+                lg:px-8
+                lg:text-base
               "
             >
-              <FaCalculator className="text-xs sm:text-sm" />
+              <FaCalculator className="text-[11px] sm:text-xs" />
 
               Get Estimate
 
               <FaArrowRight
                 className="
-                  text-xs
-
+                  text-[11px]
                   transition-transform
                   duration-300
-
                   group-hover:translate-x-1
-
-                  sm:text-sm
+                  sm:text-xs
                 "
               />
             </button>
@@ -431,13 +366,10 @@ Please guide me regarding the next steps.
           ref={visualRef}
           className="
             relative
-
             mx-auto
-
             min-h-[640px]
             w-full
             max-w-[640px]
-
             lg:mx-0
             lg:h-[580px]
             lg:min-h-0
@@ -453,7 +385,6 @@ Please guide me regarding the next steps.
             className="
               absolute
               inset-0
-
               flex
               items-center
               justify-center
@@ -464,19 +395,13 @@ Please guide me regarding the next steps.
               alt="Property deed documents and property documentation"
               className="
                 block
-
                 h-auto
                 w-full
-
-                max-w-[590px]
-
+                max-w-[500px]
                 object-contain
-
                 select-none
-
-                lg:max-w-[650px]
-
-                xl:max-w-[700px]
+                lg:max-w-[550px]
+                xl:max-w-[595px]
               "
             />
           </div>
@@ -490,27 +415,18 @@ Please guide me regarding the next steps.
             className="
               absolute
               inset-0
-
               flex
               w-full
               flex-col
-
               overflow-y-auto
               overflow-x-hidden
-
               rounded-[34px]
-
               border
               border-black/[0.07]
-
               bg-white
-
               p-5
-
               shadow-[0_36px_90px_rgba(15,35,70,0.12)]
-
               sm:p-6
-
               lg:rounded-[38px]
               lg:p-7
             "
@@ -533,12 +449,12 @@ Please guide me regarding the next steps.
               >
                 <p
                   className="
-                    text-xs
+                    text-[11px]
                     font-bold
                     uppercase
-                    tracking-[0.2em]
-
+                    tracking-[0.18em]
                     text-[#193A7E]/50
+                    sm:text-xs
                   "
                 >
                   QUICK ENQUIRY
@@ -547,14 +463,11 @@ Please guide me regarding the next steps.
                 <h2
                   className="
                     mt-2
-
-                    text-2xl
+                    text-[24px]
                     font-semibold
                     tracking-[-0.03em]
-
                     text-[#193A7E]
-
-                    sm:text-3xl
+                    sm:text-[27px]
                   "
                 >
                   Tell us what you need.
@@ -563,14 +476,10 @@ Please guide me regarding the next steps.
                 <p
                   className="
                     mt-2
-
-                    max-w-[390px]
-
-                    text-xs
-                    leading-5
-
+                    max-w-[440px]
+                    text-[13px]
+                    leading-6
                     text-black/40
-
                     sm:text-sm
                   "
                 >
@@ -591,24 +500,20 @@ Please guide me regarding the next steps.
                   h-9
                   w-9
                   shrink-0
-
                   items-center
                   justify-center
-
                   rounded-full
-
                   bg-black/[0.04]
-
                   text-black/50
-
                   transition-all
                   duration-300
-
                   hover:bg-black/[0.08]
                   hover:text-black
+                  sm:h-10
+                  sm:w-10
                 "
               >
-                <FaXmark className="text-xs" />
+                <FaXmark className="text-xs sm:text-sm" />
               </button>
             </div>
 
@@ -619,395 +524,341 @@ Please guide me regarding the next steps.
             <form
               onSubmit={handleSubmit}
               className="
-                mt-4
-
+                mt-5
                 flex
                 flex-1
                 flex-col
-
-                sm:mt-5
+                sm:mt-6
               "
             >
               <div
                 className="
-                  space-y-3
-
-                  sm:space-y-3.5
+                  space-y-4
+                  sm:space-y-5
                 "
               >
-              {/* NAME + PHONE */}
+                {/* NAME + PHONE */}
 
-              <div
-                className="
-                  grid
-                  grid-cols-1
-                  gap-3
-
-                  sm:grid-cols-2
-                "
-              >
-                {/* NAME */}
-
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="
-                      mb-1.5
-                      block
-
-                      text-[10px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.12em]
-
-                      text-black/35
-                    "
-                  >
-                    Name
-                  </label>
-
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Your name"
-                    className="
-                      h-11
-                      w-full
-
-                      rounded-xl
-
-                      border
-                      border-black/[0.07]
-
-                      bg-black/[0.02]
-
-                      px-4
-
-                      text-sm
-                      text-black
-
-                      outline-none
-
-                      placeholder:text-black/25
-
-                      transition-all
-                      duration-300
-
-                      focus:border-[#193A7E]/30
-                      focus:bg-white
-                      focus:ring-4
-                      focus:ring-[#193A7E]/[0.05]
-                    "
-                  />
-                </div>
-
-                {/* PHONE */}
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="
-                      mb-1.5
-                      block
-
-                      text-[10px]
-                      font-semibold
-                      uppercase
-                      tracking-[0.12em]
-
-                      text-black/35
-                    "
-                  >
-                    Phone
-                  </label>
-
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    placeholder="+91"
-                    className="
-                      h-11
-                      w-full
-
-                      rounded-xl
-
-                      border
-                      border-black/[0.07]
-
-                      bg-black/[0.02]
-
-                      px-4
-
-                      text-sm
-                      text-black
-
-                      outline-none
-
-                      placeholder:text-black/25
-
-                      transition-all
-                      duration-300
-
-                      focus:border-[#193A7E]/30
-                      focus:bg-white
-                      focus:ring-4
-                      focus:ring-[#193A7E]/[0.05]
-                    "
-                  />
-                </div>
-              </div>
-
-              {/* REQUIREMENT */}
-
-              <div>
-                <label
-                  htmlFor="service"
+                <div
                   className="
-                    mb-1.5
-                    block
-
-                    text-[10px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.12em]
-
-                    text-black/35
+                    grid
+                    grid-cols-1
+                    gap-4
+                    sm:grid-cols-2
+                    sm:gap-4
                   "
                 >
-                  Requirement
-                </label>
+                  {/* NAME */}
 
-                <div className="relative">
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    defaultValue=""
-                    className="
-                      h-11
-                      w-full
-
-                      appearance-none
-
-                      rounded-xl
-
-                      border
-                      border-black/[0.07]
-
-                      bg-black/[0.02]
-
-                      px-4
-                      pr-10
-
-                      text-sm
-                      text-black/70
-
-                      outline-none
-
-                      transition-all
-                      duration-300
-
-                      focus:border-[#193A7E]/30
-                      focus:bg-white
-                      focus:ring-4
-                      focus:ring-[#193A7E]/[0.05]
-                    "
-                  >
-                    <option
-                      value=""
-                      disabled
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="
+                        mb-1.5
+                        block
+                        text-[10px]
+                        font-semibold
+                        uppercase
+                        tracking-[0.11em]
+                        text-black/35
+                        sm:text-[11px]
+                      "
                     >
-                      Select a service
-                    </option>
+                      Name
+                    </label>
 
-                    <option value="Deed Drafting">
-                      Deed Drafting
-                    </option>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="Your name"
+                      className="
+                        h-12
+                        w-full
+                        rounded-[11px]
+                        border
+                        border-black/[0.07]
+                        bg-black/[0.02]
+                        px-4
+                        text-[14px]
+                        text-black
+                        outline-none
+                        placeholder:text-black/25
+                        transition-all
+                        duration-300
+                        focus:border-[#193A7E]/30
+                        focus:bg-white
+                        focus:ring-4
+                        focus:ring-[#193A7E]/[0.05]
+                        sm:h-[50px]
+                        sm:text-[15px]
+                      "
+                    />
+                  </div>
 
-                    <option value="Registration Assistance">
-                      Registration Assistance
-                    </option>
+                  {/* PHONE */}
 
-                    <option value="Legal Consultation">
-                      Legal Consultation
-                    </option>
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="
+                        mb-1.5
+                        block
+                        text-[10px]
+                        font-semibold
+                        uppercase
+                        tracking-[0.11em]
+                        text-black/35
+                        sm:text-[11px]
+                      "
+                    >
+                      Phone
+                    </label>
 
-                    <option value="Property Papers Check">
-                      Property Papers Check
-                    </option>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      placeholder="+91"
+                      className="
+                        h-12
+                        w-full
+                        rounded-[11px]
+                        border
+                        border-black/[0.07]
+                        bg-black/[0.02]
+                        px-4
+                        text-[14px]
+                        text-black
+                        outline-none
+                        placeholder:text-black/25
+                        transition-all
+                        duration-300
+                        focus:border-[#193A7E]/30
+                        focus:bg-white
+                        focus:ring-4
+                        focus:ring-[#193A7E]/[0.05]
+                        sm:h-[50px]
+                        sm:text-[15px]
+                      "
+                    />
+                  </div>
+                </div>
 
-                    <option value="Other">
-                      Other
-                    </option>
-                  </select>
+                {/* REQUIREMENT */}
 
-                  <FaChevronDown
+                <div>
+                  <label
+                    htmlFor="service"
                     className="
-                      pointer-events-none
+                      mb-1.5
+                      block
+                      text-[10px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.11em]
+                      text-black/35
+                      sm:text-[11px]
+                    "
+                  >
+                    Requirement
+                  </label>
 
-                      absolute
-                      right-4
-                      top-1/2
+                  <div className="relative">
+                    <select
+                      id="service"
+                      name="service"
+                      required
+                      defaultValue=""
+                      className="
+                        h-12
+                        w-full
+                        appearance-none
+                        rounded-[11px]
+                        border
+                        border-black/[0.07]
+                        bg-black/[0.02]
+                        px-4
+                        pr-10
+                        text-[14px]
+                        text-black/70
+                        outline-none
+                        transition-all
+                        duration-300
+                        focus:border-[#193A7E]/30
+                        focus:bg-white
+                        focus:ring-4
+                        focus:ring-[#193A7E]/[0.05]
+                        sm:h-[50px]
+                        sm:text-[15px]
+                      "
+                    >
+                      <option
+                        value=""
+                        disabled
+                      >
+                        Select a service
+                      </option>
 
-                      -translate-y-1/2
+                      <option value="Deed Drafting">
+                        Deed Drafting
+                      </option>
 
-                      text-xs
-                      text-black/30
+                      <option value="Registration Assistance">
+                        Registration Assistance
+                      </option>
+
+                      <option value="Legal Consultation">
+                        Legal Consultation
+                      </option>
+
+                      <option value="Property Papers Check">
+                        Property Papers Check
+                      </option>
+
+                      <option value="Other">
+                        Other
+                      </option>
+                    </select>
+
+                    <FaChevronDown
+                      className="
+                        pointer-events-none
+                        absolute
+                        right-4
+                        top-1/2
+                        -translate-y-1/2
+                        text-[11px]
+                        text-black/30
+                      "
+                    />
+                  </div>
+                </div>
+
+                {/* MESSAGE */}
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="
+                      mb-1.5
+                      block
+                      text-[10px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.11em]
+                      text-black/35
+                      sm:text-[11px]
+                    "
+                  >
+                    Message
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="3"
+                    placeholder="Tell us briefly about your requirement..."
+                    className="
+                      min-h-[88px]
+                      w-full
+                      resize-none
+                      rounded-[11px]
+                      border
+                      border-black/[0.07]
+                      bg-black/[0.02]
+                      px-4
+                      py-3
+                      text-[14px]
+                      leading-6
+                      text-black
+                      outline-none
+                      placeholder:text-black/25
+                      transition-all
+                      duration-300
+                      focus:border-[#193A7E]/30
+                      focus:bg-white
+                      focus:ring-4
+                      focus:ring-[#193A7E]/[0.05]
+                      sm:min-h-[95px]
+                      sm:text-[15px]
                     "
                   />
                 </div>
               </div>
 
-              {/* MESSAGE */}
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="
-                    mb-1.5
-                    block
-
-                    text-[10px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.12em]
-
-                    text-black/35
-                  "
-                >
-                  Message
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="2"
-                  placeholder="Tell us briefly about your requirement..."
-                  className="
-                    min-h-[72px]
-                    w-full
-
-                    resize-none
-
-                    rounded-xl
-
-                    border
-                    border-black/[0.07]
-
-                    bg-black/[0.02]
-
-                    px-4
-                    py-3
-
-                    text-sm
-                    leading-5
-                    text-black
-
-                    outline-none
-
-                    placeholder:text-black/25
-
-                    transition-all
-                    duration-300
-
-                    focus:border-[#193A7E]/30
-                    focus:bg-white
-                    focus:ring-4
-                    focus:ring-[#193A7E]/[0.05]
-                  "
-                />
-              </div>
-              </div>
-
-              {/* SPACER — absorbs leftover height so the CTA sits at the bottom of the card */}
+              {/* SPACER */}
 
               <div className="flex-1" />
 
               <div className="space-y-3">
+                {/* SUBMIT */}
 
-              {/* SUBMIT */}
-
-              <button
-                type="submit"
-                className="
-                  group
-
-                  flex
-                  h-12
-                  w-full
-
-                  items-center
-                  justify-center
-                  gap-2
-
-                  rounded-xl
-
-                  bg-[#25D366]
-
-                  text-sm
-                  font-semibold
-                  text-white
-
-                  shadow-[0_10px_25px_rgba(37,211,102,0.18)]
-
-                  transition-all
-                  duration-300
-
-                  hover:-translate-y-0.5
-                  hover:bg-[#20BD5A]
-                "
-              >
-                <FaWhatsapp className="text-base" />
-
-                <span className="truncate">
-                  Send Enquiry on WhatsApp
-                </span>
-
-                <FaArrowRight
+                <button
+                  type="submit"
                   className="
-                    shrink-0
-                    text-sm
-
-                    transition-transform
+                    group
+                    flex
+                    h-12
+                    w-full
+                    items-center
+                    justify-center
+                    gap-2.5
+                    rounded-[11px]
+                    bg-[#25D366]
+                    text-[14px]
+                    font-semibold
+                    text-white
+                    shadow-[0_8px_21px_rgba(37,211,102,0.18)]
+                    transition-all
                     duration-300
-
-                    group-hover:translate-x-1
+                    hover:-translate-y-0.5
+                    hover:bg-[#20BD5A]
+                    sm:h-[52px]
+                    sm:text-[15px]
                   "
-                />
-              </button>
+                >
+                  <FaWhatsapp className="text-base sm:text-lg" />
 
-              {/* PRIVACY */}
+                  <span className="truncate">
+                    Send Enquiry on WhatsApp
+                  </span>
 
-              <p
-                className="
-                  flex
-                  items-center
-                  justify-center
+                  <FaArrowRight
+                    className="
+                      shrink-0
+                      text-[13px]
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+                      sm:text-sm
+                    "
+                  />
+                </button>
 
-                  gap-2
+                {/* PRIVACY */}
 
-                  pt-1
+                <p
+                  className="
+                    flex
+                    items-center
+                    justify-center
+                    gap-1.5
+                    pt-1
+                    text-center
+                    text-[11px]
+                    leading-5
+                    text-black/35
+                    sm:text-xs
+                  "
+                >
+                  <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
 
-                  text-center
-
-                  text-[11px]
-                  leading-tight
-
-                  text-black/35
-
-                  sm:text-xs
-                "
-              >
-                <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
-
-                Your details stay private and are used only
-                to respond to your enquiry.
-              </p>
-
+                  Your details stay private and are used only
+                  to respond to your enquiry.
+                </p>
               </div>
             </form>
           </div>
@@ -1021,20 +872,15 @@ Please guide me regarding the next steps.
           className="
             grid
             grid-cols-2
-
             gap-x-6
             gap-y-8
-
             border-t
             border-black/[0.07]
-
             pt-10
-
             sm:grid-cols-4
             sm:gap-x-10
             sm:gap-y-10
             sm:pt-12
-
             lg:col-span-2
             lg:mt-4
           "
@@ -1049,30 +895,24 @@ Please guide me regarding the next steps.
                   flex
                   items-start
                   gap-4
-
                   sm:gap-5
                 "
               >
                 <span
                   className="
                     flex
-                    h-11
-                    w-11
+                    h-10
+                    w-10
                     shrink-0
-
                     items-center
                     justify-center
-
                     rounded-full
-
                     bg-[#193A7E]/[0.07]
-
-                    text-base
+                    text-[13px]
                     text-[#193A7E]
-
-                    sm:h-14
-                    sm:w-14
-                    sm:text-lg
+                    sm:h-12
+                    sm:w-12
+                    sm:text-base
                   "
                 >
                   <Icon />
@@ -1081,13 +921,11 @@ Please guide me regarding the next steps.
                 <div className="min-w-0">
                   <p
                     className="
-                      text-sm
+                      text-[12px]
                       font-semibold
                       leading-tight
-
                       text-[#193A7E]
-
-                      sm:text-lg
+                      sm:text-base
                     "
                   >
                     {item.title}
@@ -1096,14 +934,11 @@ Please guide me regarding the next steps.
                   <p
                     className="
                       mt-1
-
-                      text-xs
+                      text-[10px]
                       leading-tight
-
                       text-black/45
-
                       sm:mt-1.5
-                      sm:text-base
+                      sm:text-sm
                     "
                   >
                     {item.subtitle}

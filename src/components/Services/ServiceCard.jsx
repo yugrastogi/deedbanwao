@@ -405,40 +405,27 @@ const ServiceCard = ({ service }) => {
       onClick={handleCardClick}
       className="
         service-card-item
-
         group
         relative
-
         flex
         min-h-0
         flex-col
-
         cursor-pointer
-
-        rounded-[20px]
-
+        rounded-[17px]
         border
         border-[#193A7E]/[0.08]
-
         bg-white
-
-        p-5
-
+        p-[17px]
         shadow-[0_8px_30px_rgba(25,58,126,0.035)]
-
         transition-all
         duration-300
         ease-out
-
         hover:-translate-y-2
-
         hover:border-[#193A7E]/[0.12]
-
         hover:shadow-[0_20px_45px_rgba(25,58,126,0.10)]
-
-        sm:min-h-[340px]
-        sm:rounded-[32px]
-        sm:p-8
+        sm:min-h-[289px]
+        sm:rounded-[27px]
+        sm:p-7
       "
     >
       {/* =====================================================
@@ -454,32 +441,23 @@ const ServiceCard = ({ service }) => {
         <div
           className="
             flex
-
-            h-11
-            w-11
-
+            h-[37px]
+            w-[37px]
             items-center
             justify-center
-
-            rounded-xl
-
+            rounded-[10px]
             bg-[#193A7E]/[0.07]
-
             text-[#193A7E]
-
             transition-colors
             duration-300
-
             group-hover:bg-[#193A7E]
             group-hover:text-white
-
-            sm:h-16
-            sm:w-16
-
-            sm:rounded-2xl
+            sm:h-[54px]
+            sm:w-[54px]
+            sm:rounded-[17px]
           "
         >
-          <Icon className="text-lg sm:text-2xl" />
+          <Icon className="text-[15px] sm:text-[20px]" />
         </div>
 
         {/* =================================================
@@ -488,14 +466,13 @@ const ServiceCard = ({ service }) => {
 
         <span
           className="
-            text-xs
+            text-[9px]
             font-medium
             italic
             tracking-tight
-
             text-[#193A7E]/30
-
-            sm:text-lg
+            sm:text-[10px]
+            lg:text-[12px]
           "
         >
           {String(service.id).padStart(2, "0")}
@@ -508,31 +485,24 @@ const ServiceCard = ({ service }) => {
 
       <div
         className="
-          mt-4
-
+          mt-3.5
           flex
           items-center
           justify-between
           gap-3
-
-          sm:mt-9
+          sm:mt-7
         "
       >
         <h3
           className="
-            text-lg
+            text-[14px]
             font-semibold
-
             leading-[1.15]
             tracking-[-0.03em]
-
             text-[#172B4D]
-
-            sm:text-[28px]
-
+            sm:text-[16px]
             sm:leading-[1.08]
-
-            lg:text-[30px]
+            lg:text-[18px]
           "
         >
           {service.title}
@@ -545,21 +515,16 @@ const ServiceCard = ({ service }) => {
         <FaArrowRight
           className="
             shrink-0
-
-            text-sm
-
+            text-[9px]
             text-[#193A7E]/30
-
             opacity-0
-
             transition-all
             duration-300
-
             group-hover:translate-x-1
             group-hover:text-[#25D366]
             group-hover:opacity-100
-
-            sm:text-lg
+            sm:text-[10px]
+            lg:text-[12px]
           "
         />
       </div>
@@ -570,14 +535,11 @@ const ServiceCard = ({ service }) => {
 
       <div
         className="
-          my-3
-
+          my-2.5
           h-px
           w-full
-
           bg-[#193A7E]/[0.07]
-
-          sm:my-6
+          sm:my-5
         "
       />
 
@@ -588,20 +550,16 @@ const ServiceCard = ({ service }) => {
       <p
         className="
           pt-1
-
           line-clamp-3
-
-          text-sm
+          text-[14px]
           leading-6
-
           text-[#294A76]/70
-
-          sm:pt-5
-          sm:text-lg
-
-          sm:leading-8
-
+          sm:pt-4
+          sm:text-[16px]
+          sm:leading-7
           sm:line-clamp-none
+          lg:text-[18px]
+          lg:leading-7
         "
       >
         {service.description}
@@ -614,22 +572,17 @@ const ServiceCard = ({ service }) => {
       <div
         className="
           pointer-events-none
-
           absolute
-
           bottom-0
-          left-4
-          right-4
-
+          left-3.5
+          right-3.5
           h-px
-
           bg-gradient-to-r
           from-transparent
           via-[#193A7E]/10
           to-transparent
-
-          sm:left-8
-          sm:right-8
+          sm:left-7
+          sm:right-7
         "
       />
     </article>

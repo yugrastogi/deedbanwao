@@ -145,19 +145,19 @@ const PageTitle = () => {
         "DeedBanwao | Property Documentation & Deed Drafting in Meerut",
 
       services:
-        "DeedBanwao | Property Deed & Documentation Services in Meerut",
+        "DeedBanwao | Property Documentation & Deed Drafting in Meerut",
 
       process:
-        "DeedBanwao | Property Documentation Process in Meerut",
+        "DeedBanwao | Property Documentation & Deed Drafting in Meerut",
 
       "why-us":
-        "DeedBanwao | Trusted Property Documentation in Meerut",
+        "DeedBanwao | Trusted Property Documentation & Deed Drafting in Meerut",
 
       faq:
-        "DeedBanwao | Property Documentation FAQs | Meerut",
+        "DeedBanwao | Property Documentation & Deed Drafting FAQs | Meerut",
 
       contact:
-        "DeedBanwao | Contact | Property Documentation in Meerut",
+        "DeedBanwao | Contact | Property Documentation & Deed Drafting in Meerut",
     };
 
     document.title =

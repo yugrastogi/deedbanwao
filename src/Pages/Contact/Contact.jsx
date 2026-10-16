@@ -437,20 +437,25 @@ const Contact = () => {
                 "
               >
 
-                <span
+                <a
+                  href="https://maps.app.goo.gl/Ar4YwmUpGEK9Zk2B7"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
+                    inline-block
                     text-2xl
                     font-medium
                     leading-tight
                     tracking-[-0.035em]
-
                     text-[#193A7E]
-
+                    transition-colors
+                    duration-200
+                    hover:text-[#16A66A]
                     sm:text-3xl
                   "
                 >
                   48 Godwin Estate, Roorkee Road, Meerut, UP, 250001
-                </span>
+                </a>
 
               </div>
 

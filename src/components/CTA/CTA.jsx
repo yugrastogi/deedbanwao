@@ -213,7 +213,7 @@ lg:py-16
           >
             <FaCalculator className="text-xs" />
 
-            Get Estimate
+            Get Free Estimate
 
             <FaArrowRight
               className="

@@ -22,44 +22,6 @@ const Contact = () => {
     >
 
       {/* =====================================================
-          BACKGROUND — SUBTLE CIRCULAR GRADIENTS
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          bg-[radial-gradient(circle_at_15%_10%,rgba(0,0,0,0.055),transparent_30%)]
-        "
-      />
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          bg-[radial-gradient(circle_at_90%_45%,rgba(0,0,0,0.04),transparent_32%)]
-        "
-      />
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          bottom-[-250px]
-          left-1/2
-          h-[600px]
-          w-[900px]
-          -translate-x-1/2
-          rounded-full
-          bg-[radial-gradient(circle,rgba(0,0,0,0.035),transparent_68%)]
-          blur-[40px]
-        "
-      />
-
-
-      {/* =====================================================
           PAGE CONTENT
       ===================================================== */}
 

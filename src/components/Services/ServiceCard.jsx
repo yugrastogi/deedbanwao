@@ -421,7 +421,7 @@ const ServiceCard = ({ service }) => {
         flex-col
         cursor-pointer
         rounded-[17px]
-        border
+        border-2
         border-[#193A7E]/[0.12]
         bg-[#E1EAF3]
         p-[17px]
@@ -429,12 +429,9 @@ const ServiceCard = ({ service }) => {
         transition-[border-color,border-width,box-shadow]
         duration-200
         ease-out
-        hover:border-2
         hover:border-[#16A66A]
-        focus-visible:border-2
         focus-visible:border-[#16A66A]
         focus-visible:outline-none
-        active:border-2
         active:border-[#16A66A]
         sm:min-h-[289px]
         sm:rounded-[27px]

@@ -20,7 +20,7 @@ sm:py-10
 
 ${
   !isLast
-    ? "border-b border-[#006AD0]/10"
+    ? "border-b border-[#193A7E]/10"
     : ""
 }
 `}
@@ -38,7 +38,7 @@ ${
       font-semibold
       tracking-[0.12em]
 
-      text-[#006AD0]/35
+      text-[#193A7E]/35
 
       sm:text-[10px]
       sm:tracking-[0.18em]
@@ -66,18 +66,18 @@ ${
       rounded-full
 
       border
-      border-[#006AD0]/10
+      border-[#193A7E]/10
 
       bg-white/50
 
-      text-[#006AD0]/60
+      text-[#193A7E]/60
 
       backdrop-blur-xl
 
       transition-all
       duration-300
 
-      group-hover:bg-[#006AD0]
+      group-hover:bg-[#193A7E]
       group-hover:text-white
 
       sm:flex
@@ -102,7 +102,7 @@ ${
         leading-[1.05]
         tracking-[-0.04em]
 
-        text-[#006AD0]
+        text-[#193A7E]
 
         transition-colors
         duration-300
@@ -128,7 +128,7 @@ ${
         text-[14px]
         leading-6
 
-        text-[#006AD0]/65
+        text-[#193A7E]/65
 
         sm:mt-3
         sm:text-[16px]

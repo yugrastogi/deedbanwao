@@ -69,7 +69,7 @@ sm:gap-10
         border
         border-white/15
 
-        bg-[#006AD0]
+        bg-[#193A7E]
 
         text-[14px]
         font-semibold

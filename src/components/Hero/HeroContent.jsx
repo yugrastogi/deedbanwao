@@ -140,7 +140,7 @@ Please guide me regarding the next steps.
               font-bold
               uppercase
               tracking-[0.2em]
-              text-[#006AD0]
+              text-[#193A7E]
               sm:mb-5
               sm:text-[10px]
               sm:tracking-[0.25em]
@@ -160,7 +160,7 @@ Please guide me regarding the next steps.
               font-semibold
               leading-[0.98]
               tracking-[-0.04em]
-              text-[#006AD0]
+              text-[#193A7E]
               sm:text-[3.2rem]
               md:text-[3.85rem]
               lg:text-[3.85rem]
@@ -169,7 +169,7 @@ Please guide me regarding the next steps.
           >
             Property Registration
             <br />
-            <span className="text-[#05AA44]">
+            <span className="text-[#16A66A]">
               in Meerut.
             </span>
           </h1>
@@ -183,7 +183,7 @@ Please guide me regarding the next steps.
               text-[14px]
               font-medium
               leading-6
-              text-[#006AD0]/75
+              text-[#193A7E]/75
               sm:mt-5
               sm:text-base
               sm:leading-7
@@ -226,16 +226,16 @@ Please guide me regarding the next steps.
                 justify-center
                 gap-2
                 rounded-full
-                bg-[#006AD0]
+                bg-[#193A7E]
                 px-5
                 text-[13px]
                 font-semibold
                 text-white
-                shadow-[0_12px_29px_rgba(0,106,208,0.20)]
+                shadow-[0_12px_29px_rgba(25,58,126,0.20)]
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#006AD0]
+                hover:bg-[#193A7E]
                 sm:h-12
                 sm:px-7
                 sm:text-sm
@@ -283,8 +283,8 @@ Please guide me regarding the next steps.
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:border-[#006AD0]/20
-                hover:text-[#006AD0]
+                hover:border-[#193A7E]/20
+                hover:text-[#193A7E]
                 sm:h-12
                 sm:px-7
                 sm:text-sm
@@ -372,7 +372,7 @@ Please guide me regarding the next steps.
                     font-bold
                     uppercase
                     tracking-[0.18em]
-                    text-[#006AD0]/50
+                    text-[#193A7E]/50
                     sm:text-xs
                   "
                 >
@@ -385,7 +385,7 @@ Please guide me regarding the next steps.
                     text-[21px]
                     font-semibold
                     tracking-[-0.03em]
-                    text-[#006AD0]
+                    text-[#193A7E]
                     sm:text-[24px]
                   "
                 >
@@ -474,10 +474,10 @@ Please guide me regarding the next steps.
                         placeholder:text-black/25
                         transition-all
                         duration-300
-                        focus:border-[#006AD0]/30
+                        focus:border-[#193A7E]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#006AD0]/[0.05]
+                        focus:ring-[#193A7E]/[0.05]
                         sm:h-11
                         sm:text-[15px]
                       "
@@ -523,10 +523,10 @@ Please guide me regarding the next steps.
                         placeholder:text-black/25
                         transition-all
                         duration-300
-                        focus:border-[#006AD0]/30
+                        focus:border-[#193A7E]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#006AD0]/[0.05]
+                        focus:ring-[#193A7E]/[0.05]
                         sm:h-11
                         sm:text-[15px]
                       "
@@ -574,10 +574,10 @@ Please guide me regarding the next steps.
                         outline-none
                         transition-all
                         duration-300
-                        focus:border-[#006AD0]/30
+                        focus:border-[#193A7E]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#006AD0]/[0.05]
+                        focus:ring-[#193A7E]/[0.05]
                         sm:h-11
                         sm:text-[15px]
                       "
@@ -665,10 +665,10 @@ Please guide me regarding the next steps.
                       placeholder:text-black/25
                       transition-all
                       duration-300
-                      focus:border-[#006AD0]/30
+                      focus:border-[#193A7E]/30
                       focus:bg-white
                       focus:ring-4
-                      focus:ring-[#006AD0]/[0.05]
+                      focus:ring-[#193A7E]/[0.05]
                       sm:min-h-[68px]
                       sm:text-[15px]
                     "
@@ -690,15 +690,15 @@ Please guide me regarding the next steps.
                     justify-center
                     gap-2.5
                     rounded-[11px]
-                    bg-[#05AA44]
+                    bg-[#16A66A]
                     text-[14px]
                     font-semibold
                     text-white
-                    shadow-[0_8px_21px_rgba(5,170,68,0.18)]
+                    shadow-[0_8px_21px_rgba(22,166,106,0.18)]
                     transition-all
                     duration-300
                     hover:-translate-y-0.5
-                    hover:bg-[#05AA44]
+                    hover:bg-[#16A66A]
                     sm:h-11
                     sm:text-[15px]
                   "
@@ -737,7 +737,7 @@ Please guide me regarding the next steps.
                     sm:text-xs
                   "
                 >
-                  <FaShieldHalved className="text-[10px] text-[#006AD0]/50" />
+                  <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
 
                   Your details stay private and are used only
                   to respond to your enquiry.
@@ -798,9 +798,9 @@ Please guide me regarding the next steps.
                     items-center
                     justify-center
                     rounded-full
-                    bg-[#006AD0]/10
+                    bg-[#193A7E]/10
                     text-[13px]
-                    text-[#006AD0]
+                    text-[#193A7E]
                     sm:h-14
                     sm:w-14
                     sm:text-lg
@@ -823,7 +823,7 @@ Please guide me regarding the next steps.
                       text-sm
                       font-semibold
                       leading-tight
-                      text-[#006AD0]
+                      text-[#193A7E]
                       sm:text-lg
                     "
                   >
@@ -835,7 +835,7 @@ Please guide me regarding the next steps.
                       mt-1
                       text-xs
                       leading-snug
-                      text-[#006AD0]/80
+                      text-[#193A7E]/80
                       sm:mt-1.5
                       sm:text-base
                     "

@@ -5,7 +5,6 @@ import {
 
 import { gsap } from "gsap";
 
-import HeroBackground from "./HeroBackground";
 import HeroContent from "./HeroContent";
 
 const Hero = () => {
@@ -88,11 +87,9 @@ const Hero = () => {
       className="
         relative
         overflow-hidden
-        bg-white
+        blueprint-page
       "
     >
-      <HeroBackground />
-
       <HeroContent
         contentRef={contentRef}
         visualRef={visualRef}

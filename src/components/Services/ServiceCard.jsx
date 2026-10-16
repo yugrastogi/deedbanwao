@@ -413,16 +413,16 @@ const ServiceCard = ({ service }) => {
         cursor-pointer
         rounded-[17px]
         border
-        border-[#006AD0]/[0.08]
+        border-[#193A7E]/[0.08]
         bg-white
         p-[17px]
-        shadow-[0_8px_30px_rgba(0,106,208,0.035)]
+        shadow-[0_8px_30px_rgba(25,58,126,0.035)]
         transition-all
         duration-300
         ease-out
         hover:-translate-y-2
-        hover:border-[#006AD0]/[0.12]
-        hover:shadow-[0_20px_45px_rgba(0,106,208,0.10)]
+        hover:border-[#193A7E]/[0.12]
+        hover:shadow-[0_20px_45px_rgba(25,58,126,0.10)]
         sm:min-h-[289px]
         sm:rounded-[27px]
         sm:p-7
@@ -446,11 +446,11 @@ const ServiceCard = ({ service }) => {
             items-center
             justify-center
             rounded-[10px]
-            bg-[#006AD0]/[0.07]
-            text-[#006AD0]
+            bg-[#193A7E]/[0.07]
+            text-[#193A7E]
             transition-colors
             duration-300
-            group-hover:bg-[#006AD0]
+            group-hover:bg-[#193A7E]
             group-hover:text-white
             sm:h-[54px]
             sm:w-[54px]
@@ -470,7 +470,7 @@ const ServiceCard = ({ service }) => {
             font-medium
             italic
             tracking-tight
-            text-[#006AD0]/30
+            text-[#193A7E]/30
             sm:text-[10px]
             lg:text-[12px]
           "
@@ -516,12 +516,12 @@ const ServiceCard = ({ service }) => {
           className="
             shrink-0
             text-[9px]
-            text-[#006AD0]/30
+            text-[#193A7E]/30
             opacity-0
             transition-all
             duration-300
             group-hover:translate-x-1
-            group-hover:text-[#05AA44]
+            group-hover:text-[#16A66A]
             group-hover:opacity-100
             sm:text-[10px]
             lg:text-[12px]
@@ -538,7 +538,7 @@ const ServiceCard = ({ service }) => {
           my-2.5
           h-px
           w-full
-          bg-[#006AD0]/[0.07]
+          bg-[#193A7E]/[0.07]
           sm:my-5
         "
       />
@@ -553,7 +553,7 @@ const ServiceCard = ({ service }) => {
           line-clamp-3
           text-[14px]
           leading-6
-          text-[#006AD0]/70
+          text-[#193A7E]/70
           sm:pt-4
           sm:text-[16px]
           sm:leading-7
@@ -579,7 +579,7 @@ const ServiceCard = ({ service }) => {
           h-px
           bg-gradient-to-r
           from-transparent
-          via-[#006AD0]/10
+          via-[#193A7E]/10
           to-transparent
           sm:left-7
           sm:right-7

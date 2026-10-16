@@ -24,7 +24,7 @@ className="
 relative
 overflow-hidden
 
-bg-white
+blueprint-page
 
 px-6
 py-16
@@ -85,8 +85,8 @@ lg:py-20
 
             bg-gradient-to-r
             from-transparent
-            via-[#006AD0]/10
-            to-[#006AD0]/20
+            via-[#193A7E]/10
+            to-[#193A7E]/20
 
             sm:w-20
 
@@ -105,7 +105,7 @@ lg:py-20
             uppercase
             tracking-[0.22em]
 
-            text-[#006AD0]/60
+            text-[#193A7E]/60
 
             sm:text-[10px]
             sm:tracking-[0.32em]
@@ -126,8 +126,8 @@ lg:py-20
 
             bg-gradient-to-l
             from-transparent
-            via-[#006AD0]/10
-            to-[#006AD0]/20
+            via-[#193A7E]/10
+            to-[#193A7E]/20
 
             sm:w-20
 
@@ -151,7 +151,7 @@ lg:py-20
           leading-[0.94]
           tracking-[-0.05em]
 
-          text-[#006AD0]
+          text-[#193A7E]
 
           sm:mt-7
           sm:text-[2.8rem]
@@ -171,7 +171,7 @@ lg:py-20
             font-normal
             italic
 
-            text-[#05AA44]
+            text-[#16A66A]
           "
         >
           We make it simple.
@@ -193,7 +193,7 @@ lg:py-20
           text-[14px]
           leading-5
 
-          text-[#006AD0]/65
+          text-[#193A7E]/65
 
           sm:mt-6
           sm:max-w-3xl
@@ -219,7 +219,7 @@ lg:py-20
         mt-12
 
         border-t
-        border-[#006AD0]/10
+        border-[#193A7E]/10
 
         sm:mt-20
       "

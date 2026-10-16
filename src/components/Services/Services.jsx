@@ -136,7 +136,7 @@ const Services = () => {
       className="
         relative
         overflow-hidden
-        bg-white
+        blueprint-page
         px-6
         py-16
         sm:px-8
@@ -158,7 +158,7 @@ const Services = () => {
           h-[340px]
           w-[340px]
           rounded-full
-          bg-[#006AD0]/[0.025]
+          bg-[#193A7E]/[0.025]
           blur-3xl
           sm:h-[425px]
           sm:w-[425px]
@@ -219,8 +219,8 @@ const Services = () => {
                 shrink-0
                 bg-gradient-to-r
                 from-transparent
-                via-[#006AD0]/10
-                to-[#006AD0]/20
+                via-[#193A7E]/10
+                to-[#193A7E]/20
                 sm:w-20
                 lg:w-24
               "
@@ -235,7 +235,7 @@ const Services = () => {
                 font-semibold
                 uppercase
                 tracking-[0.22em]
-                text-[#006AD0]/60
+                text-[#193A7E]/60
                 sm:text-[10px]
                 sm:tracking-[0.25em]
                 lg:text-[12px]
@@ -254,8 +254,8 @@ const Services = () => {
                 shrink-0
                 bg-gradient-to-l
                 from-transparent
-                via-[#006AD0]/10
-                to-[#006AD0]/20
+                via-[#193A7E]/10
+                to-[#193A7E]/20
                 sm:w-20
                 lg:w-24
               "
@@ -274,7 +274,7 @@ const Services = () => {
               font-semibold
               leading-[0.94]
               tracking-[-0.05em]
-              text-[#006AD0]
+              text-[#193A7E]
               sm:mt-7
               sm:text-[2.8rem]
               md:text-[3.35rem]
@@ -290,7 +290,7 @@ const Services = () => {
               className="
                 font-normal
                 italic
-                text-[#05AA44]
+                text-[#16A66A]
               "
             >
               Handled Properly.
@@ -308,7 +308,7 @@ const Services = () => {
               max-w-[380px]
               text-[14px]
               leading-6
-              text-[#006AD0]/65
+              text-[#193A7E]/65
               sm:mt-6
               sm:max-w-2xl
               sm:text-[16px]
@@ -401,7 +401,7 @@ const Services = () => {
                             font-semibold
                             uppercase
                             tracking-[0.16em]
-                            text-[#006AD0]/45
+                            text-[#193A7E]/45
                             sm:text-[10px]
                             sm:tracking-[0.22em]
                             lg:text-[12px]
@@ -421,7 +421,7 @@ const Services = () => {
                             font-semibold
                             leading-tight
                             tracking-[-0.03em]
-                            text-[#006AD0]
+                            text-[#193A7E]
                             sm:mt-1.5
                             sm:max-w-none
                             sm:text-[16px]
@@ -442,7 +442,7 @@ const Services = () => {
                           hidden
                           h-px
                           flex-1
-                          bg-[#006AD0]/10
+                          bg-[#193A7E]/10
                           sm:mb-2
                           sm:block
                         "
@@ -500,17 +500,17 @@ const Services = () => {
               justify-center
               gap-2
               rounded-full
-              bg-[#006AD0]
+              bg-[#193A7E]
               px-6
               text-[14px]
               font-semibold
               text-white
-              shadow-[0_14px_34px_rgba(0,106,208,0.20)]
+              shadow-[0_14px_34px_rgba(25,58,126,0.20)]
               transition-all
               duration-300
               hover:-translate-y-1
-              hover:bg-[#006AD0]
-              hover:shadow-[0_18px_40px_rgba(0,106,208,0.24)]
+              hover:bg-[#193A7E]
+              hover:shadow-[0_18px_40px_rgba(25,58,126,0.24)]
               sm:h-14
               sm:gap-2.5
               sm:px-8
@@ -533,7 +533,7 @@ const Services = () => {
                 justify-center
                 rounded-full
                 bg-white
-                text-[#006AD0]
+                text-[#193A7E]
                 transition-transform
                 duration-300
                 group-hover:scale-105
@@ -560,7 +560,7 @@ const Services = () => {
             text-center
             text-[9px]
             font-medium
-            text-[#006AD0]/35
+            text-[#193A7E]/35
             sm:mt-4
             sm:text-[10px]
             lg:text-[12px]

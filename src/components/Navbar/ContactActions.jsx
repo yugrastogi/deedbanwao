@@ -100,7 +100,7 @@ const ContactActions = ({ isLight = false }) => {
 
           rounded-full
 
-          bg-[#05AA44]
+          bg-[#16A66A]
 
           px-3
 
@@ -116,7 +116,7 @@ const ContactActions = ({ isLight = false }) => {
           duration-500
 
           hover:-translate-y-[1px]
-          hover:bg-[#05AA44]
+          hover:bg-[#16A66A]
 
           sm:w-auto
           sm:px-5

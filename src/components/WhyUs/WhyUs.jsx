@@ -9,7 +9,7 @@ aria-labelledby="why-us-heading"
 className="
 relative
 overflow-hidden
-bg-white
+blueprint-page
 
 px-6
 py-16
@@ -84,8 +84,8 @@ lg:py-20
 
               bg-gradient-to-r
               from-transparent
-              via-[#006AD0]/10
-              to-[#006AD0]/20
+              via-[#193A7E]/10
+              to-[#193A7E]/20
 
               sm:w-20
 
@@ -103,7 +103,7 @@ lg:py-20
               font-semibold
               uppercase
               tracking-[0.22em]
-              text-[#006AD0]/65
+              text-[#193A7E]/65
 
               sm:text-[10px]
               sm:tracking-[0.25em]
@@ -125,8 +125,8 @@ lg:py-20
 
               bg-gradient-to-l
               from-transparent
-              via-[#006AD0]/10
-              to-[#006AD0]/20
+              via-[#193A7E]/10
+              to-[#193A7E]/20
 
               sm:w-20
 
@@ -153,7 +153,7 @@ lg:py-20
             leading-[0.94]
             tracking-[-0.05em]
 
-            text-[#006AD0]
+            text-[#193A7E]
 
             sm:mt-7
             sm:text-[2.8rem]
@@ -173,7 +173,7 @@ lg:py-20
               font-normal
               italic
 
-              text-[#05AA44]
+              text-[#16A66A]
             "
           >
             More peace.
@@ -202,7 +202,7 @@ lg:py-20
             text-[14px]
             leading-6
 
-            text-[#006AD0]/75
+            text-[#193A7E]/75
 
             sm:text-[16px]
             sm:leading-7
@@ -230,7 +230,7 @@ lg:py-20
         mt-14
 
         border-t
-        border-[#006AD0]/15
+        border-[#193A7E]/15
 
         sm:mt-20
 

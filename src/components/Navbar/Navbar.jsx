@@ -419,18 +419,18 @@ Introduction: ${formData.get("introduction")}
             gap-2
             rounded-full
             border
-            border-[#006AD0]/15
-            bg-[#006AD0]
+            border-[#193A7E]/15
+            bg-[#193A7E]
             px-4
             py-2
             text-sm
             font-semibold
             text-white
-            shadow-[0_8px_20px_rgba(0,106,208,0.16)]
+            shadow-[0_8px_20px_rgba(25,58,126,0.16)]
             transition-all
             duration-300
             hover:-translate-y-0.5
-            hover:bg-[#006AD0]
+            hover:bg-[#193A7E]
             lg:flex
           "
         >
@@ -611,7 +611,7 @@ Introduction: ${formData.get("introduction")}
 
                   rounded-full
 
-                  bg-[#006AD0]/[0.035]
+                  bg-[#193A7E]/[0.035]
 
                   blur-[90px]
                 "
@@ -630,7 +630,7 @@ Introduction: ${formData.get("introduction")}
 
                   rounded-full
 
-                  bg-[#006AD0]/[0.025]
+                  bg-[#193A7E]/[0.025]
 
                   blur-[90px]
                 "
@@ -731,13 +731,13 @@ Introduction: ${formData.get("introduction")}
                       gap-2
                       rounded-full
                       border
-                      border-[#006AD0]/15
-                      bg-[#006AD0]/[0.06]
+                      border-[#193A7E]/15
+                      bg-[#193A7E]/[0.06]
                       px-6
                       py-4
                       text-sm
                       font-semibold
-                      text-[#006AD0]
+                      text-[#193A7E]
                     "
                   >
                     <FaBriefcase className="text-sm" />
@@ -759,7 +759,7 @@ Introduction: ${formData.get("introduction")}
 
                       rounded-full
 
-                      bg-[#006AD0]
+                      bg-[#193A7E]
 
                       px-6
                       py-4
@@ -769,15 +769,15 @@ Introduction: ${formData.get("introduction")}
 
                       text-white
 
-                      shadow-[0_12px_30px_rgba(0,106,208,0.18)]
+                      shadow-[0_12px_30px_rgba(25,58,126,0.18)]
 
                       transition-all
                       duration-300
 
                       hover:-translate-y-1
-                      hover:bg-[#006AD0]
+                      hover:bg-[#193A7E]
 
-                      hover:shadow-[0_16px_35px_rgba(0,106,208,0.24)]
+                      hover:shadow-[0_16px_35px_rgba(25,58,126,0.24)]
 
                       active:translate-y-0
                     "
@@ -805,7 +805,7 @@ Introduction: ${formData.get("introduction")}
           flex
           items-end
           justify-center
-          bg-[#006AD0]/45
+          bg-[#193A7E]/45
           p-3
           backdrop-blur-sm
           sm:items-center
@@ -827,7 +827,7 @@ Introduction: ${formData.get("introduction")}
             border-white/70
             bg-white
             p-5
-            shadow-[0_28px_80px_rgba(0,106,208,0.28)]
+            shadow-[0_28px_80px_rgba(25,58,126,0.28)]
             sm:max-h-[calc(100svh-3rem)]
             sm:rounded-[32px]
             sm:p-7
@@ -847,10 +847,10 @@ Introduction: ${formData.get("introduction")}
               items-center
               justify-center
               rounded-full
-              bg-[#006AD0]/[0.06]
-              text-[#006AD0]
+              bg-[#193A7E]/[0.06]
+              text-[#193A7E]
               transition-colors
-              hover:bg-[#006AD0]/10
+              hover:bg-[#193A7E]/10
               sm:right-5
               sm:top-5
             "
@@ -861,7 +861,7 @@ Introduction: ${formData.get("introduction")}
           <div className="pr-12">
             <h2
               id="associate-advocate-title"
-              className="text-2xl font-semibold tracking-[-0.03em] text-[#006AD0] sm:text-3xl"
+              className="text-2xl font-semibold tracking-[-0.03em] text-[#193A7E] sm:text-3xl"
             >
               Associate Advocate Request
             </h2>
@@ -871,41 +871,41 @@ Introduction: ${formData.get("introduction")}
             onSubmit={handleAssociateSubmit}
             className="mt-6 grid gap-4 sm:grid-cols-2"
           >
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0]">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E]">
               Name
-              <input name="name" required autoComplete="name" className="h-11 rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white" />
+              <input name="name" required autoComplete="name" className="h-11 rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white" />
             </label>
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0]">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E]">
               Phone
-              <input name="phone" required type="tel" autoComplete="tel" className="h-11 rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white" />
+              <input name="phone" required type="tel" autoComplete="tel" className="h-11 rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white" />
             </label>
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0]">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E]">
               Email
-              <input name="email" required type="email" autoComplete="email" className="h-11 rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white" />
+              <input name="email" required type="email" autoComplete="email" className="h-11 rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white" />
             </label>
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0]">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E]">
               Working area
               <span className="relative">
-                <select name="area" required defaultValue="" className="h-11 w-full appearance-none rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 pr-10 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white">
+                <select name="area" required defaultValue="" className="h-11 w-full appearance-none rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 pr-10 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white">
                   <option value="" disabled>Select your working area</option>
                   <option value="Meerut">Meerut</option>
                   <option value="Sardhana">Sardhana</option>
                   <option value="Mawana">Mawana</option>
                 </select>
-                <FaChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#006AD0]/70" />
+                <FaChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#193A7E]/70" />
               </span>
             </label>
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0] sm:col-span-2">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E] sm:col-span-2">
               Bar Council Enrollment No.
-              <input name="barCouncilNumber" required className="h-11 rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white" />
+              <input name="barCouncilNumber" required className="h-11 rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white" />
             </label>
-            <label className="grid gap-1.5 text-sm font-semibold text-[#006AD0] sm:col-span-2">
+            <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E] sm:col-span-2">
               A short introduction
-              <textarea name="introduction" required rows="4" className="resize-y rounded-xl border border-[#006AD0]/12 bg-[#006AD0]/[0.025] px-3 py-2.5 text-base font-normal outline-none transition focus:border-[#006AD0]/45 focus:bg-white" />
+              <textarea name="introduction" required rows="4" className="resize-y rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 py-2.5 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white" />
             </label>
             <button
               type="submit"
-              className="sm:col-span-2 mt-1 flex h-12 items-center justify-center gap-2 rounded-full bg-[#006AD0] px-6 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(0,106,208,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#006AD0]"
+              className="sm:col-span-2 mt-1 flex h-12 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-6 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(25,58,126,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#193A7E]"
             >
               Join us as an Associate Advocate
               <FaArrowRight />

@@ -49,7 +49,7 @@ className="
 relative
 overflow-hidden
 
-bg-white
+blueprint-page
 
 px-6
 py-12
@@ -80,12 +80,12 @@ lg:py-16
 
         rounded-[24px]
 
-        bg-[#006AD0]
+        bg-[#193A7E]
 
         px-6
         py-7
 
-        shadow-[0_30px_70px_rgba(0,106,208,0.28)]
+        shadow-[0_30px_70px_rgba(25,58,126,0.28)]
 
         sm:rounded-[32px]
         sm:px-10
@@ -134,7 +134,7 @@ lg:py-16
 
           rounded-full
 
-          bg-[#006AD0]/40
+          bg-[#193A7E]/40
 
           blur-[85px]
 
@@ -248,7 +248,7 @@ lg:py-16
 
               text-sm
               font-semibold
-              text-[#006AD0]
+              text-[#193A7E]
 
               shadow-[0_10px_28px_rgba(0,0,0,0.14)]
 

@@ -225,7 +225,7 @@ const NavLinks = ({
                     leading-none
                     tracking-[-0.025em]
 
-                    hover:bg-[#006AD0]/[0.04]
+                    hover:bg-[#193A7E]/[0.04]
 
                     sm:px-5
                     sm:py-4
@@ -261,18 +261,18 @@ const NavLinks = ({
 
                 rounded-full
 
-                bg-[#006AD0]/[0.045]
+                bg-[#193A7E]/[0.045]
 
                 text-base
                 font-normal
                 leading-none
-                text-[#006AD0]/45
+                text-[#193A7E]/45
 
                 transition-all
                 duration-300
 
                 group-hover:translate-x-1
-                group-hover:bg-[#006AD0]
+                group-hover:bg-[#193A7E]
                 group-hover:text-white
               "
             >

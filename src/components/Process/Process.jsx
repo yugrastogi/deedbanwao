@@ -10,7 +10,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#006AD0]
+bg-[#193A7E]
 
 px-6
 py-16
@@ -65,7 +65,7 @@ lg:py-20
 
       rounded-full
 
-      bg-[#006AD0]/30
+      bg-[#193A7E]/30
 
       blur-[72px]
 
@@ -217,7 +217,7 @@ lg:py-20
               font-normal
               italic
 
-              text-[#05AA44]
+              text-[#16A66A]
             "
           >
             To Registration.

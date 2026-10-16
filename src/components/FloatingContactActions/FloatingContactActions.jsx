@@ -8,13 +8,13 @@ const FloatingContactActions = () => {
     <div
       className="
         fixed
-        bottom-5
+        bottom-28
         right-4
         z-20
         flex
         flex-col
         gap-3
-        sm:bottom-7
+        sm:bottom-32
         sm:right-6
       "
     >
@@ -30,10 +30,10 @@ const FloatingContactActions = () => {
           items-center
           justify-center
           rounded-full
-          bg-[#05AA44]
+          bg-[#16A66A]
           text-xl
           text-white
-          shadow-[0_10px_24px_rgba(5,170,68,0.28)]
+          shadow-[0_10px_24px_rgba(22,166,106,0.28)]
           transition-all
           duration-300
           hover:-translate-y-1
@@ -53,10 +53,10 @@ const FloatingContactActions = () => {
           items-center
           justify-center
           rounded-full
-          bg-[#006AD0]
+          bg-[#193A7E]
           text-lg
           text-white
-          shadow-[0_10px_24px_rgba(0,106,208,0.25)]
+          shadow-[0_10px_24px_rgba(25,58,126,0.25)]
           transition-all
           duration-300
           hover:-translate-y-1

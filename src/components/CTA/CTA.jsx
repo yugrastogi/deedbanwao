@@ -49,7 +49,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#EFF6FC]
+bg-[#EAF2F9]
 
 px-6
 py-12

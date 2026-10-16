@@ -22,11 +22,10 @@ const handleGetEstimate = () => {
     const enquiryForm = document.getElementById("enquiry-form");
     if (!enquiryForm) return;
 
-    enquiryForm.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    // Leave room for the fixed navbar/announcement strip so the
+    // card's top padding and "QUICK ENQUIRY" label stay visible.
+    const top = enquiryForm.getBoundingClientRect().top + window.scrollY - 132;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
   }, 120);
 };
 

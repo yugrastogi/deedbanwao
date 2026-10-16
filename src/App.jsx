@@ -129,6 +129,53 @@ const PageTitle = () => {
   }, [location.pathname]);
 
   // =====================================================
+  // ROUTE-AWARE SEO METADATA
+  // Keep the brand name consistent and expose the correct
+  // canonical URL and description for each route.
+  // =====================================================
+
+  useEffect(() => {
+    const isContact = location.pathname.replace(/\/$/, "") === "/contact";
+    const pageTitle = isContact
+      ? "Contact DeedBanwao | Property Documentation in Meerut"
+      : "DeedBanwao | Property Documentation & Deed Drafting in Meerut";
+    const description = isContact
+      ? "Contact DeedBanwao in Meerut for property deed drafting, documentation, stamp duty guidance and registration assistance. Call or WhatsApp to discuss your requirement."
+      : "DeedBanwao helps with property deed drafting and documentation in Meerut, Uttar Pradesh, including sale deeds, gift deeds, rent agreements, stamp duty guidance and registration assistance.";
+    const canonicalUrl = isContact
+      ? "https://deedbanwao.com/contact"
+      : "https://deedbanwao.com/";
+
+    document.title = pageTitle;
+
+    const setMeta = (selector, attribute, value) => {
+      let element = document.head.querySelector(selector);
+      if (!element) {
+        element = document.createElement("meta");
+        const [key, name] = attribute;
+        element.setAttribute(key, name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", value);
+    };
+
+    setMeta('meta[name="description"]', ["name", "description"], description);
+    setMeta('meta[property="og:title"]', ["property", "og:title"], pageTitle);
+    setMeta('meta[property="og:description"]', ["property", "og:description"], description);
+    setMeta('meta[property="og:url"]', ["property", "og:url"], canonicalUrl);
+    setMeta('meta[name="twitter:title"]', ["name", "twitter:title"], pageTitle);
+    setMeta('meta[name="twitter:description"]', ["name", "twitter:description"], description);
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", canonicalUrl);
+  }, [location.pathname]);
+
+  // =====================================================
   // UPDATE BROWSER TAB TITLE
   // =====================================================
 

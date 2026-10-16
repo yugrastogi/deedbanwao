@@ -33,13 +33,13 @@ const Contact = () => {
           max-w-7xl
           px-6
           pb-24
-          pt-24
+          pt-16
 
           sm:pb-32
-          sm:pt-28
+          sm:pt-20
 
           lg:pb-40
-          lg:pt-32
+          lg:pt-24
         "
       >
 
@@ -49,15 +49,15 @@ const Contact = () => {
 
         <div
           className="
-            mt-8
+            mt-2
 
             grid
             grid-cols-1
             gap-10
 
-            sm:mt-12
+            sm:mt-6
 
-            lg:mt-16
+            lg:mt-8
             lg:grid-cols-[1fr_0.8fr]
             lg:items-end
             lg:gap-24
@@ -237,7 +237,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#193A7E]/25
 
                 py-8
 
@@ -317,7 +317,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#193A7E]/25
 
                 py-8
 
@@ -398,7 +398,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#193A7E]/25
 
                 py-8
 
@@ -743,7 +743,7 @@ const Contact = () => {
             gap-2
 
             border-t
-            border-[#193A7E]/10
+            border-[#193A7E]/25
 
             pt-5
 

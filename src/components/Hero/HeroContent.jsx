@@ -790,13 +790,15 @@ Please guide me regarding the next steps.
                 key={item.title}
                 className="
                   flex
-                  items-start
+                  min-h-[112px]
+                  items-center
                   gap-3
                   rounded-xl
                   bg-white/70
                   p-3
                   shadow-sm
                   sm:gap-4
+                  sm:min-h-[142px]
                   sm:p-4
                 "
               >
@@ -820,7 +822,15 @@ Please guide me regarding the next steps.
                   <Icon />
                 </span>
 
-                <div className="min-w-0">
+                <div
+                  className="
+                    flex
+                    min-w-0
+                    flex-1
+                    flex-col
+                    justify-center
+                  "
+                >
                   <p
                     className="
                       text-sm

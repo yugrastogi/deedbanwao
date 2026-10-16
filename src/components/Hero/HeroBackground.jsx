@@ -17,7 +17,7 @@ const HeroBackground = () => {
           bg-cover
           bg-center
           bg-no-repeat
-          opacity-30
+          opacity-20
         "
         style={{
           backgroundImage: `url(${heroBackground})`,

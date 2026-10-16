@@ -148,7 +148,7 @@ Please guide me regarding the next steps.
               lg:tracking-[0.3em]
             "
           >
-            Property Documentation & Deed Drafting In Meerut
+            Paper Sahi Toh Property Sahi.
           </p>
 
           {/* HEADING */}
@@ -167,10 +167,10 @@ Please guide me regarding the next steps.
               xl:text-[5.75rem]
             "
           >
-            Paper Sahi Toh
+            Property Documentation &
             <br />
             <span className="text-[#16A66A]">
-              Property Sahi.
+              Deed Drafting In Meerut
             </span>
           </h1>
 

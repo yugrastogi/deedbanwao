@@ -136,16 +136,17 @@ Please guide me regarding the next steps.
           <p
             className="
               mb-4
-              text-[9px]
+            text-[10px]
               font-bold
               uppercase
-              tracking-[0.2em]
+            whitespace-nowrap
+            tracking-[0.16em]
               text-[#193A7E]
               sm:mb-5
-              sm:text-[10px]
-              sm:tracking-[0.25em]
-              lg:text-xs
-              lg:tracking-[0.3em]
+            sm:text-xs
+            sm:tracking-[0.18em]
+            lg:text-sm
+            lg:tracking-[0.2em]
             "
           >
             Paper Sahi Toh Property Sahi.
@@ -167,10 +168,10 @@ Please guide me regarding the next steps.
               xl:text-[4.8rem]
             "
           >
-            Property Registration
+            Property Registration in
             <br />
             <span className="text-[#16A66A]">
-              in Meerut.
+              Meerut.
             </span>
           </h1>
 

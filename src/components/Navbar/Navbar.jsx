@@ -651,10 +651,10 @@ Introduction: ${formData.get("introduction")}
 
                   px-6
                   pb-8
-                  pt-[105px]
+                  pt-[72px]
 
                   sm:px-10
-                  sm:pt-[115px]
+                  sm:pt-[80px]
                 "
               >
                 {/* =================================================

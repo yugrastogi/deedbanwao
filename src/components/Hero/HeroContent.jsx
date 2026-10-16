@@ -194,11 +194,7 @@ Please guide me regarding the next steps.
               lg:leading-7
             "
           >
-            DeedBanwao provides complete registration services
-            for your Sale Deed, Lease Deed, Gift Deed, and other
-            property-related deeds in Meerut. Our expert lawyers
-            give end-to-end service for property documentation
-            and registration.
+            From deed drafting and circle rate evaluation to stamp duty calculation, e-stamp purchasing and registration assistance at the Sub-Registrar Office, we provide comprehensive support for your property documentation needs in Meerut.
           </p>
 
           {/* BUTTONS */}

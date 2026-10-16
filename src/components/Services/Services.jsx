@@ -136,7 +136,7 @@ const Services = () => {
       className="
         relative
         overflow-hidden
-        bg-[#E9EFF5]
+        bg-[#F8FAFC]
         px-6
         py-16
         sm:px-8
@@ -145,46 +145,6 @@ const Services = () => {
         lg:py-20
       "
     >
-      {/* =====================================================
-          BACKGROUND LIGHT
-      ===================================================== */}
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          -right-52
-          top-20
-          h-[340px]
-          w-[340px]
-          rounded-full
-          bg-[#193A7E]/[0.025]
-          blur-3xl
-          sm:h-[425px]
-          sm:w-[425px]
-          lg:h-[510px]
-          lg:w-[510px]
-        "
-      />
-
-      <div
-        className="
-          pointer-events-none
-          absolute
-          -left-52
-          bottom-0
-          h-[300px]
-          w-[300px]
-          rounded-full
-          bg-[#4FB3BF]/[0.035]
-          blur-3xl
-          sm:h-[380px]
-          sm:w-[380px]
-          lg:h-[465px]
-          lg:w-[465px]
-        "
-      />
-
       {/* =====================================================
           CONTENT
       ===================================================== */}

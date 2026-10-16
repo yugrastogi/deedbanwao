@@ -37,7 +37,7 @@ const NavLinks = ({
       const sectionNames = [
         ["services", "Services"],
         ["process", "How We Work"],
-        ["why-us", "Why Us?"],
+        ["why-us", "Why Us"],
         ["faq", "FAQs"],
       ];
       const marker = window.scrollY + 140;
@@ -77,7 +77,7 @@ const NavLinks = ({
       href: "#process",
     },
     {
-      name: "Why Us?",
+      name: "Why Us",
       href: "#why-us",
     },
     {

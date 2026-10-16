@@ -383,21 +383,26 @@ const ServiceCard = ({ service }) => {
   // =====================================================
 
   const handleCardClick = () => {
-    window.dispatchEvent(
-      new Event("open-enquiry-form")
-    );
+    window.dispatchEvent(new Event("open-enquiry-form"));
 
-    const enquiryForm =
-      document.getElementById("enquiry-form");
-
-    if (enquiryForm) {
+    // Wait for any UI/layout updates, then align the actual form
+    // beneath the fixed navbar instead of scrolling to its parent.
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        enquiryForm.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        const enquiryForm = document.getElementById("enquiry-form");
+        if (!enquiryForm) return;
+
+        const navbar = document.querySelector("header");
+        const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
+        const top =
+          enquiryForm.getBoundingClientRect().top +
+          window.scrollY -
+          navbarHeight -
+          16;
+
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
       });
-    }
+    });
   };
 
   return (

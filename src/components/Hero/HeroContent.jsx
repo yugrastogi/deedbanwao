@@ -110,6 +110,10 @@ Please guide me regarding the next steps.
       <div
         className="
           grid
+          relative
+          -top-8
+          sm:-top-10
+          lg:-top-16
           w-full
           origin-center
           lg:scale-[1.02]

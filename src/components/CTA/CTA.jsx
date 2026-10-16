@@ -49,7 +49,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#D8E4F0]
+bg-[#EFF6FC]
 
 px-6
 py-12
@@ -95,54 +95,6 @@ lg:py-16
         lg:py-10
       "
     >
-      {/* =================================================
-          BACKGROUND GLOW — matches Process section styling
-      ================================================= */}
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          -right-40
-          -top-40
-
-          h-[350px]
-          w-[350px]
-
-          rounded-full
-
-          bg-white/[0.03]
-
-          blur-[100px]
-
-          sm:h-[450px]
-          sm:w-[450px]
-        "
-      />
-
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          -left-40
-          -bottom-40
-
-          h-[300px]
-          w-[300px]
-
-          rounded-full
-
-          bg-[#193A7E]/40
-
-          blur-[85px]
-
-          sm:h-[400px]
-          sm:w-[400px]
-        "
-      />
-
       {/* =================================================
           CONTENT
       ================================================= */}

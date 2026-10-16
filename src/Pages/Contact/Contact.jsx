@@ -448,9 +448,9 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
                     text-[#193A7E]
-                    transition-colors
-                    duration-200
-                    hover:text-[#16A66A]
+                    transition-opacity
+                    duration-300
+                    hover:opacity-50
                     sm:text-3xl
                   "
                 >

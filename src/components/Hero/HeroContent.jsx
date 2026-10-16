@@ -98,13 +98,13 @@ Please guide me regarding the next steps.
         items-center
         px-6
         pb-14
-        pt-28
+        pt-32
         sm:px-8
         sm:pb-16
-        sm:pt-32
+        sm:pt-36
         lg:px-12
         lg:pb-12
-        lg:pt-32
+        lg:pt-36
       "
     >
       <div

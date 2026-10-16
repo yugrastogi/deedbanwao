@@ -74,7 +74,7 @@ sm:gap-10
         text-[14px]
         font-semibold
 
-        text-[#193A7E]
+        text-white
 
         shadow-none
 
@@ -133,7 +133,7 @@ sm:gap-10
           border
           border-[#193A7E]/10
 
-          bg-white
+          bg-[#193A7E]/[0.08]
 
           text-[#193A7E]
 

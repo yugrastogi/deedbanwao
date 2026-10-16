@@ -392,13 +392,8 @@ const ServiceCard = ({ service }) => {
         const enquiryForm = document.getElementById("enquiry-form");
         if (!enquiryForm) return;
 
-        const navbar = document.querySelector("header");
-        const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
-        const top =
-          enquiryForm.getBoundingClientRect().top +
-          window.scrollY -
-          navbarHeight -
-          16;
+        // Align the very top edge of the form with the top of the viewport.
+        const top = enquiryForm.getBoundingClientRect().top + window.scrollY;
 
         window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
       });

@@ -39,7 +39,7 @@ sm:gap-10
 
           -translate-x-1/2
 
-          bg-white/10
+          bg-[#193A7E]/15
 
           sm:top-[58px]
         "
@@ -67,14 +67,14 @@ sm:gap-10
         rounded-full
 
         border
-        border-white/15
+        border-[#193A7E]/15
 
         bg-[#193A7E]
 
         text-[14px]
         font-semibold
 
-        text-white
+        text-[#193A7E]
 
         shadow-[0_10px_30px_rgba(0,0,0,0.18)]
 
@@ -131,9 +131,9 @@ sm:gap-10
           rounded-[10px]
 
           border
-          border-white/10
+          border-[#193A7E]/10
 
-          bg-white/[0.05]
+          bg-[#193A7E]/[0.04]
 
           text-white
 
@@ -157,7 +157,7 @@ sm:gap-10
           uppercase
           tracking-[0.14em]
 
-          text-white/40
+          text-[#193A7E]/55
 
           sm:text-[10px]
           sm:tracking-[0.24em]
@@ -212,7 +212,7 @@ sm:gap-10
         text-[14px]
         leading-6
 
-        text-white/55
+        text-[#193A7E]/75
 
         sm:mt-5
         sm:text-[16px]
@@ -236,7 +236,7 @@ sm:gap-10
         h-px
         w-10
 
-        bg-white
+        bg-[#16A66A]
 
         sm:mt-7
         sm:w-[68px]

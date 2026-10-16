@@ -350,22 +350,24 @@ const Footer = () => {
                   {footerData.contact.email}
                 </span>
               </a>
-            </div>
               {/* LOCATION */}
-
               <div
                 className="
                   flex
                   items-start
                   gap-3
                   text-sm
+                  font-medium
                   leading-6
-                  text-[#172B4D]/65
+                  text-[#172B4D]/75
+                  transition-colors
+                  duration-300
                 "
               >
                 <FaMapMarkerAlt className="mt-1 shrink-0 text-xs" />
-                <span>{footerData.contact.location}</span>
+                <span className="min-w-0">{footerData.contact.location}</span>
               </div>
+            </div>
           </div>
         </div>
 

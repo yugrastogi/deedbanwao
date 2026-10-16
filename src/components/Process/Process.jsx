@@ -10,16 +10,16 @@ className="
 relative
 overflow-hidden
 
-bg-[#0B2348]
+bg-[#006AD0]
 
 px-6
 py-16
 
 sm:px-8
-sm:py-20
+sm:py-16
 
 lg:px-12
-lg:py-24
+lg:py-20
 "
 >
   {/* =====================================================
@@ -65,7 +65,7 @@ lg:py-24
 
       rounded-full
 
-      bg-[#193A7E]/30
+      bg-[#006AD0]/30
 
       blur-[72px]
 
@@ -200,13 +200,13 @@ lg:py-24
             text-white
 
             sm:mt-7
-            sm:text-[3.2rem]
+            sm:text-[2.8rem]
 
-            md:text-[3.85rem]
+            md:text-[3.35rem]
 
-            lg:text-[4.45rem]
+            lg:text-[3.75rem]
 
-            xl:text-[5.75rem]
+            xl:text-[4.5rem]
           "
         >
           From Enquiry
@@ -217,7 +217,7 @@ lg:py-24
               font-normal
               italic
 
-              text-[#16A66A]
+              text-[#05AA44]
             "
           >
             To Registration.
@@ -244,7 +244,7 @@ lg:py-24
     sm:leading-7
 
     lg:ml-10
-    lg:text-[18px]
+    lg:text-base
     lg:leading-8
   "
 >

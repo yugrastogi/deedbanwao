@@ -17,7 +17,7 @@ const Contact = () => {
         min-h-screen
         overflow-hidden
         bg-white
-        text-[#193A7E]
+        text-[#006AD0]
       "
     >
 
@@ -128,8 +128,8 @@ const Contact = () => {
 
                   bg-gradient-to-r
                   from-transparent
-                  via-[#193A7E]/10
-                  to-[#193A7E]/20
+                  via-[#006AD0]/10
+                  to-[#006AD0]/20
 
                   sm:w-20
                   lg:w-24
@@ -147,7 +147,7 @@ const Contact = () => {
                   uppercase
                   tracking-[0.3em]
 
-                  text-[#193A7E]/60
+                  text-[#006AD0]/60
                 "
               >
                 Get In Touch
@@ -163,8 +163,8 @@ const Contact = () => {
 
                   bg-gradient-to-l
                   from-transparent
-                  via-[#193A7E]/10
-                  to-[#193A7E]/20
+                  via-[#006AD0]/10
+                  to-[#006AD0]/20
 
                   sm:w-20
                   lg:w-24
@@ -187,7 +187,7 @@ const Contact = () => {
     font-semibold
     leading-[1.15]
     tracking-[-0.035em]
-    text-[#193A7E]
+    text-[#006AD0]
     sm:text-[32px]
     md:text-[38px]
     lg:text-[44px]
@@ -195,11 +195,11 @@ const Contact = () => {
   "
 >
   <span className="block">
-    Have a <span className="text-[#193A7E]">Deed Drafting</span>
+    Have a <span className="text-[#006AD0]">Deed Drafting</span>
   </span>
 
   <span className="block whitespace-nowrap">
-    or <span className="text-[#16A66A]">Property Documentation</span>
+    or <span className="text-[#05AA44]">Property Documentation</span>
   </span>
 
   <span className="block">
@@ -227,7 +227,7 @@ const Contact = () => {
                 text-base
                 leading-7
 
-                text-[#294A76]/70
+                text-[#006AD0]/70
 
                 sm:text-lg
                 sm:leading-8
@@ -281,7 +281,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#006AD0]/10
 
                 py-8
 
@@ -302,7 +302,7 @@ const Contact = () => {
                     uppercase
                     tracking-[0.3em]
 
-                    text-[#193A7E]/50
+                    text-[#006AD0]/50
                   "
                 >
                   Phone Number
@@ -333,7 +333,7 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
 
-                    text-[#193A7E]
+                    text-[#006AD0]
 
                     transition-opacity
                     duration-300
@@ -361,7 +361,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#006AD0]/10
 
                 py-8
 
@@ -382,7 +382,7 @@ const Contact = () => {
                     uppercase
                     tracking-[0.3em]
 
-                    text-[#193A7E]/50
+                    text-[#006AD0]/50
                   "
                 >
                   Email
@@ -414,7 +414,7 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
 
-                    text-[#193A7E]
+                    text-[#006AD0]
 
                     transition-opacity
                     duration-300
@@ -442,7 +442,7 @@ const Contact = () => {
                 grid-cols-1
 
                 border-t
-                border-[#193A7E]/10
+                border-[#006AD0]/10
 
                 py-8
 
@@ -463,7 +463,7 @@ const Contact = () => {
                     uppercase
                     tracking-[0.3em]
 
-                    text-[#193A7E]/50
+                    text-[#006AD0]/50
                   "
                 >
                   Location
@@ -488,7 +488,7 @@ const Contact = () => {
                     leading-tight
                     tracking-[-0.035em]
 
-                    text-[#193A7E]
+                    text-[#006AD0]
 
                     sm:text-3xl
                   "
@@ -528,7 +528,7 @@ const Contact = () => {
                 text-sm
                 leading-6
 
-                text-[#294A76]/60
+                text-[#006AD0]/60
               "
             >
               Prefer a quick conversation? Connect
@@ -559,7 +559,7 @@ const Contact = () => {
 
                 rounded-full
 
-                bg-[#25D366]
+                bg-[#05AA44]
 
                 px-6
 
@@ -569,9 +569,9 @@ const Contact = () => {
                 duration-300
 
                 hover:-translate-y-1
-                hover:bg-[#20BD5A]
+                hover:bg-[#05AA44]
 
-                hover:shadow-[0_18px_40px_rgba(37,211,102,0.20)]
+                hover:shadow-[0_18px_40px_rgba(5,170,68,0.20)]
 
                 sm:px-7
               "
@@ -677,20 +677,20 @@ const Contact = () => {
                   rounded-full
 
                   border
-                  border-[#193A7E]/15
+                  border-[#006AD0]/15
 
                   bg-white
 
                   text-sm
                   font-semibold
-                  text-[#193A7E]
+                  text-[#006AD0]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
-                  hover:border-[#193A7E]
-                  hover:bg-[#193A7E]
+                  hover:border-[#006AD0]
+                  hover:bg-[#006AD0]
                   hover:text-white
                 "
               >
@@ -734,20 +734,20 @@ const Contact = () => {
                   rounded-full
 
                   border
-                  border-[#193A7E]/15
+                  border-[#006AD0]/15
 
                   bg-white
 
                   text-sm
                   font-semibold
-                  text-[#193A7E]
+                  text-[#006AD0]
 
                   transition-all
                   duration-300
 
                   hover:-translate-y-1
-                  hover:border-[#193A7E]
-                  hover:bg-[#193A7E]
+                  hover:border-[#006AD0]
+                  hover:bg-[#006AD0]
                   hover:text-white
                 "
               >
@@ -787,7 +787,7 @@ const Contact = () => {
             gap-2
 
             border-t
-            border-[#193A7E]/10
+            border-[#006AD0]/10
 
             pt-5
 

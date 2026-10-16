@@ -10,16 +10,9 @@ import {
 import { gsap } from "gsap";
 
 import Navbar from "./components/Navbar/Navbar";
-import Disclaimer from "./components/Disclaimer/Disclaimer";
+import FloatingContactActions from "./components/FloatingContactActions/FloatingContactActions";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
-
-// =====================================================
-// DISCLAIMER STORAGE KEY
-// =====================================================
-
-const DISCLAIMER_STORAGE_KEY =
-  "deedbanwao-disclaimer-accepted";
 
 // =====================================================
 // PAGE TITLE
@@ -288,6 +281,8 @@ const Website = () => {
 
       <Navbar />
 
+      <FloatingContactActions />
+
       {/* =====================================================
           ANIMATED ROUTES
       ===================================================== */}
@@ -302,35 +297,7 @@ const Website = () => {
 // =====================================================
 
 const App = () => {
-  const [disclaimerAccepted, setDisclaimerAccepted] =
-    useState(() => {
-      return (
-        localStorage.getItem(
-          DISCLAIMER_STORAGE_KEY
-        ) === "true"
-      );
-    });
-
-  // =====================================================
-  // WEBSITE + DISCLAIMER
-  //
-  // The actual website stays mounted behind the modal.
-  // The disclaimer blocks interaction until accepted.
-  // =====================================================
-
-  return (
-    <>
-      <Website />
-
-      {!disclaimerAccepted && (
-        <Disclaimer
-          onProceed={() =>
-            setDisclaimerAccepted(true)
-          }
-        />
-      )}
-    </>
-  );
+  return <Website />;
 };
 
 export default App;

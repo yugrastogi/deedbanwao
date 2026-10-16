@@ -80,12 +80,12 @@ lg:py-16
 
         rounded-[24px]
 
-        bg-[#0B2348]
+        bg-[#006AD0]
 
         px-6
         py-7
 
-        shadow-[0_30px_70px_rgba(11,35,72,0.28)]
+        shadow-[0_30px_70px_rgba(0,106,208,0.28)]
 
         sm:rounded-[32px]
         sm:px-10
@@ -134,7 +134,7 @@ lg:py-16
 
           rounded-full
 
-          bg-[#193A7E]/40
+          bg-[#006AD0]/40
 
           blur-[85px]
 
@@ -248,7 +248,7 @@ lg:py-16
 
               text-sm
               font-semibold
-              text-[#193A7E]
+              text-[#006AD0]
 
               shadow-[0_10px_28px_rgba(0,0,0,0.14)]
 

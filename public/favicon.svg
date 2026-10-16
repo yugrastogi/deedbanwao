@@ -2,7 +2,7 @@
   <defs>
     <clipPath id="clip"><circle cx="256" cy="256" r="248" /></clipPath>
   </defs>
-  <circle cx="256" cy="256" r="248" fill="#ffffff" stroke="#193A7E" stroke-width="16" />
+  <circle cx="256" cy="256" r="248" fill="#ffffff" stroke="#006AD0" stroke-width="16" />
   <g clip-path="url(#clip)">
     <image href="/deedbanwao-brand.png" x="28" y="190" width="456" height="102" preserveAspectRatio="xMidYMid meet" />
   </g>

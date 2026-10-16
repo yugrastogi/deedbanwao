@@ -52,7 +52,7 @@ const Footer = () => {
       className="
         relative
         overflow-hidden
-        bg-[#0B2348]
+        bg-[#006AD0]
 
         px-5
         pt-16
@@ -103,7 +103,7 @@ const Footer = () => {
 
           rounded-full
 
-          bg-[#193A7E]/40
+          bg-[#006AD0]/40
 
           blur-[90px]
 
@@ -282,7 +282,7 @@ const Footer = () => {
                   transition-all
                   duration-300
 
-                  hover:text-[#25D366]
+                  hover:text-[#05AA44]
                 "
               >
                 <FaWhatsapp className="text-base" />

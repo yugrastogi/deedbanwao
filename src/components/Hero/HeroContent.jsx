@@ -140,7 +140,7 @@ Please guide me regarding the next steps.
               font-bold
               uppercase
               tracking-[0.2em]
-              text-[#193A7E]
+              text-[#006AD0]
               sm:mb-5
               sm:text-[10px]
               sm:tracking-[0.25em]
@@ -160,7 +160,7 @@ Please guide me regarding the next steps.
               font-semibold
               leading-[0.98]
               tracking-[-0.04em]
-              text-[#193A7E]
+              text-[#006AD0]
               sm:text-[3.2rem]
               md:text-[3.85rem]
               lg:text-[3.85rem]
@@ -169,7 +169,7 @@ Please guide me regarding the next steps.
           >
             Property Registration
             <br />
-            <span className="text-[#16A66A]">
+            <span className="text-[#05AA44]">
               in Meerut.
             </span>
           </h1>
@@ -183,7 +183,7 @@ Please guide me regarding the next steps.
               text-[14px]
               font-medium
               leading-6
-              text-[#294A76]/75
+              text-[#006AD0]/75
               sm:mt-5
               sm:text-base
               sm:leading-7
@@ -226,16 +226,16 @@ Please guide me regarding the next steps.
                 justify-center
                 gap-2
                 rounded-full
-                bg-[#193A7E]
+                bg-[#006AD0]
                 px-5
                 text-[13px]
                 font-semibold
                 text-white
-                shadow-[0_12px_29px_rgba(25,58,126,0.20)]
+                shadow-[0_12px_29px_rgba(0,106,208,0.20)]
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#123064]
+                hover:bg-[#006AD0]
                 sm:h-12
                 sm:px-7
                 sm:text-sm
@@ -283,8 +283,8 @@ Please guide me regarding the next steps.
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:border-[#193A7E]/20
-                hover:text-[#193A7E]
+                hover:border-[#006AD0]/20
+                hover:text-[#006AD0]
                 sm:h-12
                 sm:px-7
                 sm:text-sm
@@ -319,11 +319,11 @@ Please guide me regarding the next steps.
           className="
             relative
             mx-auto
-            min-h-[540px]
+            min-h-[460px]
             w-full
             max-w-[640px]
             lg:mx-0
-            lg:h-[510px]
+            lg:h-[490px]
             lg:min-h-0
             lg:max-w-none
           "
@@ -339,17 +339,15 @@ Please guide me regarding the next steps.
               flex
               w-full
               flex-col
-              overflow-y-auto
-              overflow-x-hidden
               rounded-[34px]
               border
               border-black/[0.07]
               bg-white
-              p-5
+              p-4
               shadow-[0_36px_90px_rgba(15,35,70,0.12)]
-              sm:p-6
+              sm:p-5
               lg:rounded-[38px]
-              lg:p-7
+              lg:p-6
             "
           >
             {/* FORM HEADER */}
@@ -374,7 +372,7 @@ Please guide me regarding the next steps.
                     font-bold
                     uppercase
                     tracking-[0.18em]
-                    text-[#193A7E]/50
+                    text-[#006AD0]/50
                     sm:text-xs
                   "
                 >
@@ -383,12 +381,12 @@ Please guide me regarding the next steps.
 
                 <h2
                   className="
-                    mt-2
-                    text-[24px]
+                    mt-1
+                    text-[21px]
                     font-semibold
                     tracking-[-0.03em]
-                    text-[#193A7E]
-                    sm:text-[27px]
+                    text-[#006AD0]
+                    sm:text-[24px]
                   "
                 >
                   Tell us what you need.
@@ -396,10 +394,10 @@ Please guide me regarding the next steps.
 
                 <p
                   className="
-                    mt-2
+                    mt-1
                     max-w-[440px]
                     text-[13px]
-                    leading-6
+                    leading-5
                     text-black/40
                     sm:text-sm
                   "
@@ -418,17 +416,12 @@ Please guide me regarding the next steps.
             <form
               onSubmit={handleSubmit}
               className="
-                mt-5
-                flex
-                flex-1
-                flex-col
-                sm:mt-6
+                mt-4
               "
             >
               <div
                 className="
-                  space-y-4
-                  sm:space-y-5
+                  space-y-3
                 "
               >
                 {/* NAME + PHONE */}
@@ -437,9 +430,9 @@ Please guide me regarding the next steps.
                   className="
                     grid
                     grid-cols-1
-                    gap-4
+                    gap-3
                     sm:grid-cols-2
-                    sm:gap-4
+                    sm:gap-3
                   "
                 >
                   {/* NAME */}
@@ -468,7 +461,7 @@ Please guide me regarding the next steps.
                       required
                       placeholder="Your name"
                       className="
-                        h-12
+                        h-10
                         w-full
                         rounded-[11px]
                         border
@@ -481,11 +474,11 @@ Please guide me regarding the next steps.
                         placeholder:text-black/25
                         transition-all
                         duration-300
-                        focus:border-[#193A7E]/30
+                        focus:border-[#006AD0]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#193A7E]/[0.05]
-                        sm:h-[50px]
+                        focus:ring-[#006AD0]/[0.05]
+                        sm:h-11
                         sm:text-[15px]
                       "
                     />
@@ -517,7 +510,7 @@ Please guide me regarding the next steps.
                       required
                       placeholder="+91"
                       className="
-                        h-12
+                        h-10
                         w-full
                         rounded-[11px]
                         border
@@ -530,11 +523,11 @@ Please guide me regarding the next steps.
                         placeholder:text-black/25
                         transition-all
                         duration-300
-                        focus:border-[#193A7E]/30
+                        focus:border-[#006AD0]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#193A7E]/[0.05]
-                        sm:h-[50px]
+                        focus:ring-[#006AD0]/[0.05]
+                        sm:h-11
                         sm:text-[15px]
                       "
                     />
@@ -567,7 +560,7 @@ Please guide me regarding the next steps.
                       required
                       defaultValue=""
                       className="
-                        h-12
+                        h-10
                         w-full
                         appearance-none
                         rounded-[11px]
@@ -581,11 +574,11 @@ Please guide me regarding the next steps.
                         outline-none
                         transition-all
                         duration-300
-                        focus:border-[#193A7E]/30
+                        focus:border-[#006AD0]/30
                         focus:bg-white
                         focus:ring-4
-                        focus:ring-[#193A7E]/[0.05]
-                        sm:h-[50px]
+                        focus:ring-[#006AD0]/[0.05]
+                        sm:h-11
                         sm:text-[15px]
                       "
                     >
@@ -653,10 +646,10 @@ Please guide me regarding the next steps.
                   <textarea
                     id="message"
                     name="message"
-                    rows="3"
+                    rows="2"
                     placeholder="Tell us briefly about your requirement..."
                     className="
-                      min-h-[88px]
+                      min-h-[60px]
                       w-full
                       resize-none
                       rounded-[11px]
@@ -672,22 +665,18 @@ Please guide me regarding the next steps.
                       placeholder:text-black/25
                       transition-all
                       duration-300
-                      focus:border-[#193A7E]/30
+                      focus:border-[#006AD0]/30
                       focus:bg-white
                       focus:ring-4
-                      focus:ring-[#193A7E]/[0.05]
-                      sm:min-h-[95px]
+                      focus:ring-[#006AD0]/[0.05]
+                      sm:min-h-[68px]
                       sm:text-[15px]
                     "
                   />
                 </div>
               </div>
 
-              {/* SPACER */}
-
-              <div className="flex-1" />
-
-              <div className="space-y-3">
+              <div className="mt-3 space-y-2">
                 {/* SUBMIT */}
 
                 <button
@@ -695,22 +684,22 @@ Please guide me regarding the next steps.
                   className="
                     group
                     flex
-                    h-12
+                    h-10
                     w-full
                     items-center
                     justify-center
                     gap-2.5
                     rounded-[11px]
-                    bg-[#25D366]
+                    bg-[#05AA44]
                     text-[14px]
                     font-semibold
                     text-white
-                    shadow-[0_8px_21px_rgba(37,211,102,0.18)]
+                    shadow-[0_8px_21px_rgba(5,170,68,0.18)]
                     transition-all
                     duration-300
                     hover:-translate-y-0.5
-                    hover:bg-[#20BD5A]
-                    sm:h-[52px]
+                    hover:bg-[#05AA44]
+                    sm:h-11
                     sm:text-[15px]
                   "
                 >
@@ -748,7 +737,7 @@ Please guide me regarding the next steps.
                     sm:text-xs
                   "
                 >
-                  <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
+                  <FaShieldHalved className="text-[10px] text-[#006AD0]/50" />
 
                   Your details stay private and are used only
                   to respond to your enquiry.
@@ -809,9 +798,9 @@ Please guide me regarding the next steps.
                     items-center
                     justify-center
                     rounded-full
-                    bg-[#193A7E]/10
+                    bg-[#006AD0]/10
                     text-[13px]
-                    text-[#193A7E]
+                    text-[#006AD0]
                     sm:h-14
                     sm:w-14
                     sm:text-lg
@@ -834,7 +823,7 @@ Please guide me regarding the next steps.
                       text-sm
                       font-semibold
                       leading-tight
-                      text-[#193A7E]
+                      text-[#006AD0]
                       sm:text-lg
                     "
                   >
@@ -846,7 +835,7 @@ Please guide me regarding the next steps.
                       mt-1
                       text-xs
                       leading-snug
-                      text-[#294A76]/80
+                      text-[#006AD0]/80
                       sm:mt-1.5
                       sm:text-base
                     "

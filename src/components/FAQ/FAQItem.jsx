@@ -11,7 +11,7 @@ className="
 group
 
 border-b
-border-[#193A7E]/10
+border-[#006AD0]/10
 "
 >
   {/* =================================================
@@ -62,8 +62,8 @@ border-[#193A7E]/10
 
         ${
           isOpen
-            ? "rotate-180 text-[#193A7E]/65"
-            : "group-hover:text-[#193A7E]/60"
+            ? "rotate-180 text-[#006AD0]/65"
+            : "group-hover:text-[#006AD0]/60"
         }
       `}
     >
@@ -144,7 +144,7 @@ border-[#193A7E]/10
             text-[14px]
             leading-5
 
-            text-[#294A76]/65
+            text-[#006AD0]/65
 
             sm:text-[16px]
             sm:leading-7

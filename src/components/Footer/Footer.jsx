@@ -177,8 +177,6 @@ const Footer = () => {
               documentation. Clear guidance, careful
               documentation and a straightforward process.
             </p>
-
-          </div>
           </div>
 
           {/* =================================================

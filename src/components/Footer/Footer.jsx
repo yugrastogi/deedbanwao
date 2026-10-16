@@ -178,25 +178,7 @@ const Footer = () => {
               documentation and a straightforward process.
             </p>
 
-            {/* LOCATION */}
-
-            <div
-              className="
-                mt-6
-                flex
-                items-center
-                gap-3
-
-                text-sm
-                text-[#172B4D]/65
-              "
-            >
-              <FaMapMarkerAlt className="shrink-0 text-xs" />
-
-              <span>
-                {footerData.contact.location}
-              </span>
-            </div>
+          </div>
           </div>
 
           {/* =================================================

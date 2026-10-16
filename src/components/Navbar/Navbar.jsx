@@ -740,7 +740,7 @@ Introduction: ${formData.get("introduction")}
     </nav>
 
     <div className="relative z-20 mt-[72px] border-b border-[#193A7E]/10 bg-[#EFF6FC] sm:mt-[76px]">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-end gap-x-5 gap-y-2 px-4 py-3 text-right sm:px-7 lg:px-10">
+      <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-5 gap-y-2 px-4 py-3 pr-4 text-right sm:px-7 sm:pr-7 lg:px-10 lg:pr-4">
         <p className="text-sm font-medium text-[#193A7E] sm:text-base">
           Join us as an associate advocate
         </p>

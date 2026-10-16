@@ -318,7 +318,7 @@ Please guide me regarding the next steps.
           className="
             relative
             mx-auto
-            min-h-[640px] sm:min-h-[620px]
+            min-h-[590px] sm:min-h-[570px]
             w-full
             max-w-[640px]
             lg:mx-0
@@ -678,7 +678,7 @@ Please guide me regarding the next steps.
                 </div>
               </div>
 
-              <div className="mt-3 space-y-2">
+              <div className="mt-3">
                 {/* SUBMIT */}
 
                 <button
@@ -723,27 +723,6 @@ Please guide me regarding the next steps.
                   />
                 </button>
 
-                {/* PRIVACY */}
-
-                <p
-                  className="
-                    flex
-                    items-center
-                    justify-center
-                    gap-1.5
-                    pt-1
-                    text-center
-                    text-[11px]
-                    leading-5
-                    text-black/35
-                    sm:text-xs
-                  "
-                >
-                  <FaShieldHalved className="text-[10px] text-[#193A7E]/50" />
-
-                  Your details stay private and are used only
-                  to respond to your enquiry.
-                </p>
               </div>
             </form>
           </div>

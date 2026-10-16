@@ -10,7 +10,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#183A7E]
+bg-[#E5ECF3]
 
 px-6
 py-16
@@ -39,7 +39,7 @@ lg:py-20
 
       rounded-full
 
-      bg-white/[0.025]
+      bg-[#193A7E]/[0.025]
 
       blur-[85px]
 
@@ -65,7 +65,7 @@ lg:py-20
 
       rounded-full
 
-      bg-[#193A7E]/30
+      bg-[#4FB3BF]/[0.08]
 
       blur-[72px]
 
@@ -131,7 +131,7 @@ lg:py-20
 
               bg-gradient-to-r
               from-transparent
-              to-white/20
+              to-[#193A7E]/20
 
               sm:w-20
 
@@ -150,7 +150,7 @@ lg:py-20
               uppercase
               tracking-[0.22em]
 
-              text-white/55
+              text-[#193A7E]/70
 
               sm:text-[10px]
               sm:tracking-[0.25em]
@@ -197,7 +197,7 @@ lg:py-20
             leading-[0.94]
             tracking-[-0.05em]
 
-            text-white
+            text-[#193A7E]
 
             sm:mt-7
             sm:text-[2.8rem]
@@ -290,7 +290,7 @@ lg:py-20
         mt-0
 
         border-t
-        border-white/10
+        border-[#193A7E]/15
 
         pt-6
 

@@ -170,7 +170,7 @@ Please guide me regarding the next steps.
             Property Documentation &
             <br />
             <span className="text-[#16A66A]">
-              Deed Drafting In Meerut
+              Registration In Meerut
             </span>
           </h1>
 

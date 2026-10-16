@@ -112,7 +112,7 @@ Please guide me regarding the next steps.
           grid
           w-full
           origin-center
-          scale-[1.02]
+          lg:scale-[1.02]
           grid-cols-1
           items-center
           gap-10
@@ -318,7 +318,7 @@ Please guide me regarding the next steps.
           className="
             relative
             mx-auto
-            min-h-[440px] sm:min-h-[460px]
+            min-h-[640px] sm:min-h-[620px]
             w-full
             max-w-[640px]
             lg:mx-0
@@ -332,10 +332,13 @@ Please guide me regarding the next steps.
           ================================================= */}
 
           <div
+            id="enquiry-form"
             className="
-              absolute
-              inset-0
+              relative
+              scroll-mt-6
               flex
+              lg:absolute
+              lg:inset-0
               w-full
               flex-col
               rounded-[34px]
@@ -763,7 +766,7 @@ Please guide me regarding the next steps.
             bg-[#DFEAF5]
             p-5
             shadow-sm
-            sm:grid-cols-4
+            lg:grid-cols-4
             sm:gap-5
             sm:p-6
             lg:col-span-2

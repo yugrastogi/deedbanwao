@@ -385,19 +385,17 @@ const ServiceCard = ({ service }) => {
   const handleCardClick = () => {
     window.dispatchEvent(new Event("open-enquiry-form"));
 
-    // Wait for any UI/layout updates, then align the actual form
-    // beneath the fixed navbar instead of scrolling to its parent.
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        const enquiryForm = document.getElementById("enquiry-form");
-        if (!enquiryForm) return;
+    // Let event-driven UI updates settle before scrolling to the form card.
+    window.setTimeout(() => {
+      const enquiryForm = document.getElementById("enquiry-form");
+      if (!enquiryForm) return;
 
-        // Align the very top edge of the form with the top of the viewport.
-        const top = enquiryForm.getBoundingClientRect().top + window.scrollY;
-
-        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      enquiryForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
       });
-    });
+    }, 120);
   };
 
   return (

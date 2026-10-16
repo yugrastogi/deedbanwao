@@ -390,11 +390,10 @@ const ServiceCard = ({ service }) => {
       const enquiryForm = document.getElementById("enquiry-form");
       if (!enquiryForm) return;
 
-      enquiryForm.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
+      // Keep the card's top padding and "QUICK ENQUIRY" label visible
+      // below the fixed navbar and announcement strip.
+      const top = enquiryForm.getBoundingClientRect().top + window.scrollY - 132;
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
     }, 120);
   };
 

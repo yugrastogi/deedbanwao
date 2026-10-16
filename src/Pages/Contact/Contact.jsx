@@ -16,7 +16,7 @@ const Contact = () => {
         relative
         min-h-screen
         overflow-hidden
-        blueprint-page
+        bg-[#E6EDF4]
         text-[#193A7E]
       "
     >
@@ -493,7 +493,7 @@ const Contact = () => {
                     sm:text-3xl
                   "
                 >
-                  Meerut, Uttar Pradesh
+                  48 Godwin Estate, Roorkee Road, Meerut, UP, 250001
                 </span>
 
               </div>

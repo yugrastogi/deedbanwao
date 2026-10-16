@@ -9,7 +9,7 @@ aria-labelledby="why-us-heading"
 className="
 relative
 overflow-hidden
-blueprint-page
+bg-[#DDE7F1]
 
 px-6
 py-16

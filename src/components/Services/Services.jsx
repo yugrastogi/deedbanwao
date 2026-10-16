@@ -136,7 +136,7 @@ const Services = () => {
       className="
         relative
         overflow-hidden
-        blueprint-page
+        bg-[#E9EFF5]
         px-6
         py-16
         sm:px-8

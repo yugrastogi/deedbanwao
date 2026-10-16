@@ -10,7 +10,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#193A7E]
+bg-[#102A4A]
 
 px-6
 py-16
@@ -28,7 +28,7 @@ lg:py-20
 
   <div
     className="
-      pointer-events-none
+      hidden
 
       absolute
       -right-64
@@ -54,7 +54,7 @@ lg:py-20
 
   <div
     className="
-      pointer-events-none
+      hidden
 
       absolute
       -left-72

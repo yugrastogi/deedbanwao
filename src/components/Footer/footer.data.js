@@ -35,7 +35,7 @@ const footerData = {
 
     email: "deedbanwao@gmail.com",
 
-    location: "Meerut, Uttar Pradesh",
+    location: "48 Godwin Estate, Roorkee Road, Meerut, UP, 250001",
   },
 };
 

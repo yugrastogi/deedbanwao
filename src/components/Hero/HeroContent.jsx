@@ -101,10 +101,10 @@ Please guide me regarding the next steps.
         pt-28
         sm:px-8
         sm:pb-16
-        sm:pt-30
+        sm:pt-32
         lg:px-12
         lg:pb-12
-        lg:pt-28
+        lg:pt-32
       "
     >
       <div

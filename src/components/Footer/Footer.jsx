@@ -52,7 +52,7 @@ const Footer = () => {
       className="
         relative
         overflow-hidden
-        bg-[#193A7E]
+        bg-[#17202B]
 
         px-5
         pt-16
@@ -69,7 +69,7 @@ const Footer = () => {
 
       <div
         className="
-          pointer-events-none
+          hidden
 
           absolute
           -right-48
@@ -92,7 +92,7 @@ const Footer = () => {
 
       <div
         className="
-          pointer-events-none
+          hidden
 
           absolute
           -left-48

@@ -52,13 +52,13 @@ overflow-hidden
 bg-white
 
 px-6
-py-14
+py-12
 
 sm:px-8
-sm:py-16
+sm:py-14
 
 lg:px-12
-lg:py-20
+lg:py-16
 "
 >
   <div

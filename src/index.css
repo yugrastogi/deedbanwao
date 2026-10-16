@@ -21,10 +21,30 @@ body {
   font-family: var(--font-body);
 }
 
+/* Large headings use Inter Tight; keep existing colors and layout intact. */
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Smaller headings, labels, paragraphs, buttons and other text use Noto Sans. */
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+input,
+textarea,
+select,
+label {
+  font-family: var(--font-body);
+}
+
 .font-display {
   font-family: var(--font-display);
   font-weight: 600;
-  color: #222222;
 }
 
 .font-body {

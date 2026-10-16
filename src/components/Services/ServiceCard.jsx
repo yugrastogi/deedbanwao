@@ -387,12 +387,12 @@ const ServiceCard = ({ service }) => {
       new Event("open-enquiry-form")
     );
 
-    const heroSection =
-      document.getElementById("home");
+    const enquiryForm =
+      document.getElementById("enquiry-form");
 
-    if (heroSection) {
+    if (enquiryForm) {
       requestAnimationFrame(() => {
-        heroSection.scrollIntoView({
+        enquiryForm.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });

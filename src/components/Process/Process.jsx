@@ -10,7 +10,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#E5ECF3]
+bg-[#EAF2F9]
 
 px-6
 py-16
@@ -22,62 +22,6 @@ lg:px-12
 lg:py-20
 "
 >
-  {/* =====================================================
-      BACKGROUND GLOW
-  ===================================================== */}
-
-  <div
-    className="
-      hidden
-
-      absolute
-      -right-64
-      top-0
-
-      h-[383px]
-      w-[383px]
-
-      rounded-full
-
-      bg-[#193A7E]/[0.025]
-
-      blur-[85px]
-
-      sm:h-[553px]
-      sm:w-[553px]
-      sm:blur-[110px]
-
-      lg:h-[638px]
-      lg:w-[638px]
-    "
-  />
-
-  <div
-    className="
-      hidden
-
-      absolute
-      -left-72
-      bottom-0
-
-      h-[340px]
-      w-[340px]
-
-      rounded-full
-
-      bg-[#4FB3BF]/[0.08]
-
-      blur-[72px]
-
-      sm:h-[510px]
-      sm:w-[510px]
-      sm:blur-[94px]
-
-      lg:h-[595px]
-      lg:w-[595px]
-    "
-  />
-
   {/* =====================================================
       CONTENT
   ===================================================== */}
@@ -238,7 +182,7 @@ lg:py-20
     text-[14px]
     leading-6
 
-    text-white/55
+    text-[#193A7E]/75
 
     sm:text-[16px]
     sm:leading-7

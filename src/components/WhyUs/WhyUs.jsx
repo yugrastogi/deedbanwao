@@ -9,7 +9,7 @@ aria-labelledby="why-us-heading"
 className="
 relative
 overflow-hidden
-bg-[#DDE7F1]
+bg-[#F3F7FB]
 
 px-6
 py-16
@@ -82,10 +82,7 @@ lg:py-20
               w-7
               shrink-0
 
-              bg-gradient-to-r
-              from-transparent
-              via-[#193A7E]/10
-              to-[#193A7E]/20
+              bg-[#193A7E]/15
 
               sm:w-20
 
@@ -123,10 +120,7 @@ lg:py-20
               w-7
               shrink-0
 
-              bg-gradient-to-l
-              from-transparent
-              via-[#193A7E]/10
-              to-[#193A7E]/20
+              bg-[#193A7E]/15
 
               sm:w-20
 

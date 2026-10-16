@@ -762,7 +762,7 @@ Please guide me regarding the next steps.
             rounded-2xl
             border
             border-white/70
-            bg-white/60
+            bg-[#DFEAF5]
             p-5
             shadow-sm
             sm:grid-cols-4

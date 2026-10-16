@@ -93,7 +93,7 @@ Please guide me regarding the next steps.
         z-10
         mx-auto
         flex
-        min-h-[min(100svh,780px)]
+        min-h-0 lg:min-h-[min(100svh,780px)]
         max-w-[1560px]
         items-center
         px-6
@@ -320,7 +320,7 @@ Please guide me regarding the next steps.
           className="
             relative
             mx-auto
-            min-h-[460px]
+            min-h-[440px] sm:min-h-[460px]
             w-full
             max-w-[640px]
             lg:mx-0
@@ -755,8 +755,10 @@ Please guide me regarding the next steps.
         <div
           className="
             grid
-            grid-cols-2
-            gap-4
+            grid-cols-1
+            gap-3
+            sm:grid-cols-2
+            sm:gap-4
             rounded-2xl
             border
             border-white/70
@@ -786,7 +788,7 @@ Please guide me regarding the next steps.
                   p-3
                   shadow-sm
                   sm:gap-4
-            sm:min-h-[126px]
+            sm:min-h-[112px]
                   sm:p-4
                 "
               >
@@ -804,7 +806,7 @@ Please guide me regarding the next steps.
                     text-[#193A7E]
                     sm:h-14
                     sm:w-14
-                    sm:text-lg
+                    sm:text-base lg:text-lg
                   "
                 >
                   <Icon />

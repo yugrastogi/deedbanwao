@@ -872,15 +872,16 @@ Please guide me regarding the next steps.
           className="
             grid
             grid-cols-2
-            gap-x-6
-            gap-y-8
-            border-t
-            border-black/[0.07]
-            pt-10
+            gap-4
+            rounded-2xl
+            border
+            border-white/70
+            bg-white/60
+            p-5
+            shadow-sm
             sm:grid-cols-4
-            sm:gap-x-10
-            sm:gap-y-10
-            sm:pt-12
+            sm:gap-5
+            sm:p-6
             lg:col-span-2
             lg:mt-4
           "
@@ -894,25 +895,30 @@ Please guide me regarding the next steps.
                 className="
                   flex
                   items-start
-                  gap-4
-                  sm:gap-5
+                  gap-3
+                  rounded-xl
+                  bg-white/70
+                  p-3
+                  shadow-sm
+                  sm:gap-4
+                  sm:p-4
                 "
               >
                 <span
                   className="
                     flex
-                    h-10
-                    w-10
+                    h-12
+                    w-12
                     shrink-0
                     items-center
                     justify-center
                     rounded-full
-                    bg-[#193A7E]/[0.07]
+                    bg-[#193A7E]/10
                     text-[13px]
                     text-[#193A7E]
-                    sm:h-12
-                    sm:w-12
-                    sm:text-base
+                    sm:h-14
+                    sm:w-14
+                    sm:text-lg
                   "
                 >
                   <Icon />
@@ -921,11 +927,11 @@ Please guide me regarding the next steps.
                 <div className="min-w-0">
                   <p
                     className="
-                      text-[12px]
+                      text-sm
                       font-semibold
                       leading-tight
                       text-[#193A7E]
-                      sm:text-base
+                      sm:text-lg
                     "
                   >
                     {item.title}
@@ -934,11 +940,11 @@ Please guide me regarding the next steps.
                   <p
                     className="
                       mt-1
-                      text-[10px]
-                      leading-tight
-                      text-black/45
+                      text-xs
+                      leading-snug
+                      text-[#294A76]/80
                       sm:mt-1.5
-                      sm:text-sm
+                      sm:text-base
                     "
                   >
                     {item.subtitle}

@@ -749,7 +749,7 @@ Introduction: ${formData.get("introduction")}
           onClick={() => setAssociateFormOpen(true)}
           className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#16A66A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#193A7E]"
         >
-          Join Now
+          Send Request
           <FaArrowRight className="text-xs" />
         </button>
       </div>

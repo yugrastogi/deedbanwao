@@ -281,7 +281,10 @@ const Footer = () => {
                 </span>
               </a>
               {/* LOCATION */}
-              <div
+              <a
+                href="https://maps.app.goo.gl/Ar4YwmUpGEK9Zk2B7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                   flex
                   items-start
@@ -292,11 +295,12 @@ const Footer = () => {
                   text-[#172B4D]/75
                   transition-colors
                   duration-300
+                  hover:text-[#193A7E]
                 "
               >
                 <FaMapMarkerAlt className="mt-1 shrink-0 text-xs" />
                 <span className="min-w-0">{footerData.contact.location}</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>

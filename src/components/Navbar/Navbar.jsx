@@ -410,34 +410,6 @@ Introduction: ${formData.get("introduction")}
           isLight={true}
         />
 
-        <button
-          type="button"
-          onClick={() => setAssociateFormOpen(true)}
-          className="
-            hidden
-            items-center
-            gap-2
-            rounded-full
-            border
-            border-[#193A7E]/15
-            bg-[#193A7E]
-            px-4
-            py-2
-            text-sm
-            font-semibold
-            text-white
-            shadow-[0_8px_20px_rgba(25,58,126,0.16)]
-            transition-all
-            duration-300
-            hover:-translate-y-0.5
-            hover:bg-[#193A7E]
-            lg:flex
-          "
-        >
-          <FaBriefcase className="text-xs" />
-          Join us as an Associate Advocate
-        </button>
-
         {/* =================================================
             MOBILE CONTROLLER
         ================================================= */}
@@ -717,35 +689,6 @@ Introduction: ${formData.get("introduction")}
                 >
                   <button
                     type="button"
-                    onClick={() =>
-                      closeMenuWithAnimation(() =>
-                        setAssociateFormOpen(true)
-                      )
-                    }
-                    className="
-                      mb-3
-                      flex
-                      w-full
-                      items-center
-                      justify-center
-                      gap-2
-                      rounded-full
-                      border
-                      border-[#193A7E]/15
-                      bg-[#193A7E]/[0.06]
-                      px-6
-                      py-4
-                      text-sm
-                      font-semibold
-                      text-[#193A7E]
-                    "
-                  >
-                    <FaBriefcase className="text-sm" />
-                    Join us as an Associate Advocate
-                  </button>
-
-                  <button
-                    type="button"
                     onClick={
                       handleMobileEnquiry
                     }
@@ -795,6 +738,22 @@ Introduction: ${formData.get("introduction")}
         </div>
       </div>
     </nav>
+
+    <div className="relative z-20 mt-[72px] border-b border-[#193A7E]/10 bg-[#EFF6FC] sm:mt-[76px]">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 py-3 text-center sm:px-7 lg:justify-between lg:px-10">
+        <p className="text-sm font-medium text-[#193A7E] sm:text-base">
+          Join us as an associate advocate
+        </p>
+        <button
+          type="button"
+          onClick={() => setAssociateFormOpen(true)}
+          className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#16A66A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#193A7E]"
+        >
+          Join Now
+          <FaArrowRight className="text-xs" />
+        </button>
+      </div>
+    </div>
 
     {associateFormOpen && (
       <div

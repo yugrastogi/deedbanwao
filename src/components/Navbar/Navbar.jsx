@@ -12,7 +12,7 @@ import {
   FaXmark,
 } from "react-icons/fa6";
 
-import logo from "../../assets/images/deedbanwao-brand.png";
+const logo = "/deedbanwao-logo.webp";
 
 import ContactActions from "./ContactActions";
 import NavLinks from "./NavLinks";

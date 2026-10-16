@@ -22,13 +22,8 @@ body {
 }
 
 .blueprint-page {
-  background-color: #ffffff;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-    url("/blueprint-grid.png");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #F5F7FA;
+  background-image: none;
 }
 
 /* Large headings use Inter Tight; keep existing colors and layout intact. */

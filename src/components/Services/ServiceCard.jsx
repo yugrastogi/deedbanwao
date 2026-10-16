@@ -402,7 +402,16 @@ const ServiceCard = ({ service }) => {
 
   return (
     <article
+      role="button"
+      tabIndex={0}
+      aria-label={`Enquire about ${service.title}`}
       onClick={handleCardClick}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          handleCardClick();
+        }
+      }}
       className="
         service-card-item
         group
@@ -413,17 +422,20 @@ const ServiceCard = ({ service }) => {
         cursor-pointer
         rounded-[17px]
         border
-        border-[#193A7E]/[0.08]
+        border-[#193A7E]/[0.12]
         bg-[#E1EAF3]
         p-[17px]
         shadow-[0_8px_30px_rgba(25,58,126,0.035)]
-        transition-all
-        duration-300
+        transition-[border-color,border-width,box-shadow]
+        duration-200
         ease-out
-        hover:-translate-y-2
-        hover:border-[#193A7E]
-        hover:bg-[#193A7E]
-        hover:shadow-[0_20px_45px_rgba(25,58,126,0.18)]
+        hover:border-2
+        hover:border-[#16A66A]
+        focus-visible:border-2
+        focus-visible:border-[#16A66A]
+        focus-visible:outline-none
+        active:border-2
+        active:border-[#16A66A]
         sm:min-h-[289px]
         sm:rounded-[27px]
         sm:p-7
@@ -449,10 +461,7 @@ const ServiceCard = ({ service }) => {
             rounded-[10px]
             bg-[#193A7E]/[0.07]
             text-[#193A7E]
-            transition-colors
-            duration-300
-            group-hover:bg-white/15
-            group-hover:text-white
+
             sm:h-[54px]
             sm:w-[54px]
             sm:rounded-[17px]
@@ -472,7 +481,6 @@ const ServiceCard = ({ service }) => {
             italic
             tracking-tight
             text-[#193A7E]/30
-            group-hover:text-white/55
             sm:text-[10px]
             lg:text-[12px]
           "
@@ -502,7 +510,6 @@ const ServiceCard = ({ service }) => {
             leading-[1.15]
             tracking-[-0.03em]
             text-[#172B4D]
-            group-hover:text-white
             sm:text-[16px]
             sm:leading-[1.08]
             lg:text-[18px]
@@ -523,8 +530,6 @@ const ServiceCard = ({ service }) => {
             opacity-0
             transition-all
             duration-300
-            group-hover:translate-x-1
-            group-hover:text-white
             group-hover:opacity-100
             sm:text-[10px]
             lg:text-[12px]
@@ -542,7 +547,6 @@ const ServiceCard = ({ service }) => {
           h-px
           w-full
           bg-[#193A7E]/[0.07]
-          group-hover:bg-white/20
           sm:my-5
         "
       />
@@ -558,7 +562,6 @@ const ServiceCard = ({ service }) => {
           text-[14px]
           leading-6
           text-[#193A7E]/70
-          group-hover:text-white/75
           sm:pt-4
           sm:text-[16px]
           sm:leading-7

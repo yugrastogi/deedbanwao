@@ -2,8 +2,15 @@ import {
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const FloatingContactActions = () => {
+  const location = useLocation();
+
+  if (location.pathname === "/contact") {
+    return null;
+  }
+
   return (
     <div
       className="

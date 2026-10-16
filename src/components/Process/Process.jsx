@@ -10,7 +10,7 @@ className="
 relative
 overflow-hidden
 
-bg-[#102A4A]
+bg-[#183A7E]
 
 px-6
 py-16
@@ -159,7 +159,7 @@ lg:py-20
               lg:tracking-[0.3em]
             "
           >
-            How It Works
+            How We Work
           </span>
 
           {/* RIGHT LINE */}

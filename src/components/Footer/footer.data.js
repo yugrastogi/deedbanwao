@@ -9,7 +9,7 @@ const footerData = {
       href: "/#services",
     },
     {
-      name: "Process",
+      name: "How We Work",
       href: "/#process",
     },
     {

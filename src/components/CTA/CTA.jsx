@@ -49,7 +49,7 @@ className="
 relative
 overflow-hidden
 
-blueprint-page
+bg-[#D8E4F0]
 
 px-6
 py-12

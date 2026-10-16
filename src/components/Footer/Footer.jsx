@@ -52,7 +52,7 @@ const Footer = () => {
       className="
         relative
         overflow-hidden
-        bg-[#17202B]
+        bg-[#E5ECF3]
 
         px-5
         pt-16
@@ -167,7 +167,7 @@ const Footer = () => {
                 text-sm
                 leading-7
 
-                text-white/50
+                text-[#172B4D]/70
 
                 sm:text-base
                 sm:leading-8
@@ -188,7 +188,7 @@ const Footer = () => {
                 gap-3
 
                 text-sm
-                text-white/45
+                text-[#172B4D]/65
               "
             >
               <FaMapMarkerAlt className="shrink-0 text-xs" />
@@ -210,7 +210,7 @@ const Footer = () => {
                 font-semibold
                 uppercase
                 tracking-[0.25em]
-                text-white/35
+                text-[#172B4D]/50
               "
             >
               Explore
@@ -229,13 +229,13 @@ const Footer = () => {
 
                     text-sm
                     font-medium
-                    text-white/65
+                    text-[#172B4D]/75
 
                     transition-all
                     duration-300
 
                     hover:translate-x-1
-                    hover:text-white
+                    hover:text-[#193A7E]
                   "
                 >
                   {link.name}
@@ -255,7 +255,7 @@ const Footer = () => {
                 font-semibold
                 uppercase
                 tracking-[0.25em]
-                text-white/35
+                text-[#172B4D]/50
               "
             >
               Get In Touch
@@ -277,7 +277,7 @@ const Footer = () => {
 
                   text-sm
                   font-medium
-                  text-white/65
+                  text-[#172B4D]/75
 
                   transition-all
                   duration-300
@@ -308,12 +308,12 @@ const Footer = () => {
 
                   text-sm
                   font-medium
-                  text-white/65
+                  text-[#172B4D]/75
 
                   transition-all
                   duration-300
 
-                  hover:text-white
+                  hover:text-[#193A7E]
                 "
               >
                 <FaPhone className="text-xs" />
@@ -336,12 +336,12 @@ const Footer = () => {
 
                   text-sm
                   font-medium
-                  text-white/65
+                  text-[#172B4D]/75
 
                   transition-all
                   duration-300
 
-                  hover:text-white
+                  hover:text-[#193A7E]
                 "
               >
                 <FaEnvelope className="text-xs" />
@@ -373,7 +373,7 @@ const Footer = () => {
             gap-4
 
             border-t
-            border-white/10
+            border-[#193A7E]/15
 
             py-6
 
@@ -388,7 +388,7 @@ const Footer = () => {
             className="
               text-[11px]
               font-medium
-              text-white/30
+              text-[#172B4D]/45
 
               sm:text-xs
             "
@@ -411,12 +411,12 @@ const Footer = () => {
               font-semibold
               uppercase
               tracking-[0.18em]
-              text-white/35
+              text-[#172B4D]/50
 
               transition-all
               duration-300
 
-              hover:text-white
+              hover:text-[#193A7E]
             "
           >
             Back To Top
@@ -433,9 +433,9 @@ const Footer = () => {
                 rounded-full
 
                 border
-                border-white/10
+                border-[#193A7E]/15
 
-                bg-white/[0.04]
+                bg-[#193A7E]/[0.06]
               "
             >
               <FaArrowUp className="text-[9px]" />

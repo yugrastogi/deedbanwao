@@ -177,10 +177,7 @@ const Services = () => {
                 h-px
                 w-7
                 shrink-0
-                bg-gradient-to-r
-                from-transparent
-                via-[#193A7E]/10
-                to-[#193A7E]/20
+                bg-[#193A7E]/15
                 sm:w-20
                 lg:w-24
               "
@@ -212,10 +209,7 @@ const Services = () => {
                 h-px
                 w-7
                 shrink-0
-                bg-gradient-to-l
-                from-transparent
-                via-[#193A7E]/10
-                to-[#193A7E]/20
+                bg-[#193A7E]/15
                 sm:w-20
                 lg:w-24
               "

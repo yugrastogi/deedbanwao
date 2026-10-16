@@ -64,56 +64,6 @@ const Footer = () => {
       "
     >
       {/* =====================================================
-          BACKGROUND GLOW
-      ===================================================== */}
-
-      <div
-        className="
-          hidden
-
-          absolute
-          -right-48
-          top-0
-
-          h-[400px]
-          w-[400px]
-
-          rounded-full
-
-          bg-white/[0.035]
-
-          blur-[100px]
-
-          sm:h-[550px]
-          sm:w-[550px]
-          sm:blur-[120px]
-        "
-      />
-
-      <div
-        className="
-          hidden
-
-          absolute
-          -left-48
-          bottom-0
-
-          h-[350px]
-          w-[350px]
-
-          rounded-full
-
-          bg-[#193A7E]/40
-
-          blur-[90px]
-
-          sm:h-[500px]
-          sm:w-[500px]
-          sm:blur-[110px]
-        "
-      />
-
-      {/* =====================================================
           MAIN FOOTER
       ===================================================== */}
 

@@ -76,7 +76,7 @@ sm:gap-10
 
         text-[#193A7E]
 
-        shadow-[0_10px_30px_rgba(0,0,0,0.18)]
+        shadow-none
 
         sm:h-[65px]
         sm:w-[65px]
@@ -133,11 +133,9 @@ sm:gap-10
           border
           border-[#193A7E]/10
 
-          bg-[#193A7E]/[0.04]
+          bg-white
 
-          text-white
-
-          backdrop-blur-xl
+          text-[#193A7E]
 
           sm:h-[37px]
           sm:w-[37px]
@@ -186,7 +184,7 @@ sm:gap-10
         leading-[1.05]
         tracking-[-0.04em]
 
-        text-white
+        text-[#193A7E]
 
         sm:mt-6
         sm:text-[2.55rem]

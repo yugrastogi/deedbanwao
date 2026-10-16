@@ -6,7 +6,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const logo = "/deedbanwao-logo.webp";
+import logo from "../../assets/images/deedbanwao-brand.png";
 
 import footerData from "./footer.data";
 

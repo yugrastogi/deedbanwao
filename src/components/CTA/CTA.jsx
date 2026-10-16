@@ -15,21 +15,26 @@ const CTA = () => {
 // scroll the Hero section into view so the form is visible.
 
 const handleGetEstimate = () => {
-  window.dispatchEvent(
-    new Event("open-enquiry-form")
-  );
+  window.dispatchEvent(new Event("open-enquiry-form"));
 
-  const heroSection =
-    document.getElementById("home");
-
-  if (heroSection) {
+  // Scroll to the form itself, not the top of the hero section.
+  // Two animation frames let any event-driven layout updates settle first.
+  requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      heroSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      const enquiryForm = document.getElementById("enquiry-form");
+      if (!enquiryForm) return;
+
+      const navbar = document.querySelector("header");
+      const navbarHeight = navbar?.getBoundingClientRect().height ?? 0;
+      const top =
+        enquiryForm.getBoundingClientRect().top +
+        window.scrollY -
+        navbarHeight -
+        16;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
     });
-  }
+  });
 };
 
 // =====================================================

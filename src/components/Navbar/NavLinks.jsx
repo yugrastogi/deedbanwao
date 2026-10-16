@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import {
   useLocation,
   useNavigate,
@@ -11,6 +12,56 @@ const NavLinks = ({
 }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const navRef = useRef(null);
+  const linkRefs = useRef({});
+  const [activeLink, setActiveLink] = useState("Home");
+  const [indicator, setIndicator] = useState({ left: 0, width: 0 });
+
+  const updateIndicator = (name) => {
+    const activeElement = linkRefs.current[name];
+    const navElement = navRef.current;
+    if (!activeElement || !navElement) return;
+    setIndicator({
+      left: activeElement.offsetLeft,
+      width: activeElement.offsetWidth,
+    });
+  };
+
+  useEffect(() => {
+    const updateActiveLink = () => {
+      if (location.pathname === "/contact") {
+        setActiveLink("Contact");
+        return;
+      }
+
+      const sectionNames = [
+        ["services", "Services"],
+        ["process", "How We Work"],
+        ["why-us", "Why Us?"],
+        ["faq", "FAQs"],
+      ];
+      const marker = window.scrollY + 140;
+      let current = "Home";
+
+      for (const [id, name] of sectionNames) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top + window.scrollY <= marker) {
+          current = name;
+        }
+      }
+
+      setActiveLink(current);
+    };
+
+    updateActiveLink();
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    window.addEventListener("resize", () => updateIndicator(activeLink));
+    return () => window.removeEventListener("scroll", updateActiveLink);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    updateIndicator(activeLink);
+  }, [activeLink, mobile, isLight]);
 
   const links = [
     {
@@ -144,6 +195,7 @@ const NavLinks = ({
 
   return (
     <div
+      ref={navRef}
       className={
         mobile
           ? `
@@ -164,8 +216,16 @@ const NavLinks = ({
             `
       }
     >
+      {!mobile && (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 h-[2px] rounded-full bg-[#193A7E] transition-all duration-300 ease-out"
+          style={{ left: indicator.left, width: indicator.width, opacity: indicator.width ? 1 : 0 }}
+        />
+      )}
       {links.map((link) => (
         <a
+          ref={(element) => { linkRefs.current[link.name] = element; }}
           key={link.name}
           href={
             link.name === "Contact"
@@ -183,6 +243,7 @@ const NavLinks = ({
               link
             )
           }
+          aria-current={activeLink === link.name ? "page" : undefined}
           className={`
             group
 

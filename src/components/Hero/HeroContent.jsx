@@ -1,6 +1,4 @@
-import {
-  useEffect,
-} from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaArrowRight,
@@ -11,10 +9,7 @@ import {
   FaLocationDot,
   FaShieldHalved,
   FaWhatsapp,
-  FaXmark,
 } from "react-icons/fa6";
-
-import propertyDocument from "../../assets/images/property-document.png";
 
 const TRUST_FEATURES = [
   {
@@ -42,47 +37,8 @@ const TRUST_FEATURES = [
 const HeroContent = ({
   contentRef,
   visualRef,
-  graphicsRef,
-  formRef,
-  showEnquiry,
-  setShowEnquiry,
 }) => {
-  // =====================================================
-  // OPEN ENQUIRY FROM MOBILE MENU
-  // =====================================================
-
-  useEffect(() => {
-    const openEnquiryForm = () => {
-      setShowEnquiry(true);
-    };
-
-    window.addEventListener(
-      "open-enquiry-form",
-      openEnquiryForm
-    );
-
-    return () => {
-      window.removeEventListener(
-        "open-enquiry-form",
-        openEnquiryForm
-      );
-    };
-  }, [setShowEnquiry]);
-
-  // =====================================================
-  // SCROLL TO PROCESS SECTION (HOW IT WORKS)
-  // =====================================================
-
-  const scrollToProcess = () => {
-    const section = document.getElementById("process");
-
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+  const navigate = useNavigate();
 
   // =====================================================
   // SUBMIT ENQUIRY
@@ -259,11 +215,11 @@ Please guide me regarding the next steps.
               sm:gap-4
             "
           >
-            {/* HOW IT WORKS */}
+            {/* GET FREE CONSULTATION */}
 
             <button
               type="button"
-              onClick={scrollToProcess}
+              onClick={() => navigate("/contact")}
               className="
                 group
                 flex
@@ -292,7 +248,7 @@ Please guide me regarding the next steps.
             >
               <FaFileLines className="text-[11px] sm:text-xs" />
 
-              How It Works
+              Get Free Consultation
 
               <FaArrowRight
                 className="
@@ -305,13 +261,11 @@ Please guide me regarding the next steps.
               />
             </button>
 
-            {/* GET ESTIMATE */}
+            {/* TALK TO AN EXPERT */}
 
             <button
               type="button"
-              onClick={() =>
-                setShowEnquiry(true)
-              }
+              onClick={() => navigate("/contact")}
               className="
                 group
                 flex
@@ -343,7 +297,7 @@ Please guide me regarding the next steps.
             >
               <FaCalculator className="text-[11px] sm:text-xs" />
 
-              Get Estimate
+              Talk to an Expert
 
               <FaArrowRight
                 className="
@@ -377,41 +331,10 @@ Please guide me regarding the next steps.
           "
         >
           {/* =================================================
-              SINGLE HERO IMAGE
-          ================================================= */}
-
-          <div
-            ref={graphicsRef}
-            className="
-              absolute
-              inset-0
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <img
-              src={propertyDocument}
-              alt="Property deed documents and property documentation"
-              className="
-                block
-                h-auto
-                w-full
-                max-w-[500px]
-                object-contain
-                select-none
-                lg:max-w-[550px]
-                xl:max-w-[595px]
-              "
-            />
-          </div>
-
-          {/* =================================================
               ENQUIRY FORM
           ================================================= */}
 
           <div
-            ref={formRef}
             className="
               absolute
               inset-0
@@ -488,33 +411,6 @@ Please guide me regarding the next steps.
                 </p>
               </div>
 
-              {/* CLOSE */}
-
-              <button
-                type="button"
-                onClick={() =>
-                  setShowEnquiry(false)
-                }
-                className="
-                  flex
-                  h-9
-                  w-9
-                  shrink-0
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-black/[0.04]
-                  text-black/50
-                  transition-all
-                  duration-300
-                  hover:bg-black/[0.08]
-                  hover:text-black
-                  sm:h-10
-                  sm:w-10
-                "
-              >
-                <FaXmark className="text-xs sm:text-sm" />
-              </button>
             </div>
 
             {/* =================================================

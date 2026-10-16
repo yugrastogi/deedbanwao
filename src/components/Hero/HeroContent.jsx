@@ -93,18 +93,18 @@ Please guide me regarding the next steps.
         z-10
         mx-auto
         flex
-        min-h-screen
+        min-h-[min(100svh,780px)]
         max-w-[1560px]
         items-center
         px-6
-        pb-20
-        pt-40
+        pb-14
+        pt-28
         sm:px-8
-        sm:pb-24
-        sm:pt-36
+        sm:pb-16
+        sm:pt-30
         lg:px-12
-        lg:pb-16
-        lg:pt-32
+        lg:pb-12
+        lg:pt-28
       "
     >
       <div
@@ -113,10 +113,10 @@ Please guide me regarding the next steps.
           w-full
           grid-cols-1
           items-center
-          gap-14
+          gap-10
           lg:grid-cols-[0.95fr_1.05fr]
-          lg:gap-16
-          xl:gap-24
+          lg:gap-12
+          xl:gap-16
         "
       >
         {/* =================================================
@@ -135,13 +135,13 @@ Please guide me regarding the next steps.
 
           <p
             className="
-              mb-5
+              mb-4
               text-[9px]
               font-bold
               uppercase
               tracking-[0.2em]
               text-[#193A7E]
-              sm:mb-7
+              sm:mb-5
               sm:text-[10px]
               sm:tracking-[0.25em]
               lg:text-xs
@@ -163,14 +163,14 @@ Please guide me regarding the next steps.
               text-[#193A7E]
               sm:text-[3.2rem]
               md:text-[3.85rem]
-              lg:text-[4.45rem]
-              xl:text-[5.75rem]
+              lg:text-[3.85rem]
+              xl:text-[4.8rem]
             "
           >
-            Property Documentation &
+            Property Registration
             <br />
             <span className="text-[#16A66A]">
-              Registration In Meerut
+              in Meerut.
             </span>
           </h1>
 
@@ -178,38 +178,36 @@ Please guide me regarding the next steps.
 
           <p
             className="
-              mt-5
+              mt-4
               max-w-[580px]
               text-[14px]
               font-medium
               leading-6
               text-[#294A76]/75
-              sm:mt-7
+              sm:mt-5
               sm:text-base
               sm:leading-7
-              lg:text-lg
-              lg:leading-8
+              lg:text-base
+              lg:leading-7
             "
           >
-            Professional property documentation and deed
-            drafting assistance in Meerut, including Sale
-            Deeds, Gift Deeds, Wills, GPA, SPA, Partition
-            Deeds, Rent Agreements and other property-related
-            deeds. Get document checking, drafting guidance
-            and registration assistance from the comfort of
-            your home.
+            DeedBanwao provides complete registration services
+            for your Sale Deed, Lease Deed, Gift Deed, and other
+            property-related deeds in Meerut. Our expert lawyers
+            give end-to-end service for property documentation
+            and registration.
           </p>
 
           {/* BUTTONS */}
 
           <div
             className="
-              mt-7
+              mt-5
               flex
               flex-col
               items-stretch
               gap-3
-              sm:mt-9
+              sm:mt-7
               sm:flex-row
               sm:items-center
               sm:gap-4
@@ -321,11 +319,11 @@ Please guide me regarding the next steps.
           className="
             relative
             mx-auto
-            min-h-[640px]
+            min-h-[540px]
             w-full
             max-w-[640px]
             lg:mx-0
-            lg:h-[580px]
+            lg:h-[510px]
             lg:min-h-0
             lg:max-w-none
           "
@@ -798,7 +796,7 @@ Please guide me regarding the next steps.
                   p-3
                   shadow-sm
                   sm:gap-4
-                  sm:min-h-[142px]
+            sm:min-h-[126px]
                   sm:p-4
                 "
               >

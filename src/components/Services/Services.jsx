@@ -138,11 +138,11 @@ const Services = () => {
         overflow-hidden
         bg-white
         px-6
-        py-20
+        py-16
         sm:px-8
-        sm:py-24
+        sm:py-20
         lg:px-12
-        lg:py-28
+        lg:py-24
       "
     >
       {/* =====================================================

@@ -8,10 +8,11 @@ import { gsap } from "gsap";
 import {
   FaArrowRight,
   FaBriefcase,
+  FaChevronDown,
   FaXmark,
 } from "react-icons/fa6";
 
-import logo from "../../assets/images/deedbanwao_logo.svg";
+import logo from "../../assets/images/deedbanwao-brand.png";
 
 import ContactActions from "./ContactActions";
 import NavLinks from "./NavLinks";
@@ -282,10 +283,10 @@ const Navbar = () => {
 
     const formData = new FormData(event.currentTarget);
 
-    const application = `
+    const request = `
 Hello DeedBanwao,
 
-I would like to apply as an associate advocate.
+I would like to request to join as an associate advocate.
 
 Name: ${formData.get("name")}
 Phone: ${formData.get("phone")}
@@ -295,9 +296,11 @@ Bar Council No.: ${formData.get("barCouncilNumber")}
 Introduction: ${formData.get("introduction")}
 `.trim();
 
+    const subject = "Associate Advocate Request";
+
     window.open(
-      `https://wa.me/917983320163?text=${encodeURIComponent(application)}`,
-      "_blank"
+      `mailto:deedbanwao@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(request)}`,
+      "_self"
     );
   };
 
@@ -399,6 +402,14 @@ Introduction: ${formData.get("introduction")}
           md:ml-0
         "
       >
+        {/* =================================================
+            CALL + WHATSAPP
+        ================================================= */}
+
+        <ContactActions
+          isLight={true}
+        />
+
         <button
           type="button"
           onClick={() => setAssociateFormOpen(true)}
@@ -424,16 +435,8 @@ Introduction: ${formData.get("introduction")}
           "
         >
           <FaBriefcase className="text-xs" />
-          Join as Advocate
+          Join us as an Associate Advocate
         </button>
-
-        {/* =================================================
-            CALL + WHATSAPP
-        ================================================= */}
-
-        <ContactActions
-          isLight={true}
-        />
 
         {/* =================================================
             MOBILE CONTROLLER
@@ -738,7 +741,7 @@ Introduction: ${formData.get("introduction")}
                     "
                   >
                     <FaBriefcase className="text-sm" />
-                    Join as an Associate Advocate
+                    Join us as an Associate Advocate
                   </button>
 
                   <button
@@ -833,7 +836,7 @@ Introduction: ${formData.get("introduction")}
           <button
             type="button"
             onClick={() => setAssociateFormOpen(false)}
-            aria-label="Close associate advocate application form"
+            aria-label="Close associate advocate request form"
             className="
               absolute
               right-4
@@ -856,18 +859,12 @@ Introduction: ${formData.get("introduction")}
           </button>
 
           <div className="pr-12">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#193A7E]/55">
-              Join the network
-            </p>
             <h2
               id="associate-advocate-title"
-              className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-[#193A7E] sm:text-3xl"
+              className="text-2xl font-semibold tracking-[-0.03em] text-[#193A7E] sm:text-3xl"
             >
-              Associate Advocate Application
+              Associate Advocate Request
             </h2>
-            <p className="mt-2 text-sm leading-6 text-[#294A76]/70">
-              Tell us a little about your practice. We’ll get in touch about opportunities in your area.
-            </p>
           </div>
 
           <form
@@ -888,12 +885,15 @@ Introduction: ${formData.get("introduction")}
             </label>
             <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E]">
               Working area
-              <select name="area" required defaultValue="" className="h-11 rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white">
-                <option value="" disabled>Select your working area</option>
-                <option value="Meerut">Meerut</option>
-                <option value="Sardhana">Sardhana</option>
-                <option value="Mawana">Mawana</option>
-              </select>
+              <span className="relative">
+                <select name="area" required defaultValue="" className="h-11 w-full appearance-none rounded-xl border border-[#193A7E]/12 bg-[#193A7E]/[0.025] px-3 pr-10 text-base font-normal outline-none transition focus:border-[#193A7E]/45 focus:bg-white">
+                  <option value="" disabled>Select your working area</option>
+                  <option value="Meerut">Meerut</option>
+                  <option value="Sardhana">Sardhana</option>
+                  <option value="Mawana">Mawana</option>
+                </select>
+                <FaChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#193A7E]/70" />
+              </span>
             </label>
             <label className="grid gap-1.5 text-sm font-semibold text-[#193A7E] sm:col-span-2">
               Bar Council No.
@@ -907,7 +907,7 @@ Introduction: ${formData.get("introduction")}
               type="submit"
               className="sm:col-span-2 mt-1 flex h-12 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-6 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(25,58,126,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#123064]"
             >
-              Send application
+              Join us as an Associate Advocate
               <FaArrowRight />
             </button>
           </form>

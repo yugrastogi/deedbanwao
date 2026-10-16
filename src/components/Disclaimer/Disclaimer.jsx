@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LuFileWarning } from "react-icons/lu";
 
-import deedbanwaoLogo from "../../assets/images/deedbanwao_logo.svg";
+import deedbanwaoLogo from "../../assets/images/deedbanwao-brand.png";
 
 const Disclaimer = ({ onProceed }) => {
   const [agreed, setAgreed] = useState(false);

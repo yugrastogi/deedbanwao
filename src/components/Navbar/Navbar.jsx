@@ -684,9 +684,9 @@ Introduction: ${formData.get("introduction")}
 
                 <div
                   className="
-                    mt-auto
+                    mt-6
 
-                    pt-8
+                    pt-2
                   "
                 >
                   <button

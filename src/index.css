@@ -1,1 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Inter Tight", sans-serif;
+  --font-body: "Noto Sans", sans-serif;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: #222222;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: #222222;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}

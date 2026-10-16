@@ -623,10 +623,10 @@ Introduction: ${formData.get("introduction")}
 
                   px-6
                   pb-8
-                  pt-[72px]
+                  pt-0
 
                   sm:px-10
-                  sm:pt-[80px]
+                  sm:pt-0
                 "
               >
                 {/* =================================================
@@ -638,15 +638,17 @@ Introduction: ${formData.get("introduction")}
                     mb-8
 
                     flex
+                    min-h-[72px]
                     items-center
 
                     border-b
                     border-black/[0.07]
 
-                    pb-7
+                    pb-0
 
                     sm:mb-10
-                    sm:pb-8
+                    sm:min-h-[76px]
+                    sm:pb-0
                   "
                 >
                   <img

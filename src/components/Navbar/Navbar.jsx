@@ -740,14 +740,14 @@ Introduction: ${formData.get("introduction")}
     </nav>
 
     <div className="relative z-20 mt-[72px] border-b border-[#193A7E]/10 bg-[#EFF6FC] sm:mt-[76px]">
-      <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-5 gap-y-2 px-4 py-3 pr-4 text-right sm:px-7 sm:pr-7 lg:px-10 lg:pr-4">
+      <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-5 gap-y-2 px-4 py-3 pr-4 text-right sm:px-7 sm:pr-7 lg:px-10 lg:pr-10">
         <p className="text-sm font-medium text-[#193A7E] sm:text-base">
           Join us as an associate advocate
         </p>
         <button
           type="button"
           onClick={() => setAssociateFormOpen(true)}
-          className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#16A66A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#193A7E]"
+          className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#244A94] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#193A7E]"
         >
           Send Request
           <FaArrowRight className="text-xs" />

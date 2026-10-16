@@ -111,6 +111,8 @@ Please guide me regarding the next steps.
         className="
           grid
           w-full
+          origin-center
+          scale-[1.02]
           grid-cols-1
           items-center
           gap-10

@@ -33,13 +33,13 @@ const Contact = () => {
           max-w-7xl
           px-6
           pb-24
-          pt-16
+          pt-4
 
           sm:pb-32
-          sm:pt-20
+          sm:pt-6
 
           lg:pb-40
-          lg:pt-24
+          lg:pt-8
         "
       >
 
@@ -49,15 +49,15 @@ const Contact = () => {
 
         <div
           className="
-            mt-2
+            mt-0
 
             grid
             grid-cols-1
             gap-10
 
-            sm:mt-6
+            sm:mt-0
 
-            lg:mt-8
+            lg:mt-0
             lg:grid-cols-[1fr_0.8fr]
             lg:items-end
             lg:gap-24

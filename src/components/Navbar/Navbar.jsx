@@ -744,7 +744,7 @@ Introduction: ${formData.get("introduction")}
     <div className="relative z-20 mt-[72px] border-b border-[#193A7E]/10 bg-[#EFF6FC] sm:mt-[76px]">
       <div className="mx-auto flex w-full flex-nowrap items-center justify-end gap-2 px-3 py-3 pr-4 text-right sm:gap-5 sm:px-7 sm:pr-7 lg:px-10 lg:pr-10">
         <p className="whitespace-nowrap text-[11px] font-medium leading-none text-[#193A7E] sm:text-base">
-          Join us as an associate advocate
+          Join us as an associate
         </p>
         <button
           type="button"
@@ -868,7 +868,7 @@ Introduction: ${formData.get("introduction")}
               type="submit"
               className="sm:col-span-2 mt-1 flex h-12 items-center justify-center gap-2 rounded-full bg-[#193A7E] px-6 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(25,58,126,0.18)] transition-all hover:-translate-y-0.5 hover:bg-[#193A7E]"
             >
-              Join us as an Associate Advocate
+              Join us as an Associate
               <FaArrowRight />
             </button>
           </form>
